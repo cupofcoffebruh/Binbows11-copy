@@ -62,7 +62,7 @@ main{
   background-position: center;
   background-repeat: no-repeat;
     height:100vh;
-    background-image: url(/Users/Dell/Documents/wp9378861.jpg);
+    background-image: url(/Users/Dell/Documents/win11background.jpg);
     background-size: cover;
     transition: 0.5s;
     
@@ -414,23 +414,30 @@ transition-delay:3s;
 
   }
   #preloader{
-    background: black url(/Users/Dell/Documents/excited-loading.gif)  no-repeat center ;
+    background: black url(/Users/Dell/Documents/excited-loading.gif)  no-repeat center;
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: 100;
-    position: absolute;
-    
-    background-size:7%;
+    background-size:10%;
+    background-position: 50%;
     transition: all 0.5s ease;
-    
+    display: flex;
+    justify-content: center;
+  }
+  #preloader p{
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    top:60%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   .Win11{
     position: absolute;
-  top: 29%;
+  top: 25.4%;
   left: 50%;
   transform: translate(-50%, -50% );
-  width: 17%;
+  width: 21vw;
   
   }
 
@@ -457,11 +464,12 @@ transition-delay:3s;
   border-radius: 6px ;
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  
+
  
 }
 .startmenu.active{
-  bottom:50px
+  bottom:50px;
+
 }
 
 .pls-work{
@@ -836,8 +844,8 @@ iframe.active{
 margin: 2px;
  
 }
-.Quick_Settings.active{
-  background: white;
+.Quick_Settings:hover{
+  background: rgba(230, 228, 228, 0.514);
 }
 
 .Quick_Settings .bx-bluetooth{
@@ -855,13 +863,16 @@ margin: 2px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
   position: absolute;
-  right: 10px;
-  bottom: -400px;
+  /*right: 10px;*/
+  bottom: 48px;
+  right: 12px;
+  transform: translateX(350px);
   backdrop-filter: blur(14px);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .Quick-Settings-Container.active{
-  bottom: 45px;
+  /*right: 10px;*/
+  transform: translateX(-0px);
 }
 
 .Quick-Settings-Container-Footer{
@@ -959,7 +970,7 @@ background: lightgray;
 height: 44px;
 width: 84px;
 font-size: 16px;
-background-color:rgb(55, 135, 255);
+background-color:#3787ff;
 border-radius: 4px;
 line-height: 44px;
 margin:3px;
@@ -968,9 +979,14 @@ margin-top: 22px;
 cursor: pointer;
 transition: all 0.4s ease;
 border-bottom: 1px solid rgb(235, 233, 233);
+
 }
-.settings-column .bx-wifi{
+.settings-column .bx-chevron-right{
+transform: translateX(-4px);
+}
+.settings-column i{
   color: #fff;
+
 }
 
 .settings-column p{
@@ -987,7 +1003,9 @@ border-bottom: 1px solid rgb(235, 233, 233);
   
 }
 
-
+.settings-column.active .bx-chevron-right{
+  color: #000;
+}
 
 
 
@@ -1014,7 +1032,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
     transform: translateY(-10px);
   }
   .settings-column1.active{
-    background-color: rgb(55, 135, 255);
+    background-color: #3787ff;
   }
   .settings-column1.active .bx-rotate-90{
     color: #fff;
@@ -1046,7 +1064,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
     transform: translateY(-10px);
   }
   .settings-column2.active{
-    background-color: rgb(55, 135, 255);
+    background-color: #3787ff;
   }
   .settings-column2.active .bx-sun{
     color: #fff;
@@ -1080,7 +1098,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
       transform: translateY(-10px);
     }
     .settings-column3.active{
-      background-color: rgb(55, 135, 255);
+      background-color: #3787ff;
     }
     .settings-column3.active .bx-flip-horizontal{
       color: #fff;
@@ -1110,7 +1128,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
         transform: translateY(-10px);
       }
       .settings-column4.active{
-        background-color: rgb(55, 135, 255);
+        background-color: #3787ff;
       }
       .settings-column4.active  .bx-chevron-right{
         color: #fff;
@@ -1336,7 +1354,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
   .sliderValue{
     position:   fixed;
     width: 100%;
-    transform: translateX(66px);
+    transform: translateX(69px);
   }
   .sliderValue span{
     position: absolute;
@@ -1377,7 +1395,8 @@ border-bottom: 1px solid rgb(235, 233, 233);
   .sliderValue1{
     position:   fixed;
     width: 100%;
-    transform: translateX(66px);
+    transform: translateX(68px);
+    top:15px;
   }
   .sliderValue1 span{
     position: absolute;
@@ -1390,7 +1409,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
     z-index: 2;
     color: #000;
     transform-origin: bottom;
-    transition: transform 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
     line-height: 25px;
     font-size: 13px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1409,7 +1428,7 @@ border-bottom: 1px solid rgb(235, 233, 233);
     left: 50%;
     transform: translateX(-50%) ;
     border-radius: 12%;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
  
   }
   .field{
@@ -1431,11 +1450,14 @@ border-bottom: 1px solid rgb(235, 233, 233);
     height: 100%;
     flex-wrap: wrap;
     position: relative;
-    margin-top: 34px;
+    margin-top: 35px;
     padding:0px 0px 0px 0px;
     transform: translateX(0px);
   }
- 
+#audio{
+  width: 17px;
+  transform: translateY(-3px);
+}
   .field .value{
     position: absolute;
     font-size: 18px;
@@ -1613,11 +1635,13 @@ top: 27%;
      overflow-y: hidden;
      overflow-x: hidden;
      height: calc(100% - 56px);
-    left: -630px;
+   /* left: -630px;*/
+    transform: translateX(-630px);
     transition: 0.2s;
   }
   .widgets-container.opened{
-  left:0px;
+  /*left:0px;*/
+  transform: translateX(0px);
   }
   
   .clock1{
@@ -1842,7 +1866,7 @@ bottom:5px;
  
 }
 .progressbar1{
-  width: 82%;
+  width: 61.4%;
   height:3px;
   background: #005fba;
   position: absolute;
@@ -1869,7 +1893,7 @@ bottom:5px;
   
 }
 .Lang-Div:hover{
-  background: #fff;
+  background: rgba(230, 228, 228, 0.514);
 }
 .Chevron-up{
   position: absolute;
@@ -1877,14 +1901,21 @@ bottom:5px;
   bottom:1px;
   line-height: 34px;
 }
-.Overlay{
+.Chevron-up:hover{
+  background: rgba(230, 228, 228, 0.514);
+}
+.NightLightOverlay{
   position: absolute;
     top: 0;
     left: 0;
     z-index: 9999999999999999999999999;
     width: 100vw;
     height: 100vh;
-    background: #000;
     opacity: 0;
     pointer-events: none;
+    transition: 0.5s;
+}
+.NightLightOverlay.active{
+  background: rgba(255,0,0,.23137254901960785);
+  opacity: 1;
 }
