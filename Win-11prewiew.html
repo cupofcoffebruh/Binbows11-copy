@@ -576,13 +576,14 @@
     
     </main>
     <script>
-      //WidgetsClock//
+  
+ //WidgetsClock//
      
   
 
 
       //Clock//
-     class DigitalClock {
+    class DigitalClock {
   constructor(element) {
     this.element = element;
   }
@@ -728,14 +729,12 @@ clock.onclick = function(){
 //startmenu//
 
 let startmenu = document.querySelector(".startmenu");
-let ul_li = document.querySelector(".Nav-Container ul li")
 ;
 
 
 
 icon.onclick = function(){
   startmenu.classList.toggle("active")
-  ul_li.classList.toggle("active")
 
 }
 //Widgets panel//
@@ -762,7 +761,6 @@ let  xd  = document.querySelector(".Quick-Settings-Container")
 
 QuickSettings.onclick = function(){
   xd.classList.toggle("active")
-  QuickSettings.classList.toggle("active")
 
 }
 //Quick Acces//
@@ -792,13 +790,13 @@ idk.onclick = function(){
 
 //settings-column2//
 let idk2 = document.querySelector(".settings-column2");
-let  what = document.querySelector("main");
+let  NightLightOverlay = document.querySelector(".NightLightOverlay");
 ;
 
 
 idk2.onclick = function(){
   idk2.classList.toggle("active")
-  what.classList.toggle("active")
+  NightLightOverlay.classList.toggle("active")
 
 }
 
@@ -865,7 +863,7 @@ window.addEventListener("load", function(){
 
 
 /*DropDown*/
-/* When the user clicks on the button, 
+/*When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -923,17 +921,18 @@ let window2 = document.querySelector(".Window SmallScreen");
 let window1 = document.querySelector(".Window");
 let close1 = document.querySelector(".bx-x");
 let line123 = document.querySelector(".line");
+
 ;
 
 
 
-/*x.onclick = function(){
+close1.onclick = function(){
   window1.classList.toggle("Display-None");
   window2.classList.toggle("Display-None");
-}*/
+}
 close1.onclick = function(){
-  /*line123.classList.toggle("transparent");*/
-  window1.classList.toggle("Display-None");
+ /* line123.classList.toggle("transparent");
+  window1.classList.toggle("Display-None");*/
    window2.classList.toggle("Display-None");
 }
 
@@ -947,7 +946,7 @@ let  widow1234 = document.querySelector(".Window Active");
 
 
 totaskbar.onclick = function(){
- /* window1.classList.toggle("Totaskbar")*/
+  /*window1.classList.toggle("Totaskbar")*/
   line.classList.toggle("notactive");
   line.classList.toggle("active");
 } 
@@ -980,42 +979,38 @@ input.onclick = function(){
 
 
 //Volume slider//
-const body = document.querySelector(".Overlay");
 const progressbar = document.querySelector(".progressbar");
-const slideValue = document.querySelector(".sliderValue span ");
+const slideValue = document.querySelector(".sliderValue span");
       const inputSlider = document.querySelector(".field input");
       inputSlider.oninput = (()=>{
         let value = inputSlider.value;
         slideValue.textContent = value;
         slideValue.style.left = (value/1.5) + "%";
         progressbar.style.width = (value/1.4) + "%";
-        body.style.opacity = (value/1) + "%";
         slideValue.classList.add("show");
       });
       inputSlider.onblur = (()=>{
         slideValue.classList.remove("show");
       });
 
-const progressbar1 = document.querySelector(".progressbar1");
-      const xdxd = document.querySelector(".field1 input");
-      xdxd.oninput = (()=>{
-        let value = xdxd.value;
-        progressbar1.style.width = (value/1.2) + "%";
-        xdxd.classList.add("show");
-      });
-      /*inputSlider.onblur = (()=>{
-        slideValue.classList.remove("show");
-      });*/
 
-/*const progressbar = document.querySelector(".progressbar");
-      const hjghsd = document.querySelector(".field input");
-      hjghsd.oninput = (()=>{
-        let value = hjghsd.value;
-        progressbar.textContent = value;
-        progressbar.style.width = (value/1.4) + "%";
-      });*/
+      const progressbar1 = document.querySelector(".progressbar1");
+const slideValue1 = document.querySelector(".sliderValue1 span");
+const Value = document.querySelector(".sliderValue1");
+      const inputSlider1 = document.querySelector(".field1 input");
+      inputSlider1.oninput = (()=>{
+        let value = inputSlider1.value;
+        slideValue1.textContent = value;
+        slideValue1.style.left = (value/1) + "";
+        progressbar1.style.width = (value/1.2) + "%";
+        Value.style.left = (value/1.5) + "%";
+        slideValue1.classList.add("show");
+      });
+      inputSlider1.onblur = (()=>{
+        slideValue1.classList.remove("show");
+      });
      // Draggebla Window//
-   /*  const wrapper = document.querySelector(".Window "),
+   /* const wrapper = document.querySelector(".Window "),
     header = wrapper.querySelector(".Window-header");
     function onDrag({movementX, movementY}){
       let getStyle = window.getComputedStyle(wrapper);
@@ -1034,7 +1029,7 @@ const progressbar1 = document.querySelector(".progressbar1");
     });*/
 
 
-
+console.log('');
     //Calculator//
 
 class Calculator {
@@ -1047,25 +1042,7 @@ class Calculator {
     const deleteButton = document.querySelector('data-delete')
     const allClearButton = document.querySelector('data-all-clear')
     const previusOperandTextElement = document.querySelector('data-previous-operand')
-    const currentOperandTextElement = document.querySelector('data-current-operand')
-
-
-console.log(/*About The Project
-This is an open suorce project by CupOfCoffeBruh kinda :)  Fully made in plain HTML,CSS,JS
-The idea from Blueedgetechno so i try to copy win11*/);
-
-
-
-
-
-
-
-/*Brightness controller*/
-/*rangeinput = document.getElementsByClassName("range");
-main = document.getElementsByClassName("main");
-rangeinput.addEventListener("change", () => {
-main.style.filter = "brightness(" + rangeinput.value + "%)";
-});*/
+    const currentOperandTextElement = document.querySelector('data-current-operand');
 
 
 </script>
