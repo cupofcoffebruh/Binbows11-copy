@@ -408,6 +408,7 @@
               slideValue.textContent = value;
               slideValue.style.left = (value/1.5) + "%";
               progressbar.style.width = (value/1.4) + "%";
+              BrightnessOverlay.style.opacity = (value/1) + "%";
               slideValue.classList.add("show");
             });
             inputSlider.onblur = (()=>{
