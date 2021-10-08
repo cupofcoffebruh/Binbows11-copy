@@ -2,6 +2,9 @@
 Re-creation of Binbows 11 ( kinda Its actually  windows 11 as you guess) in HTML CSS JS
 All files are here Ui_icons, Icons, backgrounds
 Win-11prewiew.html,Win-11prewiew.css,And main.js
+
+
+
          ______       ______       ________________   ________________
         /      |     /      |     |                | |                |
        /       |    /       |     |                | |                |
