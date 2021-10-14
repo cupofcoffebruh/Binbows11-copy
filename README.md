@@ -19,9 +19,7 @@ Re-creation of Binbows 11 (Its actually  windows 11as you guess) in HTML CSS JS
               
               
               
-              
-![win11#4](https://user-images.githubusercontent.com/90518786/137381112-cf24d4f8-eb22-4955-a722-d0bfd60d1833.PNG)
-![win11#3](https://user-images.githubusercontent.com/90518786/137381120-1afe0540-dc6a-4e2a-b408-538bd79ce881.PNG)
-![win11#1](https://user-images.githubusercontent.com/90518786/137381139-5e9ab4ad-bb6f-4666-bbfb-cab390280288.PNG)
-![win11#2](https://user-images.githubusercontent.com/90518786/137381153-c8f5e1a3-1e5b-4b82-9e51-83e274369183.PNG)
-![win11#1](https://user-images.githubusercontent.com/90518786/137381171-acd3d861-490d-41a6-ac08-9ec4f7f3f88f.PNG)
+![zuioolzt8o8zoik](https://user-images.githubusercontent.com/90518786/136603508-faa14a36-285d-4e54-9ec1-c51497cbc624.PNG)
+![fhgrh](https://user-images.githubusercontent.com/90518786/136603685-e127397f-34e1-4e03-b623-973aa9ca0b01.PNG)
+![thhijhiojrtio](https://user-images.githubusercontent.com/90518786/136603883-2e0cc1c9-049f-40af-85b8-6d4f2cfb5b4f.PNG)
+![thhijhiojrtio](https://user-images.githubusercontent.com/90518786/136604064-faae1065-5894-4c4e-8e05-a193df7ab0ac.PNG)
