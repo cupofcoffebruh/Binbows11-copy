@@ -143,9 +143,6 @@
       
       clock.onclick = function(){
         calendar.classList.toggle("active")
-        clock.classList.toggle("active")
-      
-      
       }
       //startmenu//
       
@@ -156,8 +153,8 @@
       
       icon.onclick = function(){
         startmenu.classList.toggle("active")
-      
       }
+
       //Widgets panel//
       let Widgets_panel = document.querySelector(".widgets-container");
       let icon3 = document.querySelector("#icon3")
@@ -336,6 +333,47 @@
         xdk.classList.toggle("SmallScreen");
         Numbergrid.classList.toggle("SmallScreen");
       } 
+
+
+
+
+      let pinned_app_container = document.querySelector(".pinned-app-container");
+      let all_apps_button = document.querySelector(".allappsbutton");
+      let used_apps = document.querySelector(".used-apps-container");
+      let search_bar = document.querySelector(".Search-Bar");
+      let start_menu_header = document.querySelector(".startmenu_header");
+      let backbutton = document.querySelector(".back-button");
+      let recommended = document.querySelector(".recommended");
+      let all_apps_text = document.querySelector(".all_apps");
+      let all_apps_container = document.querySelector(".all_apps_container");
+     /* let  = document.querySelector("");
+      let  = document.querySelector("");
+      let  = document.querySelector("");*/
+      ;
+      
+      
+      
+      all_apps_button.onclick = function(){
+        pinned_app_container.classList.toggle("all_apps_state");
+        used_apps.classList.toggle("all_apps_state");
+        search_bar.classList.toggle("all_apps_state");
+        start_menu_header.classList.toggle("all_apps_state");
+        backbutton.classList.toggle("all_apps_state");
+        recommended.classList.toggle("all_apps_state"); 
+        all_apps_text.classList.toggle("all_apps_state");
+        all_apps_container.classList.toggle("all_apps_state");
+      } 
+
+      backbutton.onclick = function(){
+        pinned_app_container.classList.toggle("all_apps_state");
+        used_apps.classList.toggle("all_apps_state");
+        search_bar.classList.toggle("all_apps_state");
+        start_menu_header.classList.toggle("all_apps_state");
+        backbutton.classList.toggle("all_apps_state");
+        recommended.classList.toggle("all_apps_state");
+        all_apps_text.classList.toggle("all_apps_state");
+        all_apps_container.classList.toggle("all_apps_state");
+      }
       
       
       let window2 = document.querySelector(".Window SmallScreen");
@@ -380,26 +418,13 @@
       
       
       //Search-Bar//
-      let input = document.querySelector(".Search-Bar1 input");
-      
-      ;
-      
-      
-      
-      input.onclick = function(){
-       input.classList.toggle("Active-search")
-      
-       
-      } 
-      
-      
-      
-      
+     
       
           
       
       
       //Volume slider//
+      const BrightnessOverlay = document.querySelector(".Brightness-Overlay");
       const progressbar = document.querySelector(".progressbar");
       const slideValue = document.querySelector(".sliderValue span");
             const inputSlider = document.querySelector(".field input");
@@ -454,14 +479,3 @@
       console.log('');
           //Calculator//
       
-      class Calculator {
-        
-      }
-      
-          const numberButtons = document.querySelectorAll('{data-number}')
-          const operationButtons = document.querySelectorAll('{˙data-operation}')
-          const equalsButton = document.querySelector('{data-equals}')
-          const deleteButton = document.querySelector('data-delete')
-          const allClearButton = document.querySelector('data-all-clear')
-          const previusOperandTextElement = document.querySelector('data-previous-operand')
-          const currentOperandTextElement = document.querySelector('data-current-operand');
