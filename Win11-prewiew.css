@@ -1346,7 +1346,8 @@ transform: translateX(-4px);
       width: 350px;
       height: 449px;
       border-radius: 6px 6px 6px 6px;
-     transform: translateY(54%);
+      transform: translateY(54%);
+      /*transform: rotate(98deg);*/
      box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
       
     
@@ -1729,14 +1730,14 @@ top: 27%;
     position: absolute;
     right: 170px;
     top:60px;
-    z-index: 99;
+    z-index: -99;
     font-weight: 600;
     font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   .Show-Number{
     font-size: 76px;
-    z-index: 999;
+    z-index: -999;
     position: absolute;
     top:60px;
     right: 250px;
@@ -2227,12 +2228,15 @@ line-height: 23px;
  position: absolute;
  right: 5px;
  padding:5px;
+ top:17px;
  border-radius: 6px;
  box-shadow: 0 0 13px 0px rgb(0 0 0 / 10%);
  opacity: 0;
  transition: 0.2s;
  transform: scale(0.2);
  pointer-events: none;
+ z-index: 99999999;
+ transition-delay: 0.6s;
  }
 .square{
   position: absolute;
@@ -2247,7 +2251,10 @@ line-height: 23px;
 .close-section:hover .multi_task_box{
   opacity: 1;
   transform: scale(1);
+  pointer-events: auto;
 }
+
+
  .multi_task_box_column{
    width: 82px;
    height: 56px;
@@ -2476,3 +2483,17 @@ border:1px solid darkgrey;
           background: rgb(230, 228, 228);
           border:1px solid darkgrey;
            }
+
+           .Window.SmallScreen .Number-vals{
+             opacity: 0;
+
+           }
+           .Window.SmallScreen .history{
+            opacity: 0;
+            pointer-events: none;
+          }
+          .Window.SmallScreen .Show-Number{
+           right: 32px;
+           font-size: 31px;
+           top: 50px;
+          }
