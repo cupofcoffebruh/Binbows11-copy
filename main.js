@@ -386,14 +386,15 @@
       
       
       close1.onclick = function(){
+        Window.classList.toggle("Active");
+        line.classList.remove("notactive");
+        line.classList.remove("active");
+      }
+    /*  close1.onclick = function(){
+        line123.classList.toggle("transparent");
         window1.classList.toggle("Display-None");
-        window2.classList.toggle("Display-None");
-      }
-      close1.onclick = function(){
-       /* line123.classList.toggle("transparent");
-        window1.classList.toggle("Display-None");*/
          window2.classList.toggle("Display-None");
-      }
+      }*/
       
       //To TaskBar//
       let line = document.querySelector(".line");
@@ -405,14 +406,13 @@
       
       
       totaskbar.onclick = function(){
-        /*window1.classList.toggle("Totaskbar")*/
+      Window.classList.toggle("Active");
         line.classList.toggle("notactive");
-        line.classList.toggle("active");
+        line.classList.add("active");
       } 
       icon7.onclick = function(){
-      /*window1.classList.toggle("Totaskbar");*/
         line.classList.toggle("notactive");
-        line.classList.toggle("active");
+        line.classList.add("active");
         Window.classList.toggle("Active");
       }
       
@@ -457,7 +457,7 @@
               slideValue1.classList.remove("show");
             });
            // Draggebla Window//
-         /* const wrapper = document.querySelector(".Window "),
+         /* const wrapper = document.querySelector(".Window Smallscreen "),
           header = wrapper.querySelector(".Window-header");
           function onDrag({movementX, movementY}){
             let getStyle = window.getComputedStyle(wrapper);
@@ -474,8 +474,33 @@
             header.classList.remove("active");
             header.removeEventListener("mousemove", onDrag);
           });*/
-      
-      
-      console.log('');
-          //Calculator//
-      
+
+/*Multi task fuctions*/
+
+
+let column_left = document.querySelector(".column-left");
+let window_multitask = document.querySelector(".Window");
+
+;
+
+
+
+column_left.onclick = function(){
+  window_multitask.classList.toggle("addleft50");
+  window_multitask1.classList.remove("addright50");
+} 
+
+
+/*toright*/
+
+let column_right = document.querySelector(".column-right");
+let window_multitask1 = document.querySelector(".Window");
+
+;
+
+
+
+column_right.onclick = function(){
+  window_multitask1.classList.toggle("addright50");
+  window_multitask.classList.remove("addleft50");
+} 
