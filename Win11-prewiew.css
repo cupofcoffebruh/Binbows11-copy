@@ -1326,12 +1326,13 @@ transform: translateX(-4px);
       /*opacity: 0;
       pointer-events: none;*/
     }
-   
+  
     .Window.Active{
       opacity: 1;
       transform: scale(1);
       pointer-events: all;
     }
+  
     .Window.Display-None{
       transform: scale(0.4);
       opacity: 0;
@@ -2497,3 +2498,12 @@ border:1px solid darkgrey;
            font-size: 31px;
            top: 50px;
           }
+       
+      .Window.addleft50{
+        width: 50%;
+        left: 0px;
+      }
+      .Window.addright50{
+        width: 50%;
+        right: 0px;
+      }
