@@ -946,15 +946,8 @@ cursor: default;
   position: absolute;
   bottom: 54px;
 }
-iframe{
-  height: 96vh;
-  width: 100%;
-  display: none;
- 
-}
-iframe.active{
- display: block;
-}
+
+
 
 .Quick_Settings{
   
@@ -1318,13 +1311,14 @@ transform: translateX(-4px);
       position: absolute;
       display: flex;
       transform: scale(0.6);
-      transition: 0.3s;
+      transition: 0.2s;
       pointer-events: none;
       opacity: 0;
       background-color: #eee;
       /*This is the closed stste so you cant see it*/
       /*opacity: 0;
       pointer-events: none;*/
+      overflow-x: hidden;
     }
   
     .Window.Active{
@@ -1333,11 +1327,11 @@ transform: translateX(-4px);
       pointer-events: all;
     }
   
-    .Window.Display-None{
+   /* .Window.Display-None{
       transform: scale(0.4);
       opacity: 0;
       pointer-events: none;
-    }
+    }*/
    .Window.Totaskbar{
       transform: scale(0.4);
       opacity: 0;
@@ -1353,9 +1347,9 @@ transform: translateX(-4px);
       
     
     }
-    .Window.SmallScreen.fhgfdudh{
+    /*.Window.SmallScreen.fhgfdudh{
       background:red;
-    }
+    }*/
     .Window.SmallScreen .close-section .bx-x{
       border-radius: 0px 6px 0px 0px;
     }
@@ -1676,6 +1670,7 @@ transform: translateX(-4px);
     font-weight: 600;
    line-height: 11vh;
    overflow-y:hidden ;
+   z-index: 99;
   }
   
  
@@ -2236,7 +2231,7 @@ line-height: 23px;
  transition: 0.2s;
  transform: scale(0.2);
  pointer-events: none;
- z-index: 99999999;
+ z-index: 9999999999999999999;
  transition-delay: 0.6s;
  }
 .square{
@@ -2272,6 +2267,7 @@ width: 34px;
 border-radius: 5px 0px 0px 5px;
 background: rgb(230, 228, 228);
 border:1px solid darkgrey;
+transition: var(--transition);
  }
  .column-left:hover{
    background:#3787ff;
@@ -2286,6 +2282,7 @@ border:1px solid darkgrey;
   border-radius: 0px 5px 5px 0px;
 background: rgb(230, 228, 228);
 border:1px solid darkgrey;
+transition: var(--transition);
  }
 /*second*/
  .column-left1{
@@ -2295,6 +2292,7 @@ border:1px solid darkgrey;
   border-radius: 5px 0px 0px 5px;
   background: rgb(230, 228, 228);
   border:1px solid darkgrey;
+  transition: var(--transition);
    }
    .column-left1:hover{
      background:#3787ff;
@@ -2309,6 +2307,7 @@ border:1px solid darkgrey;
     border-radius: 0px 5px 5px 0px;
   background: rgb(230, 228, 228);
   border:1px solid darkgrey;
+  transition: var(--transition);
    }
 /*third*/
    .column-left2{
@@ -2318,6 +2317,7 @@ border:1px solid darkgrey;
     border-radius: 5px 0px 0px 5px;
     background: rgb(230, 228, 228);
     border:1px solid darkgrey;
+    transition: var(--transition);
      }
      .column-left2:hover{
        background:#3787ff;
@@ -2336,6 +2336,7 @@ border:1px solid darkgrey;
       width: 20.6px;
     background: rgb(230, 228, 228);
     border:1px solid darkgrey;
+    transition: var(--transition);
      }
      .column-right2{
       margin: 1.6px;
@@ -2344,6 +2345,7 @@ border:1px solid darkgrey;
       border-radius: 0px 5px 5px 0px;
     background: rgb(230, 228, 228);
     border:1px solid darkgrey;
+    transition: var(--transition);
      }
 
      /*fourth*/
@@ -2354,6 +2356,7 @@ border:1px solid darkgrey;
       border-radius: 5px 0px 0px 5px;
       background: rgb(230, 228, 228);
       border:1px solid darkgrey;
+      transition: var(--transition);
        }
        .column-left3:hover{
          background:#3787ff;
@@ -2371,6 +2374,7 @@ border:1px solid darkgrey;
         border-radius: 0px 5px 0px 0px;
       background: rgb(230, 228, 228);
       border:1px solid darkgrey;
+      transition: var(--transition);
        }
        .column-right3-bottom{
         margin: 1.6px;
@@ -2382,6 +2386,7 @@ border:1px solid darkgrey;
       position: absolute;
       left:44.5px;
       top: 98.8px;
+      transition: var(--transition);
        }
 
        /*fifth*/
@@ -2392,6 +2397,7 @@ border:1px solid darkgrey;
         border-radius: 5px 0px 0px 5px;
         background: rgb(230, 228, 228);
         border:1px solid darkgrey;
+        transition: var(--transition);
          }
          .column-left3:hover{
            background:#3787ff;
@@ -2410,6 +2416,7 @@ border:1px solid darkgrey;
           border-radius: 5px 0px 0px 0px;
         background: rgb(230, 228, 228);
         border:1px solid darkgrey;
+        transition: var(--transition);
          }
          .column-left4-bottom{
           margin: 1.8px;
@@ -2418,6 +2425,7 @@ border:1px solid darkgrey;
           border-radius: 0px 5px 0px 0px;
         background: rgb(230, 228, 228);
         border:1px solid darkgrey;
+        transition: var(--transition);
          }
          .column-right4-top{
           margin: 1.8px;
@@ -2426,6 +2434,7 @@ border:1px solid darkgrey;
           border-radius: 0px 0px 0px 5px;
         background: rgb(230, 228, 228);
         border:1px solid darkgrey;
+        transition: var(--transition);
          }
          .column-right4-bottom{
           margin: 1.8px;
@@ -2434,6 +2443,7 @@ border:1px solid darkgrey;
           border-radius: 0px 0px 5px 0px;
         background: rgb(230, 228, 228);
         border:1px solid darkgrey;
+        transition: var(--transition);
          }
 
          .column-left4-top:hover{
@@ -2457,6 +2467,7 @@ border:1px solid darkgrey;
           border-radius: 5px 0px 0px 5px;
           background: rgb(230, 228, 228);
           border:1px solid darkgrey;
+          transition: var(--transition);
            }
            .column-left5:hover{
              background:#3787ff;
@@ -2475,6 +2486,7 @@ border:1px solid darkgrey;
             width: 28px;
           background: rgb(230, 228, 228);
           border:1px solid darkgrey;
+          transition: var(--transition);
            }
            .column-right5{
             margin: 1.6px;
@@ -2483,6 +2495,7 @@ border:1px solid darkgrey;
             border-radius: 0px 5px 5px 0px;
           background: rgb(230, 228, 228);
           border:1px solid darkgrey;
+          transition: var(--transition);
            }
 
            .Window.SmallScreen .Number-vals{
@@ -2501,9 +2514,117 @@ border:1px solid darkgrey;
        
       .Window.addleft50{
         width: 50%;
-        left: 0px;
+        transform: translateX(0%);
       }
-      .Window.addright50{
+     .Window.addright50{
         width: 50%;
-        right: 0px;
+        transform: translateX(100%);
       }
+      iframe{
+        width: 100%;
+        z-index: 99;
+        top: 25px;
+        position: absolute;
+        height: calc(100% - 27px);
+
+      }
+.Window.addright25{
+  width: 25%;
+    transform: translateX(300% );
+    
+}
+      .Window.addleft75{
+        width: 75%;
+        transform: translateX(0%);
+      }
+      .Window.addright33{
+        width: 33.33333333333%;
+        transform: translateX(0%);
+      }
+      .Window.addcenter33{
+        width: 33.33333333333%;
+        transform: translateX(100%);
+      }
+      .Window.addleft33{
+        width: 33.33333333333%;
+        transform: translateX(200%);
+      }
+      .Window.addleft50trio{
+        width: 50%;
+        transform: translateX(0%);
+      }
+      .Window.addright_top50{
+        height: 50%;
+        width: 50%;
+        transform: translateX(100%);
+      }
+     .Number-grid.addright_top{
+      
+       height: 26%;
+       padding-right: 0px;
+       transform: translateY(65px);
+       width:113%;
+     }
+    
+     .Number-grid.addright_top p{
+       line-height:45px;
+     }
+     .Number-vals.addright_top{
+     transform: translateY(65px);
+     }
+     
+     .Show-Number.addright_top{
+       right:22px;
+     }
+     .history.addright_top{
+       opacity: 0;
+
+     }
+     :root{
+      --transition:0.11111111s;
+     }      
+     .Window.addright_bottom{
+       transform:
+       translateX(100%) translateY(91.6%);
+       height: 50%;
+       width: 50%;
+     }
+     .Window.addleft_top{
+       height: 50%;
+       width: 50%;
+     }
+    /* .Window.addright123_top{
+       width: 50%;
+       height: 50%;
+       transform: translateX(100%);
+     }*/
+ .Window.addsomething{
+   width: 50%;
+   height: 50%;
+   transform: translateX(100%);
+ }
+     .Window.addrighttop{
+       width: 50%;
+       height: 50%;
+
+     }
+     .Window.left-bottom{
+      width: 50%;
+      height: 50%;
+      transform: translateY(91.6%);
+     }
+     .Window.right4-bottom{
+       height: 50%;
+       width: 50%;
+       transform:
+       translateX(100%) translateY(91.6%);
+     }
+.Window.asdw{
+  width: 25%;
+  height: 96%;
+transform: translateX(0%);
+}
+
+.Number-vals .addleft25{
+  top:0px;
+}
