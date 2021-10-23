@@ -251,20 +251,8 @@
       
       
       
-      
-      
-      //Microsoft Edge//
-      let iframe = document.querySelector("iframe");
-      
-      ;
-      
-      
-      
-      icon6.onclick = function(){
-        iframe.classList.toggle("active")
-        
-      
-      }
+     
+     
       
       
       
@@ -389,7 +377,19 @@
         Window.classList.toggle("Active");
         line.classList.remove("notactive");
         line.classList.remove("active");
+
       }
+
+     let windowsmallscreen = document.querySelector(".Window SmallScreen");
+
+      let iconcalc = document.querySelector("#icon7");
+
+      /*if ( windowsmallscreen.classList.contains("SmallScreen")){
+        iconcalc.onclick = function(){
+          windowsmallscreen.classList.remove("SmallScreen");
+          }
+      }*/
+    
     /*  close1.onclick = function(){
         line123.classList.toggle("transparent");
         window1.classList.toggle("Display-None");
@@ -486,9 +486,27 @@ let window_multitask = document.querySelector(".Window");
 
 
 column_left.onclick = function(){
-  window_multitask.classList.toggle("addleft50");
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask.classList.add("addleft50");
   window_multitask1.classList.remove("addright50");
-} 
+  window_multitask2.classList.remove("addleft75");
+  window_multitask3.classList.remove("addright25");
+  window_multitask4.classList.remove("addright33");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+
+}
 
 
 /*toright*/
@@ -501,6 +519,438 @@ let window_multitask1 = document.querySelector(".Window");
 
 
 column_right.onclick = function(){
-  window_multitask1.classList.toggle("addright50");
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask1.classList.add("addright50");
   window_multitask.classList.remove("addleft50");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask3.classList.remove("addright25");
+  window_multitask4.classList.remove("addright33");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+/*toleft75*/
+
+let column_left1 = document.querySelector(".column-left1");
+let window_multitask2 = document.querySelector(".Window");
+
+;
+
+
+
+column_left1.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask2.classList.add("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask3.classList.remove("addright25");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+/*toright25*/
+
+let column_right1 = document.querySelector(".column-right1");
+let window_multitask3 = document.querySelector(".Window");
+
+;
+
+
+
+column_right1.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.add("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+/*toleft33%*/
+let column_left2 = document.querySelector(".column-left2");
+let window_multitask4 = document.querySelector(".Window");
+
+;
+
+
+
+column_left2.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.add("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+/*tocenter33*/
+let column_left2_center_item = document.querySelector(".column-left2_center_item");
+let window_multitask5 = document.querySelector(".Window");
+
+;
+
+
+
+column_left2_center_item.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.add("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+/*toleft33*/
+let column_right2 = document.querySelector(".column-right2");
+let window_multitask6 = document.querySelector(".Window");
+
+;
+
+
+
+column_right2.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.add("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+
+/*tri position columns*/
+let column_left3 = document.querySelector(".column-left3");
+let window_multitask7 = document.querySelector(".Window");
+
+;
+
+
+
+column_left3.onclick = function(){
+  show_number.classList.add("addright_top");
+  history.classList.add("addright_top");
+  number_vals.classList.remove("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.add("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+/*trio top column*/
+let column_right3_top = document.querySelector(".column-right3-top");
+let window_multitask8 = document.querySelector(".Window");
+let number_column_addright_top50 = document.querySelector(".Number-grid");
+let number_vals = document.querySelector(".Number-vals");
+let show_number = document.querySelector(".Show-Number");
+let history = document.querySelector(".history");
+;
+
+
+
+column_right3_top.onclick = function(){
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.add("addright_top50");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+/*leftbottom*/
+let column_right3_bottom = document.querySelector(".column-right3-bottom");
+let window_multitask9 = document.querySelector(".Window");
+
+;
+
+
+
+column_right3_bottom.onclick = function(){
+  window_multitask9.classList.add("addright_bottom");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+
+} 
+/*left4 top*/
+let column_left4_top = document.querySelector(".column-left4-top");
+let window_multitask10 = document.querySelector(".Window");
+
+;
+
+
+
+column_left4_top.onclick = function(){
+  window_multitask10.classList.add("addleft_top");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+/*top right*/
+
+let column_left4_bottom = document.querySelector(".column-left4-bottom");
+let window_multitask12 = document.querySelector(".Window");
+
+;
+
+
+
+column_left4_bottom.onclick = function(){
+  window_multitask12.classList.add("addsomething");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+   window_multitask15.classList.remove("asdw");
+   
+} 
+
+
+/*bottom_left*/
+let column_right4_top = document.querySelector(".column-right4-top");
+let window_multitask13 = document.querySelector(".Window");
+
+;
+
+
+
+column_right4_top.onclick = function(){
+  window_multitask13.classList.add("left-bottom");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+} 
+
+
+
+
+
+let column_right4_bottom = document.querySelector(".column-right4-bottom");
+let window_multitask14 = document.querySelector(".Window");
+
+;
+
+
+
+column_right4_bottom.onclick = function(){
+  window_multitask14.classList.add("right4-bottom");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_vals.classList.add("addright_top");
+  number_column_addright_top50.classList.add("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask15.classList.remove("asdw");
+  
+} 
+
+
+let column_left5 = document.querySelector(".column-left5");
+let window_multitask15 = document.querySelector(".Window");
+let number_vals1 = document.querySelector(".Number-vals");
+;
+
+
+
+column_left5.onclick = function(){
+  window_multitask15.classList.add("asdw");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right-bottom");
 } 
