@@ -56,9 +56,77 @@
 
 </div>
   <div class="NightLightOverlay">
-
   </div>
    <main>
+     <div class="to_center">
+    <div class="Search_box_container">
+      <input type="text" placeholder="Search something ...">
+      <img id="search_icon"  src="/Users/Dell/Documents/search_menu_search.png">
+    <div class="search_navigation_header">
+      <div id="option_selected" class="search_navigation_header_option">
+        <p>All</p>
+      </div>
+      <div id="option1" class="search_navigation_header_option">
+        <p>Apps</p>
+      </div>
+      <div id="option2" class="search_navigation_header_option">
+        <p>Documents</p>
+      </div>
+      <div id="option3" class="search_navigation_header_option">
+        <p>Web</p>
+      </div>
+      <div id="option4" class="search_navigation_header_option">
+        <p>More</p>
+      </div>
+    </div>
+
+    <div class="top_apps">
+      <p>Top apps</p>
+    </div>
+    <div class="flex_grid_top_apps">
+      <div class="top_app_column">
+      <img class="top_app_img" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/explorer.png">
+     <p>File explorer</p>
+      </div>
+      <div class="top_app_column">
+        <img class="top_app_img" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/terminal.png">
+        <p>Terminal</p>
+      </div>
+      <div class="top_app_column">
+        <img class="top_app_img" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/edge.png">
+        <p>Edge</p>
+      </div>
+      <div class="top_app_column">
+        <img class="top_app_img" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photos.png">
+        <p>Photos</p>
+      </div>
+      <div class="top_app_column">
+        <img class="top_app_img" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/access.png">
+        <p>Aceess</p>
+      </div>
+    </div>
+    <div class="recent"><p>Recent</p></div>
+
+    <div class="recent_box">
+      <div class="recent_box_item">
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/terminal.png">
+     <p>Terminal</p>
+    </div>
+    <div class="recent_box_item">
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calendar.png">
+      <p>Calendar</p>
+     </div>
+     <div class="recent_box_item">
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/code.png">
+      <p>VScode</p>
+     </div>
+     <div class="recent_box_item">
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/camera.png">
+      <p>Camera</p>
+     </div>
+     </div>
+  </div>
+  </div>
 
 <div class="widgets-container">
   <div class="clock1">
@@ -153,6 +221,8 @@
   <!-- <iframe src="https://www.bing.com"></iframe>-->
   <!-- <iframe src=" https://www.google.com/webhp?igu=1"></iframe>-->
 <!-- <iframe src="https://www.wikipedia.org"></iframe>-->
+<!--<iframe src="https://vscode.dev/"></iframe>-->
+<!--<iframe src="https://venge.io"></iframe>-->
  
       <div data-current-operand class="Preavius-Number"><p></p></div>
         <div data-previous-operand class="Show-Number">0
@@ -252,7 +322,9 @@
           <img class=" bx-minus" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/minimize.png">
           <!--<img class="bx-minus" src="/Users/Dell/Documents/minimize.png">-->
           <!--<i class='bx bx-square bx-flip-horizontal' ></i>--> 
-        <img class=" bx-square" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png">
+          <img class="bx-square"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png">
+         
+    
         <div class="multi_task_box">
             <div class="multi_task_box_column">
               <div class="column-left"></div>
@@ -304,10 +376,9 @@
     <a href="https://github.com/cupofcoffebruh/Binbows11-copy" target="_blank" ><img id="User-details" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/github.png"></a>
   <p>Github</p>
   </div>
-  <!--<div class="Desktop-App">
-    <img id="icon7" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png">
-  <p>Calculator</p>
-  </div>-->
+  
+  
+
 </div>
     <div id="context-menu">
       <div class="item">
@@ -422,8 +493,13 @@
    </div>
    <div class="all_apps_container">
      <div class="all_apps_item">
-       <span class="all_apps_letter">A</span>
-     </div>
+       <span class="all_apps_letter">A</span></div>
+     <div class="all_apps_item">
+      <!-- thats if its a letter !
+      <span class="all_apps_letter"></span>-->
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/access.png">
+      <div class="app-name"> <p>Aceess</p></div>
+    </div>
      <div class="all_apps_item">
       <!-- thats if its a letter !
       <span class="all_apps_letter"></span>-->
@@ -433,7 +509,7 @@
     <div class="all_apps_item">
       <span class="all_apps_letter">C</span>
     </div>
-    <div class="all_apps_item">
+    <div id="calc_open_all_apps" class="all_apps_item">
       <!-- thats if its a letter !
       <span class="all_apps_letter"></span>-->
       <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png">
@@ -622,8 +698,20 @@
     <div class="all_apps_item">
       <!-- thats if its a letter !
       <span class="all_apps_letter"></span>-->
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/paint3d.png">
+      <div class="app-name"> <p>Paint 3d</p></div>
+    </div>
+    <div class="all_apps_item">
+      <!-- thats if its a letter !
+      <span class="all_apps_letter"></span>-->
       <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/people.png">
       <div class="app-name"> <p>People</p></div>
+    </div>
+    <div class="all_apps_item">
+      <!-- thats if its a letter !
+      <span class="all_apps_letter"></span>-->
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photopea (1).png">
+      <div class="app-name"> <p>Photopea</p></div>
     </div>
     <div class="all_apps_item">
       <!-- thats if its a letter !
@@ -631,12 +719,7 @@
       <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photos.png">
       <div class="app-name"> <p>Photos</p></div>
     </div>
-    <div class="all_apps_item">
-      <!-- thats if its a letter !
-      <span class="all_apps_letter"></span>-->
-      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photopea.png">
-      <div class="app-name"> <p>Photopea</p></div>
-    </div>
+    
     <div class="all_apps_item">
       <!-- thats if its a letter !
       <span class="all_apps_letter"></span>-->
@@ -696,6 +779,12 @@
     <div class="all_apps_item">
       <!-- thats if its a letter !
       <span class="all_apps_letter"></span>-->
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/soltaire.png">
+      <div class="app-name"> <p>Soltaire</p></div>
+    </div>
+    <div class="all_apps_item">
+      <!-- thats if its a letter !
+      <span class="all_apps_letter"></span>-->
       <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/spotify.png">
       <div class="app-name"> <p>Spotify</p></div>
     </div>
@@ -746,6 +835,12 @@
     </div>
     <div class="all_apps_item">
       <span class="all_apps_letter">V</span>
+    </div>
+    <div class="all_apps_item">
+      <!-- thats if its a letter !
+      <span class="all_apps_letter"></span>-->
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/visio.png">
+      <div class="app-name"> <p>Visio</p></div>
     </div>
     <div class="all_apps_item">
       <!-- thats if its a letter !
@@ -839,31 +934,31 @@
 </div>
 <div class="used-apps-container">
 <div class="used_apps">
-  <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/spotify.png">
-  
-    <h1>Spotify</h1>
+  <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/getstarted.png">
+
+    <h1>Get Started</h1>
     
-    <p> 2h ago</p>
+    <p>Welcome to Binbows</p>
   </div>
   
 <div class="used_apps">
-  <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/teams.png">
+  <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/image.png">
   
-    <h1>Teams</h1>
+    <h1>windows_logo.png</h1>
     
     <p> 1h ago</p>
   </div>
   <div class="used_apps">
-    <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/edge.png">
+    <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/folder.png">
     
-      <h1>Edge</h1>
+      <h1>New folder</h1>
       
       <p> 4.5h ago </p>
     </div>
     <div class="used_apps">
-      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/terminal.png">
+      <img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/audio_file.png">
       
-        <h1>Terminal</h1>
+        <h1>cringe_tiktok_songs.mp3</h1>
         
         <p>13m ago </p>
       </div>
@@ -897,7 +992,7 @@
    <div class="p-apps">  <div class="notification-circle"></div><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/edge.png">
     <p> Edge</p>
   </div>
-  <div class="p-apps"><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photopea.png">
+  <div class="p-apps"><div class="notification-circle5"></div><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/photopea (1).png">
     <p> Photopea</p>
   </div>
   <div class="p-apps"><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calendar.png">
@@ -918,7 +1013,7 @@
   <div class="p-apps"><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/netflix.png">
     <p> Netflix</p>
   </div>
-  <div class="p-apps"><div class="notification-circle4"></div><img  src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png">
+  <div class="p-apps"><div class="notification-circle4"></div><img id="calc_open_pinned"  src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png">
     <p> Calculator</p>
   </div>
   <div class="p-apps"><img src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/powerpoint.png">
@@ -964,11 +1059,14 @@
        <li><span class="tooltip">Search</span><img id="icon2"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/search.png"></li>
        <li><span class="tooltip">Virtual Desktops</span><img id="iconVirtualDesktops"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/set-different-wallpaper-different-desktops.png"></li>
        <li><span class="tooltip">Widgets</span><img id="icon3"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/widget.png"></li>
-       <li><span class="tooltip">Microsoft Teams</span><img id="iconteams"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/microsoft%20teams.png"></li>
+       <li><span class="tooltip"> Teams</span><img id="iconteams"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/microsoft%20teams.png"></li>
        <li><span class="tooltip">File Explorer</span><img id="icon4"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/explorer.png"></li>
        <li><span class="tooltip">Settings</span><img id="icon5"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/settings.png"></li>
-       <li><span class="tooltip">Microsoft Edge</span><img id="icon6"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/edge.png"></li>
-       <li><span class="line"></span><span class="tooltip">Microsoft Store</span><img class="icon7" id="icon7"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png"></li>
+       <li><span class="tooltip"> Edge</span><img id="icon6"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/edge.png"></li>
+       <li><span class="line"></span><span class="tooltip">Calulator</span><img class="icon7" id="icon7"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/calculator.png"></li>
+       
+
+
      
     </ul>
     <div class="Quick-Settings-Container">
