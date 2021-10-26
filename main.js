@@ -147,13 +147,29 @@
       //startmenu//
       
       let startmenu = document.querySelector(".startmenu");
+      let Windowsomething = document.querySelector(".Window");
       ;
       
       
       
       icon.onclick = function(){
-        startmenu.classList.toggle("active")
+        startmenu.classList.toggle("active");
+        search_menu.classList.remove("opened");
+        pinned_app_container.classList.remove("all_apps_state");
+        used_apps.classList.remove("all_apps_state");
+        search_bar.classList.remove("all_apps_state");
+        start_menu_header.classList.remove("all_apps_state");
+        backbutton.classList.remove("all_apps_state");
+        recommended.classList.remove("all_apps_state"); 
+        all_apps_text.classList.remove("all_apps_state");
+        all_apps_container.classList.remove("all_apps_state");
+
+
       }
+      Windowsomething.onclick = function(){
+        startmenu.classList.remove("active");
+      }
+     
 
       //Widgets panel//
       let Widgets_panel = document.querySelector(".widgets-container");
@@ -172,7 +188,7 @@
       
       //QuickSettings//
       let QuickSettings = document.querySelector(".Quick_Settings");
-      let  xd  = document.querySelector(".Quick-Settings-Container")
+      let  xd  = document.querySelector(".Quick-Settings-Container");
       ;
       
       
@@ -319,7 +335,25 @@
         Window_header.classList.toggle("SmallScreen");
         Window.classList.toggle("SmallScreen");
         xdk.classList.toggle("SmallScreen");
-        Numbergrid.classList.toggle("SmallScreen");
+       Numbergrid.classList.toggle("SmallScreen");
+       number_column_addright_top50.classList.remove("addright_top");
+        window_multitask8.classList.remove("addright_top50");
+        window_multitask7.classList.remove("addleft50trio");
+        window_multitask6.classList.remove("addleft33");
+        window_multitask5.classList.remove("addcenter33");
+        window_multitask.classList.remove("addleft50");
+        window_multitask1.classList.remove("addright50");
+        window_multitask2.classList.remove("addleft75");
+        window_multitask3.classList.remove("addright25");
+        window_multitask4.classList.remove("addright33");
+        window_multitask9.classList.remove("addright_bottom");
+        window_multitask10.classList.remove("addleft_top");
+        window_multitask12.classList.remove("addsomething");
+        window_multitask13.classList.remove("left-bottom");
+        window_multitask14.classList.remove("right4-bottom");
+        window_multitask15.classList.remove("asdw");
+        window_multitask16.classList.remove("center50");
+        window_multitask17.classList.remove("right25");
       } 
 
 
@@ -399,6 +433,7 @@
       //To TaskBar//
       let line = document.querySelector(".line");
       let icon7 = document.querySelector("#icon7");
+      let calc_open = document.querySelector("#calc_open")
       let totaskbar = document.querySelector(".bx-minus");
       let  widow1234 = document.querySelector(".Window Active");
       ;
@@ -409,14 +444,67 @@
       Window.classList.toggle("Active");
         line.classList.toggle("notactive");
         line.classList.add("active");
+        
       } 
+      
       icon7.onclick = function(){
         line.classList.toggle("notactive");
         line.classList.add("active");
         Window.classList.toggle("Active");
+        Window.classList.remove("SmallScreen");
+        Numbergrid.classList.remove("SmallScreen");
+        window_multitask8.classList.remove("addright_top50");
+        window_multitask7.classList.remove("addleft50trio");
+        window_multitask6.classList.remove("addleft33");
+        window_multitask5.classList.remove("addcenter33");
+        window_multitask.classList.remove("addleft50");
+        window_multitask1.classList.remove("addright50");
+        window_multitask2.classList.remove("addleft75");
+        window_multitask3.classList.remove("addright25");
+        window_multitask4.classList.remove("addright33");
+        window_multitask9.classList.remove("addright_bottom");
+        window_multitask10.classList.remove("addleft_top");
+        window_multitask12.classList.remove("addsomething");
+        window_multitask13.classList.remove("left-bottom");
+        window_multitask14.classList.remove("right4-bottom");
+        window_multitask15.classList.remove("asdw");
+        window_multitask16.classList.remove("center50");
+        window_multitask17.classList.remove("right25");
+        show_number.classList.remove("addright_top");
+        history.classList.remove("addright_top");
+        number_vals.classList.remove("addright_top");
+        number_column_addright_top50.classList.remove("addright_top");
+
       }
-      
-      
+      calc_open_pinned.onclick = function(){
+       line.classList.add("notactive");
+        line.classList.add("active");
+        Window.classList.add("Active");
+        startmenu.classList.remove("active");
+        Window.classList.remove("SmallScreen");
+        Numbergrid.classList.remove("SmallScreen");
+      }
+
+      calc_open_all_apps.onclick = function(){
+        line.classList.add("notactive");
+        line.classList.add("active");
+        Window.classList.add("Active");
+        Window.classList.remove("SmallScreen");
+        Numbergrid.classList.remove("SmallScreen");
+        startmenu.classList.remove("active");
+        pinned_app_container.classList.remove("all_apps_state");
+        used_apps.classList.remove("all_apps_state");
+        search_bar.classList.remove("all_apps_state");
+        start_menu_header.classList.toggle("all_apps_state");
+        backbutton.classList.remove("all_apps_state");
+        recommended.classList.remove("all_apps_state"); 
+        all_apps_text.classList.remove("all_apps_state");
+        all_apps_container.classList.remove("all_apps_state");
+      }
+
+
+     
+    
       //Search-Bar//
      
       
@@ -505,7 +593,9 @@ column_left.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 }
 
 
@@ -538,7 +628,9 @@ column_right.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -571,7 +663,9 @@ column_left1.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 /*toright25*/
@@ -603,7 +697,9 @@ column_right1.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 /*toleft33%*/
@@ -634,7 +730,9 @@ column_left2.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 /*tocenter33*/
@@ -665,7 +763,9 @@ column_left2_center_item.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 /*toleft33*/
@@ -696,7 +796,9 @@ column_right2.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -729,7 +831,9 @@ column_left3.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -763,7 +867,9 @@ column_right3_top.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -795,6 +901,9 @@ column_right3_bottom.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 
 } 
 /*left4 top*/
@@ -825,7 +934,9 @@ column_left4_top.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -858,7 +969,9 @@ column_left4_bottom.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right4-bottom");
    window_multitask15.classList.remove("asdw");
-   
+   window_multitask16.classList.remove("center50");
+   window_multitask17.classList.remove("right25");
+   Window.classList.remove("SmallScreen");
 } 
 
 
@@ -890,6 +1003,9 @@ column_right4_top.onclick = function(){
   window_multitask12.classList.remove("addsomething");
   window_multitask14.classList.remove("right4-bottom");
   window_multitask15.classList.remove("asdw");
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -923,7 +1039,9 @@ column_right4_bottom.onclick = function(){
   window_multitask12.classList.remove("addsomething");
   window_multitask13.classList.remove("left-bottom");
   window_multitask15.classList.remove("asdw");
-  
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
 
 
@@ -953,4 +1071,136 @@ column_left5.onclick = function(){
   window_multitask12.classList.remove("addsomething");
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right-bottom");
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
 } 
+
+
+
+let column_left5_center_item = document.querySelector(".column-left5_center_item");
+let window_multitask16 = document.querySelector(".Window");
+;
+
+
+
+column_left5_center_item.onclick = function(){
+  window_multitask16.classList.add("center50");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right-bottom");
+  window_multitask15.classList.remove("asdw");
+  window_multitask17.classList.remove("right25");
+  Window.classList.remove("SmallScreen");
+}
+let column_right5 = document.querySelector(".column-right5");
+let window_multitask17 = document.querySelector(".Window");
+;
+
+
+
+column_right5.onclick = function(){
+  window_multitask17.classList.add("right25");
+  history.classList.add("addright_top");
+  show_number.classList.add("addright_top");
+  number_column_addright_top50.classList.remove("addright_top");
+  window_multitask8.classList.remove("addright_top50");
+  window_multitask7.classList.remove("addleft50trio");
+  window_multitask6.classList.remove("addleft33");
+  window_multitask5.classList.remove("addcenter33");
+  window_multitask4.classList.remove("addright33");
+  window_multitask3.classList.remove("addright25");
+  window_multitask2.classList.remove("addleft75");
+  window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right-bottom");
+  window_multitask15.classList.remove("asdw");
+  window_multitask16.classList.remove("center");
+  Window.classList.remove("SmallScreen");
+}
+
+
+
+let option_selected = document.querySelector("#option_selected");
+let option1 = document.querySelector("#option1");
+let option2 = document.querySelector("#option2");
+let option3 = document.querySelector("#option3");
+let option4 = document.querySelector("#option4");
+
+option_selected.classList.add("active");
+option_selected.onclick = function(){
+option_selected.classList.add("active");
+option1.classList.remove("selected1");
+  option3.classList.remove("selected3");
+  option2.classList.remove("selected2");
+  option4.classList.remove("selected4");
+}
+option1.onclick = function(){
+  option1.classList.add("selected1");
+  option3.classList.remove("selected3");
+  option2.classList.remove("selected2");
+  option4.classList.remove("selected4");
+  option_selected.classList.remove("active");
+}
+option2.onclick = function(){
+  option2.classList.add("selected2");
+  option3.classList.remove("selected3");
+  option1.classList.remove("selected1");
+  option4.classList.remove("selected4");
+  option_selected.classList.remove("active");
+}
+option3.onclick = function(){
+  option3.classList.add("selected3");
+  option2.classList.remove("selected2");
+  option1.classList.remove("selected1");
+  option4.classList.remove("selected4");
+  option_selected.classList.remove("active");
+
+}
+option4.onclick = function(){
+  option4.classList.add("selected4");
+  option3.classList.remove("selected3");
+  option2.classList.remove("selected2");
+  option1.classList.remove("selected1");
+  option_selected.classList.remove("active");
+
+}
+let start_menu_input = document.querySelector(".startmenu input");
+let search_menu = document.querySelector(".Search_box_container");
+let icon2 = document.querySelector("#icon2");
+
+icon2.onclick = function(){
+  search_menu.classList.toggle("opened");
+  startmenu.classList.remove("active");
+  pinned_app_container.classList.remove("all_apps_state");
+  used_apps.classList.remove("all_apps_state");
+  search_bar.classList.remove("all_apps_state");
+  start_menu_header.classList.remove("all_apps_state");
+  backbutton.classList.remove("all_apps_state");
+  recommended.classList.remove("all_apps_state"); 
+  all_apps_text.classList.remove("all_apps_state");
+  all_apps_container.classList.remove("all_apps_state");
+
+}
+start_menu_input.onclick = function(){
+  startmenu.classList.remove("active");
+  search_menu.classList.add("opened");
+}
