@@ -1,1 +1,44 @@
 
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+   overflow: hidden;
+}
+#video{
+    height: 100vh;
+    width: 100%;
+}
+
+#snap{
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    background: white;
+   /* border: 6px  rgb(185, 185, 185) solid;*/
+    outline: 5px  rgb(185, 185, 185) solid;
+    outline-offset: 3.5px;
+border: 2px  transparent solid;
+    border-radius:100% ;
+    transition: 0.3s;
+    -webkit-appearance: none;
+}
+#snap:active{
+    outline: 4px  rgb(185, 185, 185) solid;
+    outline-offset: -0.1px;
+    background: grey;
+}
+#snap:active svg{
+    transform: scale(0.8);
+}
+#canvas{
+    width: 45px;
+    height: 45px;
+    border: 2px #fff solid;
+    position: absolute;
+    right: 22px;
+    bottom: 12px;
+    background: grey;
+}
