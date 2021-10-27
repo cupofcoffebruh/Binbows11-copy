@@ -1204,3 +1204,12 @@ start_menu_input.onclick = function(){
   startmenu.classList.remove("active");
   search_menu.classList.add("opened");
 }
+
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'w' /*&& event.key*/ ) {
+    event.preventDefault();
+    startmenu.classList.toggle("active");
+  /* alert('Hello World')*/
+  }
+})
