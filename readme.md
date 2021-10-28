@@ -16,4 +16,4 @@
 
 Recreation of Binbows 11 ( Its Windows as you quess )
 
-Have a try https://cupofcoffebruh.github.io/Binbows11-copy/
+Have a try https://binbows11.netlify.app/
