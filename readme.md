@@ -17,4 +17,5 @@
 Recreation of Binbows 11 ( Its Windows as you quess )
 
 Have a try https://binbows11.netlify.app/
-![social_prewiew](https://user-images.githubusercontent.com/90518786/139300551-db5eac92-718d-4482-a6e6-aaeafbe6afbb.png)
+
+![social_prewiew](https://user-images.githubusercontent.com/90518786/139300613-293c41e1-2411-4eee-8a35-6473e2a680e2.PNG)
