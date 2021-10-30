@@ -1,4 +1,4 @@
- //WidgetsClock//
+  //WidgetsClock//
      
   
 
@@ -506,13 +506,7 @@
      
     
       //Search-Bar//
-     
-      
-          
-      
-      
       //Volume slider//
-      const BrightnessOverlay = document.querySelector(".Brightness-Overlay");
       const progressbar = document.querySelector(".progressbar");
       const slideValue = document.querySelector(".sliderValue span");
             const inputSlider = document.querySelector(".field input");
@@ -521,7 +515,7 @@
               slideValue.textContent = value;
               slideValue.style.left = (value/1.5) + "%";
               progressbar.style.width = (value/1.4) + "%";
-              BrightnessOverlay.style.opacity = (value/1) + "%";
+          /*    BrightnessOverlay.style.opacity = (value/1) + "%";*/
               slideValue.classList.add("show");
             });
             inputSlider.onblur = (()=>{
@@ -529,10 +523,15 @@
             });
       
       
-            const progressbar1 = document.querySelector(".progressbar1");
-      const slideValue1 = document.querySelector(".sliderValue1 span");
-      const Value = document.querySelector(".sliderValue1");
-            /*const inputSlider1 = document.querySelector(".field1 input");
+       /*     const progressbar1 = document.querySelector(".progressbar1");
+      const slideValue1 = document.querySelector(".sliderValue1 span");*/
+     /* const Value = document.querySelector(".sliderValue1");*/
+      const audio = document.querySelector("#audio");
+      const audio_mute = document.querySelector("#audio_mute");
+const audio_one = document.querySelector("#audio_one");
+const audio_max = document.querySelector("#audio_max");
+           /* const inputSlider1 = document.querySelector(".field1 input");*/
+/*
             inputSlider1.oninput = (()=>{
               let value = inputSlider1.value;
               slideValue1.textContent = value;
@@ -540,12 +539,24 @@
               progressbar1.style.width = (value/1.2) + "%";
               Value.style.left = (value/1.5) + "%";
               slideValue1.classList.add("show");
+
+
+
+           
+            
             });
             inputSlider1.onblur = (()=>{
               slideValue1.classList.remove("show");
-            });*/
+            });
+           */
+ 
+/*to audio icons*/
 
-audio_mute.classList.add("hidden");
+
+
+
+
+  audio_mute.classList.add("hidden");
   audio_one.classList.add("hidden");
   audio.classList.remove("hidden");
   audio_max.classList.add("hidden");
@@ -599,6 +610,8 @@ audio_mute.classList.add("hidden");
       audio_max.classList.remove("hidden");
     }
 }
+            
+
            // Draggebla Window//
          /* const wrapper = document.querySelector(".Window Smallscreen "),
           header = wrapper.querySelector(".Window-header");
@@ -1269,14 +1282,15 @@ window.addEventListener('keydown', (event) => {
   }
 })
 
-/*battery % shower*/
+            
 
+/*battery % shower*/
 
 const  batterylevel = document.querySelector(".battery_percent");
 
 
 navigator.getBattery().then(function(battery){
- const level = battery.level;
+const level = battery.level;
 const status = level * 10 +"%";
 batterylevel.style.width = status;
 batterylevel.innerHTML = status;
