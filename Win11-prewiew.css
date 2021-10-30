@@ -2829,3 +2829,16 @@ margin-top:2px;
 #option4.selected4{
   border-bottom: 2px  #1f4aff solid;
 }
+
+
+.battery_percent{
+width: 10.5%;
+height: 6px;
+position: absolute;
+left: 36.2px;
+bottom: 14.6px;
+background-color: black;
+z-index: 99;
+
+}
+
