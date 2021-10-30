@@ -12,7 +12,6 @@ body{
   overflow: hidden;
    /*Please set this propertie for fun*/
    /*transform: scaleY(50%);*/
-   filter: brightness(1);
    /*transform: scaleX(50%);*/
 }
 nav{
@@ -1480,86 +1479,91 @@ transform: translateX(-4px);
     background: transparent;
     border-radius: 10px;
   }
-  .sliderValue{
-    position:   fixed;
-    width: 100%;
-    transform: translateX(69px);
-  }
-  .sliderValue span{
-    position: absolute;
-    height: 25px;
-    width: 30px;
-    transform: translateX(-70%) scale(0);
-    font-weight: 500;
-    top: -5px;
-    line-height: 55px;
-    z-index: 2;
-    color: #000;
-    transform-origin: bottom;
-    transition: transform 0.3s ease-in-out;
-    line-height: 25px;
-    font-size: 13px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .sliderValue span.show{
-    transform: translateX(-70%) scale(1); 
-  }
-  .sliderValue span:after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    background: #fff;
-     
-    z-index: -1;
-    left: 50%;
-    transform: translateX(-50%) ;
-    border-radius: 12%;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
- 
-  }
+  
+
+.sliderValue{
+  position:   fixed;
+  width: 100%;
+  transform: translateX(69px);
+}
+.sliderValue span{
+  position: absolute;
+  height: 25px;
+  width: 30px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -5px;
+  line-height: 55px;
+  z-index: 2;
+  color: #000;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+  line-height: 25px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1); 
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #fff;
+   
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) ;
+  border-radius: 12%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+
+}
 
 
 
-  .sliderValue1{
-    position:   fixed;
-    width: 100%;
-    transform: translateX(68px);
-    top:15px;
-  }
-  .sliderValue1 span{
-    position: absolute;
-    height: 25px;
-    width: 30px;
-    transform: translateX(-70%) scale(0);
-    font-weight: 500;
-    top: -5px;
-    line-height: 55px;
-    z-index: 2;
-    color: #000;
-    transform-origin: bottom;
-    transition:  0.3s ease-in-out;
-    line-height: 25px;
-    font-size: 13px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .sliderValue1 span.show{
-    transform: translateX(-70%) scale(1); 
-  }
-  .sliderValue1 span:after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    background: #fff;
-     
-    z-index: -1;
-    left: 50%;
-    transform: translateX(-50%) ;
-    border-radius: 12%;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
- 
-  }
+
+.sliderValue1{
+  position:   fixed;
+  width: 100%;
+  /*opacity: 0;*/
+ pointer-events: none;
+}
+.sliderValue1 span{
+  position: absolute;
+  height: 25px;
+  width: 30px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -5px;
+  line-height: 55px;
+  z-index: 2;
+  color: #000;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+  line-height: 25px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sliderValue1 span.show{
+  transform: translateX(-70%) scale(1); 
+}
+.sliderValue1 span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: #fff;
+   
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) ;
+  border-radius: 12%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+
+}
+
+
   .field{
     display: flex;
     align-items: center;
@@ -1583,10 +1587,7 @@ transform: translateX(-4px);
     padding:0px 0px 0px 0px;
     transform: translateX(0px);
   }
-#audio{
-  width: 17px;
-  transform: translateY(-3px);
-}
+
   .field .value{
     position: absolute;
     font-size: 18px;
@@ -2084,8 +2085,6 @@ bottom:5px;
   z-index: 9999999999999999999999999999;
   width: 100vw;
   height: 100vh;
-  opacity: 0;
-  background: #000000da;
   pointer-events: none;
 }
 .Add-widget-button{
@@ -2829,6 +2828,22 @@ margin-top:2px;
 #option4.selected4{
   border-bottom: 2px  #1f4aff solid;
 }
+
+#audio_mute.hidden{
+  opacity: 0;
+}
+
+#audio_one.hidden{
+  opacity: 0;
+}
+#audio.hidden{
+  opacity: 0;
+}
+#audio_max.hidden{
+  opacity: 0;
+
+}
+
 
 
 .battery_percent{
