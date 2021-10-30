@@ -532,7 +532,7 @@
             const progressbar1 = document.querySelector(".progressbar1");
       const slideValue1 = document.querySelector(".sliderValue1 span");
       const Value = document.querySelector(".sliderValue1");
-            const inputSlider1 = document.querySelector(".field1 input");
+            /*const inputSlider1 = document.querySelector(".field1 input");
             inputSlider1.oninput = (()=>{
               let value = inputSlider1.value;
               slideValue1.textContent = value;
@@ -543,7 +543,62 @@
             });
             inputSlider1.onblur = (()=>{
               slideValue1.classList.remove("show");
-            });
+            });*/
+
+audio_mute.classList.add("hidden");
+  audio_one.classList.add("hidden");
+  audio.classList.remove("hidden");
+  audio_max.classList.add("hidden");
+  const progressbar1 = document.querySelector(".progressbar1");
+  const inputSlider1 = document.querySelector(".field1 input");
+  const slideValue1 = document.querySelector(".sliderValue1 span");
+
+
+  inputSlider1.onblur = (()=>{
+    slideValue1.classList.remove("show");
+  });
+
+  inputSlider1.oninput = function(){
+
+
+    let value = inputSlider1.value;
+    inputSlider1.textContent = value;
+    progressbar1.style.width = (value/1.2) + "%";
+    slideValue1.textContent = value;
+   slideValue1.style.left = (value/1.5) + "%";
+    slideValue1.classList.add("show");
+
+    
+    slideValue1.textContent = value;
+   slideValue1.style.left = (value/1) + "%";
+    if (this.value < 1){
+      audio_mute.classList.remove("hidden");
+    audio_one.classList.add("hidden");
+      audio.classList.add("hidden");
+      audio_max.classList.add("hidden");
+    
+    }
+  
+    else if (this.value >= 25 && this.value < 50 ) {
+      audio_mute.classList.add("hidden");
+      audio_one.classList.remove("hidden");
+      audio.classList.add("hidden");
+      audio_max.classList.add("hidden");
+    
+    }
+    else if (this.value >= 50 && this.value < 75 ) {
+      audio_mute.classList.add("hidden");
+      audio_one.classList.add("hidden");
+      audio.classList.remove("hidden");
+      audio_max.classList.add("hidden");
+    }
+     else if (this.value >= 100) {
+      audio_mute.classList.add("hidden");
+      audio_one.classList.add("hidden");
+      audio.classList.add("hidden");
+      audio_max.classList.remove("hidden");
+    }
+}
            // Draggebla Window//
          /* const wrapper = document.querySelector(".Window Smallscreen "),
           header = wrapper.querySelector(".Window-header");
