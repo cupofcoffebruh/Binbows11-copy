@@ -1224,5 +1224,5 @@ navigator.getBattery().then(function(battery){
 /*const level = battery.level;*/
 const status = level * 10 +"%";
 batterylevel.style.width = status;
-batterylevel.innerHTML = status;
+/*batterylevel.innerHTML = status;*/
 })
