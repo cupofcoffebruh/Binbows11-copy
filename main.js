@@ -143,16 +143,27 @@
       
       clock.onclick = function(){
         calendar.classList.toggle("active")
+        xd.classList.remove("active")
+        startmenu.classList.remove("active")
+        Widgets_panel.classList.remove("opened")
+        search_menu.classList.remove("opened");
+        pinned_app_container.classList.remove("all_apps_state");
+        used_apps.classList.remove("all_apps_state");
+        search_bar.classList.remove("all_apps_state");
+        start_menu_header.classList.remove("all_apps_state");
+        backbutton.classList.remove("all_apps_state");
+        recommended.classList.remove("all_apps_state"); 
+        all_apps_text.classList.remove("all_apps_state");
+        all_apps_container.classList.remove("all_apps_state");
       }
       //startmenu//
       
       let startmenu = document.querySelector(".startmenu");
-      let Windowsomething = document.querySelector(".Window");
       ;
       
       
       
-      icon.onclick = function(){
+      icon.onclick = function (){
         startmenu.classList.toggle("active");
         search_menu.classList.remove("opened");
         pinned_app_container.classList.remove("all_apps_state");
@@ -163,12 +174,14 @@
         recommended.classList.remove("all_apps_state"); 
         all_apps_text.classList.remove("all_apps_state");
         all_apps_container.classList.remove("all_apps_state");
-
-
+        xd.classList.remove("active")
+        calendar.classList.remove("active")
+        Widgets_panel.classList.remove("opened")
       }
-      Windowsomething.onclick = function(){
-        startmenu.classList.remove("active");
-      }
+
+   
+      
+     
      
 
       //Widgets panel//
@@ -180,7 +193,10 @@
       
       icon3.onclick = function(){
         Widgets_panel.classList.toggle("opened")
-        
+        startmenu.classList.remove("active");
+        search_menu.classList.remove("opened");
+        xd.classList.remove("active")
+        calendar.classList.remove("active");
       }
       //Active App indicator//
       
@@ -195,7 +211,19 @@
       
       QuickSettings.onclick = function(){
         xd.classList.toggle("active")
-      
+        calendar.classList.remove("active")
+        startmenu.classList.remove("active")
+
+        search_menu.classList.remove("opened");
+        pinned_app_container.classList.remove("all_apps_state");
+        used_apps.classList.remove("all_apps_state");
+        search_bar.classList.remove("all_apps_state");
+        start_menu_header.classList.remove("all_apps_state");
+        backbutton.classList.remove("all_apps_state");
+        recommended.classList.remove("all_apps_state"); 
+        all_apps_text.classList.remove("all_apps_state");
+        all_apps_container.classList.remove("all_apps_state");
+        Widgets_panel.classList.remove("opened")
       }
       //Quick Acces//
       
@@ -209,7 +237,48 @@
         
       
       }
-      
+      let power_button = document.querySelector(".dropbtn");
+      let theme_toogle = document.querySelector(".settings-column5");
+    let  main_to_dark = document.querySelector("main");
+      let audio_invert = document.querySelector("#function")
+      let night_light = document.querySelector("#night_light");
+      let battery_saver = document.querySelector("#battery_saver");
+      let brightness = document.querySelector("#brightness");
+      theme_toogle.onclick = function(){
+        theme_toogle.classList.toggle("active");
+        main_to_dark.classList.toggle("dark_theme");
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+          icon2.classList.add("invert");
+          audio_invert.classList.add("invert");
+          night_light.classList.add("invert");
+          battery_saver.classList.add("invert");
+          brightness.classList.add("invert"); 
+          power_button.classList.add("invert");
+          audio_mute.classList.add("invert");
+           audio_one.classList.add("invert");
+           audio.classList.add("invert");
+           audio_max.classList.add("invert");
+        }else{
+          power_button.classList.remove("invert");
+          audio_mute.classList.remove("invert");
+          audio_one.classList.remove("invert");
+          audio.classList.remove("invert");
+          audio_max.classList.remove("invert");
+          icon2.classList.remove("invert");
+          brightness.classList.remove("invert");
+          audio_invert.classList.remove("invert");
+          night_light.classList.toggle("invert");
+         battery_saver.classList.toggle("invert");
+        }
+      }
+    /*  let fuckwindow = document.querySelector(".Window")
+      if(fuckwindow.classList.contains("addcenter33")){
+        square.onclick = function(){
+          fuckwindow.classList.add("Active");
+          Window.classList.remove("SmallScreen");
+        }
+      }*/
       
       //settings-column1//
       let idk = document.querySelector(".settings-column1");
@@ -231,7 +300,7 @@
       idk2.onclick = function(){
         idk2.classList.toggle("active")
         NightLightOverlay.classList.toggle("active")
-      
+        night_light.classList.toggle("invert");
       }
       
       
@@ -244,8 +313,8 @@
       
       
       idk3.onclick = function(){
-        idk3.classList.toggle("active")
-        
+        idk3.classList.toggle("active");
+        battery_saver.classList.toggle("invert");
       
       }
       
@@ -327,15 +396,34 @@
       let Window_header = document.querySelector(".Window-header");
       let square = document.querySelector(".bx-square");
       let Numbergrid = document.querySelector(".Number-grid");
+      let rpogjifhg = document.querySelector(".Window");
       ;
       
-      
-      
+     /* if(Window.classList.contains("addleft33")){
+        square.onclick = function(){
+          Window.classList.toggle("Active");
+          Window.classList.remove("SmallScreen");
+          Numbergrid.classList.remove("SmallScreen");
+        }
+      }
+      if(Window.classList.contains("")){
+        square.onclick = function(){
+          Window.classList.toggle("SmallScreen");
+         Numbergrid.classList.toggle("SmallScreen");
+         rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+        }
+      }*/
+      rpogjifhg.classList.add("pls_work_window_brain_fuck");
+     
       square.onclick = function(){
-        Window_header.classList.toggle("SmallScreen");
-        Window.classList.toggle("SmallScreen");
-        xdk.classList.toggle("SmallScreen");
+        wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
+        /*header.classList.remove("active");*/
+       Window_header.classList.toggle("SmallScreen");
+       Window.classList.toggle("SmallScreen");
+      //  xdk.classList.toggle("SmallScreen");
        Numbergrid.classList.toggle("SmallScreen");
+     //  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
        number_column_addright_top50.classList.remove("addright_top");
         window_multitask8.classList.remove("addright_top50");
         window_multitask7.classList.remove("addleft50trio");
@@ -355,6 +443,7 @@
         window_multitask16.classList.remove("center50");
         window_multitask17.classList.remove("right25");
       } 
+      
 
 
 
@@ -378,7 +467,7 @@
       all_apps_button.onclick = function(){
         pinned_app_container.classList.toggle("all_apps_state");
         used_apps.classList.toggle("all_apps_state");
-        search_bar.classList.toggle("all_apps_state");
+      /*  search_bar.classList.toggle("all_apps_state");*/
         start_menu_header.classList.toggle("all_apps_state");
         backbutton.classList.toggle("all_apps_state");
         recommended.classList.toggle("all_apps_state"); 
@@ -389,7 +478,7 @@
       backbutton.onclick = function(){
         pinned_app_container.classList.toggle("all_apps_state");
         used_apps.classList.toggle("all_apps_state");
-        search_bar.classList.toggle("all_apps_state");
+        /*search_bar.classList.toggle("all_apps_state");*/
         start_menu_header.classList.toggle("all_apps_state");
         backbutton.classList.toggle("all_apps_state");
         recommended.classList.toggle("all_apps_state");
@@ -436,10 +525,12 @@
       let calc_open = document.querySelector("#calc_open")
       let totaskbar = document.querySelector(".bx-minus");
       let  widow1234 = document.querySelector(".Window Active");
-      ;
+      let taskbar = document.querySelector(".Nav-Container ul ");
+      let context_menu_option = document.querySelector("#left");
       
-      
-      
+      context_menu_option.onclick = function(){
+      taskbar.classList.toggle("left");
+      }
       totaskbar.onclick = function(){
       Window.classList.toggle("Active");
         line.classList.toggle("notactive");
@@ -450,6 +541,12 @@
       icon7.onclick = function(){
         line.classList.toggle("notactive");
         line.classList.add("active");
+        wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
+        xd.classList.remove("active")
+        startmenu.classList.remove("active");
+        search_menu.classList.remove("opened");
+        calendar.classList.remove("active");
         Window.classList.toggle("Active");
         Window.classList.remove("SmallScreen");
         Numbergrid.classList.remove("SmallScreen");
@@ -483,6 +580,7 @@
         startmenu.classList.remove("active");
         Window.classList.remove("SmallScreen");
         Numbergrid.classList.remove("SmallScreen");
+      
       }
 
       calc_open_all_apps.onclick = function(){
@@ -664,6 +762,9 @@ column_left.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 }
 
 
@@ -699,6 +800,9 @@ column_right.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -734,6 +838,9 @@ column_left1.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 /*toright25*/
@@ -768,9 +875,14 @@ column_right1.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-} 
+  Numbergrid.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+  wrapper.style.top = `${0 + 0}px`
 
+}
 /*toleft33%*/
+
 let column_left2 = document.querySelector(".column-left2");
 let window_multitask4 = document.querySelector(".Window");
 
@@ -781,6 +893,7 @@ let window_multitask4 = document.querySelector(".Window");
 column_left2.onclick = function(){
   show_number.classList.add("addright_top");
   history.classList.add("addright_top");
+  Numbergrid.classList.remove("SmallScreen")
   number_vals.classList.remove("addright_top");
   number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
@@ -801,6 +914,9 @@ column_left2.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 /*tocenter33*/
@@ -814,6 +930,7 @@ let window_multitask5 = document.querySelector(".Window");
 column_left2_center_item.onclick = function(){
   show_number.classList.add("addright_top");
   history.classList.add("addright_top");
+  Numbergrid.classList.remove("SmallScreen")
   number_vals.classList.remove("addright_top");
   number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
@@ -834,8 +951,10 @@ column_left2_center_item.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-} 
-
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
+}
 /*toleft33*/
 let column_right2 = document.querySelector(".column-right2");
 let window_multitask6 = document.querySelector(".Window");
@@ -845,6 +964,7 @@ let window_multitask6 = document.querySelector(".Window");
 
 
 column_right2.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   show_number.classList.add("addright_top");
   history.classList.add("addright_top");
   number_vals.classList.remove("addright_top");
@@ -867,6 +987,9 @@ column_right2.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -880,6 +1003,7 @@ let window_multitask7 = document.querySelector(".Window");
 
 
 column_left3.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   show_number.classList.add("addright_top");
   history.classList.add("addright_top");
   number_vals.classList.remove("addright_top");
@@ -902,6 +1026,9 @@ column_left3.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -917,6 +1044,7 @@ let history = document.querySelector(".history");
 
 
 column_right3_top.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
   number_vals.classList.add("addright_top");
@@ -938,6 +1066,9 @@ column_right3_top.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -954,6 +1085,7 @@ column_right3_bottom.onclick = function(){
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
   number_vals.classList.add("addright_top");
+  Numbergrid.classList.remove("SmallScreen")
   number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
@@ -972,6 +1104,9 @@ column_right3_bottom.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 
 } 
 /*left4 top*/
@@ -985,6 +1120,7 @@ let window_multitask10 = document.querySelector(".Window");
 column_left4_top.onclick = function(){
   window_multitask10.classList.add("addleft_top");
   history.classList.add("addright_top");
+  Numbergrid.classList.remove("SmallScreen")
   show_number.classList.add("addright_top");
   number_vals.classList.add("addright_top");
   number_column_addright_top50.classList.add("addright_top");
@@ -1005,6 +1141,9 @@ column_left4_top.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -1018,6 +1157,7 @@ let window_multitask12 = document.querySelector(".Window");
 
 
 column_left4_bottom.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask12.classList.add("addsomething");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1040,6 +1180,9 @@ column_left4_bottom.onclick = function(){
    window_multitask16.classList.remove("center50");
    window_multitask17.classList.remove("right25");
    Window.classList.remove("SmallScreen");
+   rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+   wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -1052,6 +1195,7 @@ let window_multitask13 = document.querySelector(".Window");
 
 
 column_right4_top.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask13.classList.add("left-bottom");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1074,6 +1218,9 @@ column_right4_top.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -1088,6 +1235,7 @@ let window_multitask14 = document.querySelector(".Window");
 
 
 column_right4_bottom.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask14.classList.add("right4-bottom");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1110,6 +1258,9 @@ column_right4_bottom.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -1121,6 +1272,7 @@ let number_vals1 = document.querySelector(".Number-vals");
 
 
 column_left5.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask15.classList.add("asdw");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1142,6 +1294,9 @@ column_left5.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 } 
 
 
@@ -1153,6 +1308,7 @@ let window_multitask16 = document.querySelector(".Window");
 
 
 column_left5_center_item.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask16.classList.add("center50");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1174,6 +1330,9 @@ column_left5_center_item.onclick = function(){
   window_multitask15.classList.remove("asdw");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 }
 let column_right5 = document.querySelector(".column-right5");
 let window_multitask17 = document.querySelector(".Window");
@@ -1182,6 +1341,7 @@ let window_multitask17 = document.querySelector(".Window");
 
 
 column_right5.onclick = function(){
+  Numbergrid.classList.remove("SmallScreen")
   window_multitask17.classList.add("right25");
   history.classList.add("addright_top");
   show_number.classList.add("addright_top");
@@ -1203,6 +1363,9 @@ column_right5.onclick = function(){
   window_multitask15.classList.remove("asdw");
   window_multitask16.classList.remove("center");
   Window.classList.remove("SmallScreen");
+  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
+  wrapper.style.left = `${0 + 0}px`,
+        wrapper.style.top = `${0 + 0}px`
 }
 
 
@@ -1264,9 +1427,11 @@ icon2.onclick = function(){
   start_menu_header.classList.remove("all_apps_state");
   backbutton.classList.remove("all_apps_state");
   recommended.classList.remove("all_apps_state"); 
+  calendar.classList.remove("active")
+  xd.classList.remove("active");
   all_apps_text.classList.remove("all_apps_state");
   all_apps_container.classList.remove("all_apps_state");
-
+  Widgets_panel.classList.remove("opened")
 }
 start_menu_input.onclick = function(){
   startmenu.classList.remove("active");
@@ -1274,24 +1439,166 @@ start_menu_input.onclick = function(){
 }
 
 
-window.addEventListener('keydown', (event) => {
-  if (event.key === 'w' /*&& event.key*/ ) {
+/*window.addEventListener('keydown', (event) => {
+  if (event.key === 'w' /*&& event.key ) {
     event.preventDefault();
     startmenu.classList.toggle("active");
-  /* alert('Hello World')*/
+  alert('Hello World')
   }
-})
+})*/
 
             
 
 /*battery % shower*/
+const batterylevel = document.querySelector(".battery_percent")
 
-const  batterylevel = document.querySelector(".battery_percent");
+
 
 
 navigator.getBattery().then(function(battery){
 const level = battery.level;
-const status = level * 10 +"%";
+const status = level * 13 +"%";
 batterylevel.style.width = status;
 /*batterylevel.innerHTML = status;*/
 })
+
+
+ //Clock//
+ 
+
+  
+  
+  //Clock//
+  
+
+
+  let lock_screen_not_selected = document.querySelector(".lock_screen");
+  let time = document.querySelector(".time");
+  let password_input = document.querySelector(".lock_screen_password_input");
+  let password_input_arrow = document.querySelector(".arrow_left_inpass");
+  let  user_circle_details = document.querySelector(".user_circle_details");
+  let  user_name = document.querySelector(".user_mete_data_name");
+  let  i_forgot_my_password = document.querySelector(".i_forgot_my_password");
+  let  sign_in_options = document.querySelector(".sign_in_options");
+  let sign_in_options_grid = document.querySelector(".sign_in_options_grid");
+  let lock_screen_button = document.querySelector("#lock_the_screen");
+  
+
+
+  lock_screen_not_selected.onclick = function(){
+    lock_screen_not_selected.classList.add("selected");
+    time.classList.add("selected");
+    password_input.classList.add("selected");
+    password_input_arrow.classList.add("selected");
+    user_circle_details.classList.add("selected");
+    user_name.classList.add("selected")
+    i_forgot_my_password.classList.add("selected");
+    sign_in_options.classList.add("selected");
+    sign_in_options_grid.classList.add("selected");
+  }
+
+  lock_screen_button.onclick = function(){
+    lock_screen_not_selected.classList.add("active");
+    lock_screen_not_selected.classList.remove("selected");
+    time.classList.remove("selected");
+    password_input.classList.remove("selected");
+    password_input_arrow.classList.remove("selected");
+    user_circle_details.classList.remove("selected");
+    user_name.classList.remove("selected")
+    i_forgot_my_password.classList.remove("selected");
+    sign_in_options.classList.remove("selected");
+    sign_in_options_grid.classList.remove("selected");
+
+  }
+ password_input.oninput = function() {
+
+   window.addEventListener('keydown', (event) => {
+      if (event.keyCode === 13 ) {
+        event.preventDefault();
+        lock_screen_not_selected.classList.remove("active");
+
+      }
+    });
+  }
+
+
+
+ /* const cookieContainer = document.querySelector(".cookie-container");
+const cookieButton = document.querySelector(".cookie-btn");*/
+
+/*cookieButton.addEventListener("click", () => {
+  cookieContainer.classList.remove("active");
+  localStorage.setItem("cookieBannerDisplayed", "true");
+});*/
+
+/*password_input.oninput = function() {
+
+  window.addEventListener('keydown', (event) => {
+     if (event.keyCode === 13 ) {
+       event.preventDefault();
+       lock_screen_not_selected.classList.remove("active");
+       localStorage.setItem(" lock_screen_not_selected", "true");
+     }
+   });
+ }
+
+setTimeout(() => {
+     if (!localStorage.getItem("lock_screen_not_selected", "true")) {
+    lock_screen_not_selected.classList.add("active");
+  }
+}),0;*/
+  
+  
+let abuot_window = document.querySelector(".about_window");
+let ok_button = document.querySelector(".ok_button");
+
+
+
+ok_button.onclick = function(){
+  abuot_window.classList.add("close");
+}
+
+
+let todo_open_pinned = document.querySelector("#todo_open_pinned");
+let excel_open_pinned = document.querySelector("#excel_open_pinned");
+/*todo_open_pinned.addEventListener("click" ,Addnew);
+excel_open_pinned.addEventListener("click" ,Addnew);
+function  Addnew() {
+  let newApp = document.createElement('li');
+  newApp.classList.add('app');
+  taskbar.appendChild(newApp);
+  
+}*/
+todo_open_pinned.onclick = function () {
+  let newApp = document.createElement('li');
+  newApp.classList.add('app');
+  taskbar.appendChild(newApp);
+  
+}
+/*excel_open_pinned.onclick = function () {
+  let newApp = document.createElement('li');
+  newApp.classList.add('app');
+  taskbar.appendChild(newApp);
+  
+}*/
+
+var wrapper = document.querySelector(".Window ");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+header = wrapper.querySelector(".Window-header");
+function onDrag({movementX: e, movementY: r}) {
+  let t = window.getComputedStyle(wrapper)
+    , a = parseInt(t.left)
+    , o = parseInt(t.top);
+  wrapper.style.left = `${a + e}px`,
+  wrapper.style.top = `${o + r}px`
+}
+header.addEventListener("mousedown", ()=>{
+  header.classList.add("active"),
+  header.addEventListener("mousemove", onDrag)
+}
+),
+document.addEventListener("mouseup", ()=>{
+  header.classList.remove("active"),
+  header.removeEventListener("mousemove", onDrag)
+}
+);
