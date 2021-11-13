@@ -70,7 +70,7 @@ main{
     
 }
 main.dark_theme{
-  background-image: url(/Users/Dell/Documents/img/dark_theme_bck.jpeg);
+  background-image: url(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
 }
 .Nav-Container ul{
   /*background-color: var(--dark_mode_str_menu_bck_clr);*/
