@@ -70,7 +70,7 @@ main{
     
 }
 main.dark_theme{
-  background-image: url(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
+  background-image: url(/Users/Dell/Documents/img/dark_theme_bck.jpeg);
 }
 .Nav-Container ul{
   /*background-color: var(--dark_mode_str_menu_bck_clr);*/
@@ -1397,10 +1397,13 @@ transform: translateX(-4px);
       position: absolute;
       display: flex;
       transform: scale(0.6)translateY(456px);
-      transition: 0.1s;
+    /*  transition: 0.2s;*/
       overflow: hidden;
       pointer-events: none;
       opacity: 0;
+      transform-origin: center;
+      transition: 0.3s;
+     /* transition: 10s;*/
      /* bottom: 39px;*/
        backdrop-filter: blur(20px);
        background-color: var(--deafult_backcolor);
@@ -1429,18 +1432,23 @@ transform: translateX(-4px);
     .Window.SmallScreen{
      /* min-height:455px;
       min-width: 320px;*/
-      width: 289px;
-      height:  432px;
+      width: /*289px*/ 60%;
+      height:  /*432px */ 80%;
       border-radius: 6px 6px 6px 6px;
-     transform: translateY(14%) translateX(28%);
- /*   top: 4%;
-   left: 8%;*/
-    transition: 0s;
+     /* transition: 0.3s;*/
+     transition: 0.2s;
+     transform: translateY(10%) translateX(30%);
+     /*transform: translateY(24%) translateX(58%);/
+  /*top: 10%;
+  
+   left: 20%;*/
+   
       /*transform: rotate(98deg);*/
      box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
       
     
     }
+    
     /*.Window.SmallScreen.fhgfdudh{
       background:red;
     }*/
@@ -1458,10 +1466,15 @@ transform: translateX(-4px);
       pointer-events: none;
       transform: translateY(50%);
     }
+   
   
     .xdk.SmallScreen{
       display: flex;
+      vertical-align: center;
       justify-content: center;
+    }
+    .Window.Ondrag_transition{
+      transition: 0s;
     }
     .Window-header{
       height: 26px;
@@ -1559,7 +1572,7 @@ filter: var(--invert_img);
  
  
 .line.notactive{
-  background: #005fba;
+  background: var(--progressbar_color);
   width: 12px;
   transform: translateX(5.2px);
 }
@@ -2335,7 +2348,7 @@ line-height: 23px;
   pointer-events: none;
 }
  
- .close-section:hover .multi_task_box{
+  .close-section:hover .multi_task_box{
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
@@ -2634,8 +2647,9 @@ transition: var(--transition);
       }
       .Window.addcenter33{
         width: 33.33333333333%;
-        transform: translateX(50vh);
+        transform: translateX(100%);
       }
+    
       .Window.addleft33{
         width: 33.33333333333%;
         transform: translateX(200%);
@@ -2670,6 +2684,35 @@ transition: var(--transition);
      .history.addright_top{
        opacity: 0;
 
+     }
+
+     .Window.addcenter33 .Number-grid{
+      width: 111%;
+    }
+    .Window.addleft33 .Number-grid{
+      width: 111%;
+    }
+    .Window.addright33 .Number-grid{
+      width: 111%;
+    }
+    .Window.addleft50 .Number-grid{
+      width: 112%;
+    }
+    .Window.addright50 .Number-grid{
+      width: 112%;
+    }
+    .Window.addleft50trio .Number-grid{
+      width: 111%;
+    }
+    
+    .Window.center50 .Number-grid{
+      width: 111.6%;
+    }
+    .Window.asdw .Number-grid{
+     width: 110%;
+    }
+    .Window.right25 .Number-grid{
+      width: 110%;
      }
      :root{
       --transition:0.11111111s;
@@ -3574,4 +3617,39 @@ filter: invert(100%);
 transform: translateX(78px) translateY(8px);
 text-align: right;
 height: 33px;
+}
+
+
+.virtual_desktop_apps_container{
+  background: var(--deafult_backcolor);
+  border-radius: 8px;
+  backdrop-filter: blur(22px);
+  width: 377px;
+  color: var(--deafult_txt_color);
+  height: 167px;
+  position: absolute;
+  bottom: 47px;
+ 
+}
+.justify_content{
+  display: flex;
+  justify-content: center;
+}
+.New_desktop{
+  background-color: red;
+  border-radius: 3px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  line-height: 113px;
+  height: 70%;
+  font-size: 26px;
+  font-weight: 100;
+  width: 52%;
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+}
+.about_window.Ondrag_transition{
+  transition: 0s;
 }
