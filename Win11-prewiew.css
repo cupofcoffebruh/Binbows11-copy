@@ -1396,6 +1396,7 @@ transform: translateX(-4px);
       width: 100%;
       position: absolute;
       display: flex;
+     
       transform: scale(0.6)translateY(456px);
     /*  transition: 0.2s;*/
       overflow: hidden;
@@ -1437,12 +1438,15 @@ transform: translateX(-4px);
       border-radius: 6px 6px 6px 6px;
      /* transition: 0.3s;*/
      transition: 0.2s;
+     min-width: 540px;
+     min-height: 540px;
      transform: translateY(10%) translateX(30%);
      /*transform: translateY(24%) translateX(58%);/
   /*top: 10%;
   
    left: 20%;*/
    
+  
       /*transform: rotate(98deg);*/
      box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
       
@@ -2619,10 +2623,12 @@ transition: var(--transition);
       .Window.addleft50{
         width: 50%;
         transform: translateX(0%);
+        border-radius: 5px;
       }
      .Window.addright50{
         width: 50%;
         transform: translateX(100%);
+        border-radius: 5px;
       }
       iframe{
         width: 100%;
@@ -2635,33 +2641,40 @@ transition: var(--transition);
 .Window.addright25{
   width: 25%;
     transform: translateX(300% );
+    border-radius: 5px;
     
 }
       .Window.addleft75{
         width: 75%;
         transform: translateX(0%);
+        border-radius: 5px;
       }
       .Window.addright33{
         width: 33.33333333333%;
         transform: translateX(0%);
+        border-radius: 5px;
       }
       .Window.addcenter33{
         width: 33.33333333333%;
         transform: translateX(100%);
+        border-radius: 5px;
       }
     
       .Window.addleft33{
         width: 33.33333333333%;
         transform: translateX(200%);
+        border-radius: 5px;
       }
       .Window.addleft50trio{
         width: 50%;
         transform: translateX(0%);
+        border-radius: 5px;
       }
       .Window.addright_top50{
         height: 50%;
         width: 50%;
         transform: translateX(100%);
+        border-radius: 5px;
       }
      .Number-grid.addright_top{
       
@@ -2669,6 +2682,7 @@ transition: var(--transition);
        padding-right: 0px;
        transform: translateY(65px);
        width:113%;
+      
      }
     
      .Number-grid.addright_top p{
@@ -2801,10 +2815,12 @@ transition: var(--transition);
        translateX(100%) translateY(91.6%);
        height: 50%;
        width: 50%;
+       border-radius: 5px;
      }
      .Window.addleft_top{
        height: 50%;
        width: 50%;
+       border-radius: 5px;
      }
     /* .Window.addright123_top{
        width: 50%;
@@ -2815,20 +2831,23 @@ transition: var(--transition);
    width: 50%;
    height: 50%;
    transform: translateX(100%);
+   border-radius: 5px;
  }
      .Window.addrighttop{
        width: 50%;
        height: 50%;
-
+       border-radius: 5px;
      }
      .Window.left-bottom{
       width: 50%;
       height: 50%;
       transform: translateY(91.6%);
+      border-radius: 5px;
      }
      .Window.right4-bottom{
        height: 50%;
        width: 50%;
+       border-radius: 5px;
        transform:
        translateX(100%) translateY(91.6%);
      }
@@ -2836,6 +2855,7 @@ transition: var(--transition);
   width: 25%;
   height: 96%;
 transform: translateX(0%);
+border-radius: 5px;
 }
 
 .Number-vals .addleft25{
@@ -2845,11 +2865,13 @@ transform: translateX(0%);
   width: 50%;
   height: 96%;
   transform: translateX(50%);
+  border-radius: 5px;
 }
 .Window.right25{
   width: 25%;
   height: 96%;
   transform: translateX(300%);
+  border-radius: 5px;
 }
 .notification-circle5{
   position:  absolute;
@@ -3652,4 +3674,9 @@ height: 33px;
 }
 .about_window.Ondrag_transition{
   transition: 0s;
+}
+
+.Window.set_brd_rds{
+  border-radius: 8px;
+
 }
