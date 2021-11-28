@@ -18,7 +18,7 @@
   <meta name="description" content="Recreation of Binbows 11 in the browser made with html css js">
     <div id="preloader">
       <img  class="Win11" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/Win11Favicon.png">
-      <p>Shutting up </p>
+      <p>Getting Ready </p>
         </div>
 
     <title>Binbows 11 in Html,Css,Js</title>
@@ -377,7 +377,11 @@
 
   <div class="xdk">
      <div class="Window">
-       
+      <div class="resizer_ne"></div>
+      <div class="resizer_w"></div>
+      <div class="resizer_s"></div>
+      <div class="resizer_sw"></div>
+      <div class="resizer_top"></div>
  <!-- <iframe src="https://www.photopea.com"></iframe>-->
   <!-- <iframe src="https://www.bing.com"></iframe>-->
   <!-- <iframe src=" https://www.google.com/webhp?igu=1"></iframe>-->
@@ -484,10 +488,10 @@
           <img class=" bx-minus" src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/minimize.png">
           <!--<img class="bx-minus" src="/Users/Dell/Documents/minimize.png">-->
           <!--<i class='bx bx-square bx-flip-horizontal' ></i>--> 
-          <img class="bx-square"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png">
+          <img onclick="click()" onmouseover="onhover()"  onmouseout="onhover()" class="bx-square"src="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png">
          
     
-        <div class="multi_task_box">
+        <div onmouseover="onhover()"  onmouseout="onhover()" class="multi_task_box">
             <div class="multi_task_box_column">
               <div class="column-left"></div>
               <div class="column-right"></div>
@@ -1316,6 +1320,8 @@
     <div class="Chevron-up"> <i class='bx bx-chevron-up'></i></div>
     <div class="Lang-Div">
       <p>ENG</p>
+      <br>
+      <p class="us">US</p>
     </div>
     <div class="Quick_Settings">
       <i class='bx bx-wifi'></i>
@@ -1349,7 +1355,8 @@
 
 
     <script src="main.js"></script>
- <script src="clock.js"></script>
+    <script src="clock.js"></script>
+
 
 </body>
 </html>
