@@ -64,14 +64,12 @@ main{
   background-position: center;
   background-repeat: no-repeat;
     height:100vh;
-    background-image: url(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Backgrounds/win11background.jpg);
+    background-image:var(--main_back_img) ;
     background-size: cover;
     transition: 0.5s;
     
 }
-main.dark_theme{
-  background-image: url(/Users/Dell/Documents/img/dark_theme_bck.jpeg);
-}
+
 .Nav-Container ul{
   /*background-color: var(--dark_mode_str_menu_bck_clr);*/
    background: var(--deafult_backcolor);
@@ -2342,6 +2340,11 @@ line-height: 23px;
  z-index: 9999999999999999999;
  transition-delay: 0.6s;
  }
+.multi_task_box.full{
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+ }
 .square{
   position: absolute;
   width: 33px;
@@ -2352,12 +2355,7 @@ line-height: 23px;
   pointer-events: none;
 }
  
-  .close-section:hover .multi_task_box{
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: auto;
-}
-
+ 
 
  .multi_task_box_column{
    width: 82px;
@@ -2769,8 +2767,10 @@ transition: var(--transition);
      /*--numbercolumns_idk_what_to_call_this_color:#fff;*/
      --top-stories-bck_clr:#d9ceed;
      --wekdays_bck_clr:hsl(0deg 0% 100% / 50%);
+         --main_back_img:URl(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Backgrounds/win11background.jpg);
      }
       .dark-theme{
+          --main_back_img: URL(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
         --border_color:black;
         --wekdays_bck_clr:hsl(0deg 0% 100% / 10%);
         --top-stories-bck_clr: #000633;
