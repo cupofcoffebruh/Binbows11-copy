@@ -1,4 +1,4 @@
-  //WidgetsClock//
+ /WidgetsClock//
      
   
 
@@ -180,6 +180,20 @@
       }
 
    
+      window.onclick = function(event) {
+        event.preventDefault();
+        if (!event.target.matches('#icon')) {
+          var dropdowns = document.getElementsByClassName("startmenu");
+        /*  var i;
+          for (i = 0; i < dropdowns.length; i++) {*/
+           // var openDropdown = dropdowns ;
+            if (dropdowns.classList.contains('active')) {
+              dropdowns.classList.remove('active');
+            }
+          }
+      }
+      
+        
       
      
      
@@ -412,6 +426,8 @@
       square.onclick = function(){
         wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
+        //resizer_window.style.height = `${0 + 0}px`
+      //  square.src ="/Users/Dell/Documents/maxmin.png";
        header.classList.remove("active");
       Window.classList.toggle("SmallScreen");
         xdk.classList.toggle("SmallScreen");
@@ -438,12 +454,21 @@
       show_number.classList.remove("addright_top");
   history.classList.remove("addright_top");
   Window.classList.remove("set_brd_rds");
+  /*square.classList.toggle("maxmin");*/
+ 
+  resizer_window4.style.width = `${null + 100 }%`
   
+ // resizer_window4.style.width = `${a + e}px`
+    resizer_window4.style.height = `${null + 96}%`
+    //resizer_window4.style.width = `${100 + 0}%`
+
   number_vals.classList.remove("addright_top");
   number_column_addright_top50.classList.remove("addright_top");
 
-
-   
+  /*resizer_window.style.height = `${0 + 0}px`*/
+   /*if(Window.classList.contains("Active")){
+    resizer_window4.style.width = `${null + 0 }px`
+   }*/
     
  
       }
@@ -639,6 +664,9 @@
         history.classList.remove("addright_top");
         number_vals.classList.remove("addright_top");
         number_column_addright_top50.classList.remove("addright_top");
+       /* resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${100 + 0}%`*/
+    
 
       }
       calc_open_pinned.onclick = function(){
@@ -833,8 +861,15 @@ column_left.onclick = function(){
   rpogjifhg.classList.remove("pls_work_window_brain_fuck");
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
+        resizer_window.style.height = `${0 + 0}px`
+        
         Numbergrid.classList.add("multi_task_grid")
         Window.classList.remove("set_brd_rds");
+
+
+       /* resizer_window4.style.width = `${0 + 0}px`*/
+    resizer_window4.style.height = `${96 + 0}%`
+    resizer_window4.style.width = `${50 + 0}%`
 }
 
 
@@ -874,6 +909,8 @@ column_right.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 
 
@@ -889,6 +926,7 @@ let window_multitask2 = document.querySelector(".Window");
 column_left1.onclick = function(){
   show_number.classList.add("addright_top");
   history.classList.add("addright_top");
+  
   number_vals.classList.remove("addright_top");
   number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
@@ -913,6 +951,8 @@ column_left1.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${75 + 0}%`
 } 
 
 /*toright25*/
@@ -952,6 +992,8 @@ column_right1.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
   wrapper.style.top = `${0 + 0}px`
   Window.classList.remove("set_brd_rds");
+  resizer_window4.style.height = `${96 + 0}%`
+  resizer_window4.style.width = `${25 + 0}%`
 }
 /*toleft33%*/
 
@@ -990,6 +1032,8 @@ column_left2.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${33.3333333 + 0}%`
 } 
 
 /*tocenter33*/
@@ -1028,6 +1072,8 @@ column_left2_center_item.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${33.33333333 + 0}%`
 }
 /*toleft33*/
 let column_right2 = document.querySelector(".column-right2");
@@ -1065,6 +1111,8 @@ column_right2.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${33.33333333 + 0}%`
 } 
 
 
@@ -1105,6 +1153,8 @@ column_left3.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 
 
@@ -1146,6 +1196,8 @@ column_right3_top.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 
 
@@ -1185,6 +1237,8 @@ column_right3_bottom.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 /*left4 top*/
 let column_left4_top = document.querySelector(".column-left4-top");
@@ -1222,6 +1276,8 @@ column_left4_top.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 
 
@@ -1262,6 +1318,9 @@ column_left4_bottom.onclick = function(){
    wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
+
 } 
 
 
@@ -1302,7 +1361,8 @@ column_right4_top.onclick = function(){
         wrapper.style.top = `${0 + 0}px`
         
         Window.classList.remove("set_brd_rds");
-        
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 
 } 
 
@@ -1345,6 +1405,8 @@ column_right4_bottom.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${50 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 } 
 
 
@@ -1382,6 +1444,8 @@ column_left5.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${25 + 0}%`
 } 
 
 
@@ -1419,6 +1483,8 @@ column_left5_center_item.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${50 + 0}%`
 }
 let column_right5 = document.querySelector(".column-right5");
 let window_multitask17 = document.querySelector(".Window");
@@ -1453,6 +1519,8 @@ column_right5.onclick = function(){
   wrapper.style.left = `${0 + 0}px`,
         wrapper.style.top = `${0 + 0}px`
         Window.classList.remove("set_brd_rds");
+        resizer_window4.style.height = `${96 + 0}%`
+        resizer_window4.style.width = `${25 + 0}%`
 }
 
 
@@ -1547,6 +1615,10 @@ const level = battery.level;
 const status = level * 13 +"%";
 batterylevel.style.width = status;
 /*batterylevel.innerHTML = status;*/
+if (batterylevel.status  < "4" ){
+ 
+  batterylevel.classList.add("low_percent");
+}
 })
 
 
@@ -1600,10 +1672,10 @@ batterylevel.style.width = status;
  password_input.oninput = function() {
 
    window.addEventListener('keydown', (event) => {
-      if (event.keyCode === 13 ) {
+        if (event.keyCode === 13 ) {
         event.preventDefault();
         lock_screen_not_selected.classList.remove("active");
-
+       
       }
     });
   }
@@ -1701,7 +1773,7 @@ document.addEventListener("mouseup", ()=>{
 var wrapper = document.querySelector(".Window");
 /*var header = document.querySelector(".Window-header SmallScreen");*/
 header = wrapper.querySelector(".Window-header");
-function onDrag({movementX: e, movementY: r}) {
+function onDrag({movementX: e,  movementY: r}) {
   let t = window.getComputedStyle(wrapper)
     , a = parseInt(t.left)
     , o = parseInt(t.top);
@@ -1715,6 +1787,12 @@ header.addEventListener("mousedown", ()=>{
   header.addEventListener("mousemove", onDrag)
 }
 ),
+/*wrapper.addEventListener("mouseup", ()=>{
+  header.classList.remove("active"),
+  Window.classList.remove("Ondrag_transition"),
+  header.removeEventListener("mousemove", onDrag)
+}),*/
+
 document.addEventListener("mouseup", ()=>{
   header.classList.remove("active"),
   Window.classList.remove("Ondrag_transition"),
@@ -1802,4 +1880,202 @@ for (let resizer of resizers) {
     }
   }
 }*/
+ 
+var resizer_window = document.querySelector(".Window");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+resizer_ne = resizer_window.querySelector(".resizer_ne");
+function onDrag_resize({movementY: e/*,movementX: r*/}) {
+  let t = window.getComputedStyle(resizer_window)
+    , a = parseInt(t.height)
+    /*, o = parseInt(t.top);*/
+    resizer_window.style.height = `${a + e}px`
+    /*resizer_window.style.width = `${o + r}px`*/
+}
+resizer_ne.addEventListener("mousedown", ()=>{
+  resizer_ne.classList.add("active"),
+  Window.classList.add("onresize_trans");
+  Window.classList.add("set_brd_rds");
+  /*resizer_window.classList.add("Ondrag_transition"),*/
+ resizer_ne.addEventListener("mousemove", onDrag_resize)
+}
+),
 
+document.addEventListener("mouseup", ()=>{
+resizer_ne.classList.remove("active"),
+Window.classList.remove("onresize_trans");
+/*resizer_window.classList.remove("Ondrag_transition"),*/
+resizer_ne.removeEventListener("mousemove", onDrag_resize)
+}
+);
+
+
+
+var resizer_window2 = document.querySelector(".Window");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+resizer_w = resizer_window2.querySelector(".resizer_w");
+function onDrag_resize_w({movementX: e/*,movementX: r*/}) {
+  let t = window.getComputedStyle(resizer_window2)
+    , a = parseInt(t.width)
+    /*, o = parseInt(t.top);*/
+    resizer_window2.style.width = `${a + e}px`
+    /*resizer_window.style.width = `${o + r}px`*/
+    
+}
+resizer_w.addEventListener("mousedown", ()=>{
+  resizer_w.classList.add("active"),
+  Window.classList.add("onresize_trans");
+  Window.classList.add("set_brd_rds");
+  /*resizer_window.classList.add("Ondrag_transition"),*/
+ resizer_w.addEventListener("mousemove", onDrag_resize_w)
+ Window.classList.add("onresize_width");
+}
+),
+
+document.addEventListener("mouseup", ()=>{
+resizer_w.classList.remove("active"),
+Window.classList.remove("onresize_trans");
+/*resizer_window.classList.remove("Ondrag_transition"),*/
+resizer_w.removeEventListener("mousemove", onDrag_resize_w)
+/*Window.classList.remove("onresize_width");*/
+}
+);
+/*let about_trigger = document.querySelector("#about");
+
+about_trigger.onclick = function() {
+  abuot_window.classList.remove("close");
+}*/
+
+var resizer_window3 = document.querySelector(".Window");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+resizer_s = resizer_window3.querySelector(".resizer_s");
+function onDrag_resize_s({movementX: e/*,movementX: r*/}) {
+  let t = window.getComputedStyle(resizer_window3)
+    , a = parseInt(t.width)
+  //  , o = parseInt(t.left);
+   /* resizer_window3.style.width = `${ a + e}px`*/
+   /* resizer_window3.style.left = `${o + e}px`*/
+  //  const rect = resizer_window3.getBoundingClientRect();
+ resizer_window3.style.width = `${ e + a}px`;
+   //resizer_window3.style.width =  `${resizer_s.offsetX}px`;
+  // resizer_window3.style.left = `${ e + o}px`;
+   //resizer_window3.style.height = rect.height + (prevY - e.clientY) + "px";
+   //el.style.width = rect.width + (prevX - e.clientX) + "px";
+   prevX = resizer_window3.clientX;
+      prevY = resizer_window3.clientY;
+
+     
+}
+resizer_s.addEventListener("mousedown", ()=>{
+  resizer_s.classList.add("active"),
+  Window.classList.add("onresize_trans");
+  Window.classList.add("set_brd_rds");
+  /*resizer_window.classList.add("Ondrag_transition"),*/
+ resizer_s.addEventListener("mousemove", onDrag_resize_s)
+}
+),
+
+document.addEventListener("mouseup", ()=>{
+resizer_s.classList.remove("active"),
+Window.classList.remove("onresize_trans");
+/*resizer_window.classList.remove("Ondrag_transition"),*/
+resizer_s.removeEventListener("mousemove", onDrag_resize_s)
+}
+);
+
+
+
+
+
+
+//set local storage
+
+
+let settings_column5 = document.querySelector(".settings-column5");
+let localData = localStorage.getItem("theme");
+
+if(localData == "light"){
+ /* settings_column5.src = "../img/moon-solid-24.png";*/
+  document.body.classList.remove("dark-theme");
+}
+else if(localData =="dark"){
+ /* settings_column5.src = "../img/sun-regular-24.png";*/
+  document.body.classList.add("dark-theme");
+}
+
+settings_column5.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+  if(document.body.classList.contains("dark-theme")){
+    /*settings_column5.src = "../img/sun-regular-24.png";*/
+    localStorage.setItem("theme", "dark");
+  }else{
+   /* settings_column5.src = "../img/moon-solid-24.png";*/
+    localStorage.setItem("theme", "light");
+  }
+}
+
+var resizer_window4 = document.querySelector(".Window");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+resizer_sw = resizer_window4.querySelector(".resizer_sw");
+function onDrag_resize_sw({movementX: e,movementY: r}) {
+  let t = window.getComputedStyle(resizer_window4)
+    , a = parseInt(t.width)
+    , o = parseInt(t.height);
+    resizer_window4.style.width = `${a + e}px`
+    resizer_window4.style.height = `${o + r}px`
+    resizer_window4.style.width = `${a + e }px`
+} 
+resizer_sw.addEventListener("mousedown", ()=>{
+  resizer_sw.classList.add("active"),
+  Window.classList.add("onresize_trans");
+  Window.classList.add("set_brd_rds");
+  /*resizer_window.classList.add("Ondrag_transition"),*/
+ resizer_sw.addEventListener("mousemove", onDrag_resize_sw)
+}
+),
+
+document.addEventListener("mouseup", ()=>{
+resizer_sw.classList.remove("active"),
+Window.classList.remove("onresize_trans");
+
+/*resizer_window.classList.remove("Ondrag_transition"),*/
+resizer_sw.removeEventListener("mousemove", onDrag_resize_sw)
+
+}
+);
+
+
+var resizer_window5 = document.querySelector(".Window");
+/*var header = document.querySelector(".Window-header SmallScreen");*/
+resizer_top = resizer_window5.querySelector(".resizer_top");
+function onDrag_resize_top({/*movementX: e,*/movementY: r}) {
+  let t = window.getComputedStyle(resizer_window4)
+    , a = parseInt(t.top)
+    , o = parseInt(t.bottom);
+    resizer_window5.style.height =`${r + a}px`
+    resizer_window5.style.bottom =`${r + o}px`
+   //resizer_window5.style.height =  (r - o) + "px";
+    /*resizer_window5.style.bottom = `${r + a}px`*/
+    //+ (prevX - e.clientX) + "px"
+} 
+resizer_top.addEventListener("mousedown", ()=>{
+  resizer_top.classList.add("active"),
+  Window.classList.add("onresize_trans");
+  /*resizer_window.classList.add("Ondrag_transition"),*/
+  Window.classList.add("set_brd_rds");
+ resizer_top.addEventListener("mousemove", onDrag_resize_top)
+}
+),
+
+document.addEventListener("mouseup", ()=>{
+resizer_top.classList.remove("active"),
+Window.classList.remove("onresize_trans");
+/*resizer_window.classList.remove("Ondrag_transition"),*/
+resizer_top.removeEventListener("mousemove", onDrag_resize_top)
+
+}
+);
+
+function onhover() {
+  let snapbox = document.querySelector(".multi_task_box");
+  snapbox.classList.toggle("full");
+}
