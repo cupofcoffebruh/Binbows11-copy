@@ -342,6 +342,36 @@
         
       
       }
+     
+      let idk6 = document.querySelector(".settings-column6");
+      
+      
+      
+      idk6.onclick = function(){
+        idk6.classList.toggle("active")
+        
+      
+      }
+      let idk7 = document.querySelector(".settings-column7");
+      
+      
+      
+      idk7.onclick = function(){
+        idk7.classList.toggle("active")
+        
+      
+      }
+      let idk8 = document.querySelector(".settings-column8");
+      
+      
+      
+      idk8.onclick = function(){
+        idk8.classList.toggle("active")
+        
+      
+      }
+      
+      
       
       
       
@@ -710,13 +740,19 @@
               slideValue.style.left = (value/1.5) + "%";
               progressbar.style.width = (value/1.4) + "%";
           /*    BrightnessOverlay.style.opacity = (value/1) + "%";*/
-              slideValue.classList.add("show");
+             slideValue.classList.add("show");
             });
             inputSlider.onblur = (()=>{
               slideValue.classList.remove("show");
             });
       
-      
+            //rangeInput = document.getElementById('range');
+
+            /*container123 = document.getElementsByClassName('body')[0];*/
+            let body_on_brightness_change = document.querySelector("body");
+            inputSlider.addEventListener("mousemove",function(){
+              body_on_brightness_change.style.filter = "brightness(" + inputSlider.value + "%)";
+            });
        /*     const progressbar1 = document.querySelector(".progressbar1");
       const slideValue1 = document.querySelector(".sliderValue1 span");*/
      /* const Value = document.querySelector(".sliderValue1");*/
@@ -750,10 +786,10 @@ const audio_max = document.querySelector("#audio_max");
 
 
 
-  audio_mute.classList.add("hidden");
+  /*audio_mute.classList.add("hidden");
   audio_one.classList.add("hidden");
   audio.classList.remove("hidden");
-  audio_max.classList.add("hidden");
+  audio_max.classList.add("hidden");*/
   const progressbar1 = document.querySelector(".progressbar1");
   const inputSlider1 = document.querySelector(".field1 input");
   const slideValue1 = document.querySelector(".sliderValue1 span");
@@ -775,37 +811,29 @@ const audio_max = document.querySelector("#audio_max");
 
     
     slideValue1.textContent = value;
-   slideValue1.style.left = (value/1) + "%";
+  // slideValue1.style.left = (value/1) + "%";
     if (this.value < 1){
-      audio_mute.classList.remove("hidden");
-    audio_one.classList.add("hidden");
-      audio.classList.add("hidden");
-      audio_max.classList.add("hidden");
     
+      audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio_mute.png" ;
+      on_change_audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio_mute.png" ;
     }
   
     else if (this.value >= 25 && this.value < 50 ) {
-      audio_mute.classList.add("hidden");
-      audio_one.classList.remove("hidden");
-      audio.classList.add("hidden");
-      audio_max.classList.add("hidden");
     
+      audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio_level1.png" ;
+      on_change_audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio_level1.png" ;
     }
     else if (this.value >= 50 && this.value < 75 ) {
-      audio_mute.classList.add("hidden");
-      audio_one.classList.add("hidden");
-      audio.classList.remove("hidden");
-      audio_max.classList.add("hidden");
+      audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio2.png" ;
+      on_change_audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio2.png" ;
     }
      else if (this.value >= 100) {
-      audio_mute.classList.add("hidden");
-      audio_one.classList.add("hidden");
-      audio.classList.add("hidden");
-      audio_max.classList.remove("hidden");
+      audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio3.png" ;
+      on_change_audio.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/audio3.png" ;
     }
 }
             
-
+let on_change_audio = document.querySelector("#function");
            // Draggebla Window//
          /* const wrapper = document.querySelector(".Window Smallscreen "),
           header = wrapper.querySelector(".Window-header");
@@ -1609,18 +1637,28 @@ const batterylevel = document.querySelector(".battery_percent")
 
 
 
-
 navigator.getBattery().then(function(battery){
 const level = battery.level;
 const status = level * 13 +"%";
 batterylevel.style.width = status;
-/*batterylevel.innerHTML = status;*/
-if (batterylevel.status  < "4" ){
+//batterylevel.innerHTML = status;
+//battery.innerHTML = status;
+})
+/*if (batterylevel.status  < "4" ){
  
   batterylevel.classList.add("low_percent");
 }
-})
+})*/
+const battery = document.querySelector(".battery span")
 
+
+
+navigator.getBattery().then(function(battery1){
+const level = battery1.level;
+const status = level * 100 +"%";
+
+battery.innerHTML = status;
+})
 
  //Clock//
  
@@ -1991,24 +2029,25 @@ resizer_s.removeEventListener("mousemove", onDrag_resize_s)
 
 
 let settings_column5 = document.querySelector(".settings-column5");
+let theme = document.querySelector("#theme_button");
 let localData = localStorage.getItem("theme");
 
 if(localData == "light"){
- /* settings_column5.src = "../img/moon-solid-24.png";*/
+  theme.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/brightness.png";
   document.body.classList.remove("dark-theme");
 }
 else if(localData =="dark"){
- /* settings_column5.src = "../img/sun-regular-24.png";*/
+ theme.src = "https://win11.blueedge.me/img/icon/ui/moon.png";
   document.body.classList.add("dark-theme");
 }
 
 settings_column5.onclick = function(){
   document.body.classList.toggle("dark-theme");
   if(document.body.classList.contains("dark-theme")){
-    /*settings_column5.src = "../img/sun-regular-24.png";*/
+    theme.src = " https://win11.blueedge.me/img/icon/ui/moon.png";
     localStorage.setItem("theme", "dark");
   }else{
-   /* settings_column5.src = "../img/moon-solid-24.png";*/
+    theme.src = "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/brightness.png";
     localStorage.setItem("theme", "light");
   }
 }
