@@ -2928,7 +2928,7 @@ transition: var(--transition);
       .dark-theme{
         --progressbar_thumb_border_color:#2b434f;
         --settings_column_indicator:#4cc2ff;
-        --main_back_img:URL(/Users/Dell/Documents/img/dark_theme_bck.jpeg);
+        --main_back_img:URL(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
         --border_color:black;
         --wekdays_bck_clr:hsl(0deg 0% 100% / 10%);
         --top-stories-bck_clr: #000633;
