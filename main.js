@@ -1661,7 +1661,7 @@ battery.innerHTML = status;
 navigator.getBattery().then(battery => {
 
   let percentage = document.querySelector(".battery_percent");
- 
+  //let percent = document.querySelector(".us");
   let isCharging = document.querySelector("#plug");
 
   function updateAllBatteryInfo(){
@@ -1672,18 +1672,18 @@ navigator.getBattery().then(battery => {
   
   function updateLevelInfo(){
       percentage.style.width = battery.level * 14 + '%';
-      percentage.innerHTML = battery.level * 100 + '%';
+     // percent.innerHTML = battery.level * 100 + '%';
   }
 
   function updateChargeInfo(){
-      isCharging.innerHTML = battery.charging ? "Your device charging" : "";
+      isCharging.src = battery.charging ? src="https://win11.blueedge.me/img/icon/ui/plug.png" : src="";
   }
   
-  percentage.addEventListener('levelchange', () => {
+  battery.addEventListener('levelchange', () => {
       updateLevelInfo()
   })
 
-  isCharging.addEventListener('chargingchange', () => {
+  battery.addEventListener('chargingchange', () => {
       updateChargeInfo()
   })
 })
