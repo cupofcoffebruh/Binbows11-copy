@@ -1644,11 +1644,7 @@ batterylevel.style.width = status;
 //batterylevel.innerHTML = status;
 //battery.innerHTML = status;
 })
-/*if (batterylevel.status  < "4" ){
- 
-  batterylevel.classList.add("low_percent");
-}
-})*/
+
 const battery = document.querySelector(".battery span")
 
 
