@@ -1687,7 +1687,35 @@ navigator.getBattery().then(battery => {
       updateChargeInfo()
   })
 })
+  navigator.getBattery().then(battery => {
+
+  //let percentage = document.querySelector(".battery span");
+  let percent = document.querySelector(".battery span");
+  //let isCharging = document.querySelector("#plug");
+
+  function updateAllBatteryInfo(){
+      updateLevelInfo()
+      updateChargeInfo()
+  }
+  updateAllBatteryInfo()
   
+  function updateLevelInfo(){
+      /*percentage.style.width = battery.level * 16 + '%';*/
+     percent.innerHTML = battery.level * 100 + '%';
+  }
+
+  function updateChargeInfo(){
+      //isCharging.src = battery.charging ? src="https://win11.blueedge.me/img/icon/ui/plug.png" : src="";
+  }
+  
+  battery.addEventListener('levelchange', () => {
+      updateLevelInfo()
+  })
+
+  battery.addEventListener('chargingchange', () => {
+      updateChargeInfo()
+  })
+})
   
   //Clock//
   
