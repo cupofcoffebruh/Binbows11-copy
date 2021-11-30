@@ -1158,7 +1158,7 @@ margin-right: 8px;
 margin-bottom: 10px;
 margin-top: 22px;
 cursor: pointer;
-transition: all 0.4s ease;
+transition: all 0.2s ease;
 
 
 }
@@ -1180,12 +1180,12 @@ transform: translateX(-4px);
   background-color: var(--settings_column_back_color);
 }
 .settings-column.active .bx-wifi{
-  color: #000;
+  color: var(--deafult_txt_color);
   
 }
 
 .settings-column.active .bx-chevron-right{
-  color: #000;
+  color: var(--deafult_txt_color);
 }
 
 
@@ -1202,7 +1202,7 @@ transform: translateX(-4px);
   margin-bottom: 10px;
   margin-top: 22px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   
   }
   
@@ -1238,15 +1238,13 @@ transform: translateX(-4px);
   margin-bottom: 10px;
   margin-top: 22px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   
   }
-  #night_light{
+  .settings-column2 img{
     filter: var(--invert_img);
   }
-  #night_light.invert{
-  filter: invert(0%);
-  }
+  
   .settings-column2 p{
     font-weight: 500;
     font-size: 11px;
@@ -1256,15 +1254,18 @@ transform: translateX(-4px);
   .settings-column2.active{
     background-color: var(--settings_column_active_indicator);
   }
+  .settings-column2.active img{
+    filter: var(--invert_invert_img);
+    }
   /*.settings-column2.active img{
     filter:invert(0%);
   }*/
-  main.active{
+ /* main.active{
   filter: sepia(50);
   }
 #battery_saver.invert{
   filter: invert(100%);
-}
+}*/
 /*#battery_saver{
   filter: var(--invert_img);
 }*/
@@ -1281,7 +1282,7 @@ transform: translateX(-4px);
     margin-bottom: 10px;
     margin-top: 22px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
     
     }
     .settings-column3 img{
@@ -1295,11 +1296,11 @@ transform: translateX(-4px);
       transform: translateY(-10px);
     }
     .settings-column3.active{
-      background-color: var(--settings_column_back_color);
+      background-color: var(--settings_column_active_indicator);
     }
     .settings-column3.active img{
-      filter: invert(0);
-    }
+      filter: var(--invert_invert_img);
+      }
     
     .settings-column4{
       height: 3rem;
@@ -1314,10 +1315,12 @@ transform: translateX(-4px);
       margin-bottom: 10px;
       margin-top: 22px;
       cursor: pointer;
-      transition: all 0.4s ease;
+      transition: all 0.2s ease;
     
       }
-      
+      .settings-column4 img{
+        filter:var(--invert_img)
+      }
       
       .settings-column4 p{
         font-weight: 500;
@@ -1330,7 +1333,7 @@ transform: translateX(-4px);
         width: 6rem;
         margin-right: 8px;
         font-size: 16px;
-        background-color: var(--settings_column_active_indicator);
+        background-color: var(--settings_column_indicator);
         border-radius: 4px;
         line-height: 48px;
         margin:3px;
@@ -1338,11 +1341,13 @@ transform: translateX(-4px);
         margin-bottom: 10px;
         margin-top: 22px;
         cursor: pointer;
-        transition: all 0.4s ease;
+        transition: all 0.2s ease;
      
         }
       
-        
+        .settings-column4.active img{
+          filter: var(--invert_invert_img);
+          }
        /* #brightness.invert{
           filter: invert(100%);
         }*/
@@ -1370,7 +1375,7 @@ transform: translateX(-4px);
           margin-bottom: 10px;
           margin-top: 22px;
           cursor: pointer;
-          transition: all 0.4s ease;
+          transition: all 0.2s ease;
        
           }
         
@@ -1406,7 +1411,7 @@ transform: translateX(-4px);
             margin-bottom: 10px;
             margin-top: 22px;
             cursor: pointer;
-            transition: all 0.4s ease;
+            transition: all 0.2s ease;
          
             }
             .settings-column7 img{
@@ -1425,6 +1430,9 @@ transform: translateX(-4px);
             .settings-column7.active{
               background-color: var(--settings_column_active_indicator);
             }
+            .settings-column7.active img{
+              filter: var(--invert_invert_img);
+              }
 
 
             .settings-column8{
@@ -1440,10 +1448,13 @@ transform: translateX(-4px);
               margin-bottom: 10px;
               margin-top: 22px;
               cursor: pointer;
-              transition: all 0.4s ease;
+              transition: all 0.2s ease;
            
               }
-            
+          
+              .settings-column8 img{
+                filter: var(--invert_img);
+              }
               
              /* #brightness.invert{
                 filter: invert(100%);
@@ -1456,6 +1467,9 @@ transform: translateX(-4px);
               }
               .settings-column8.active{
                 background-color: var(--settings_column_active_indicator);
+              }
+              .settings-column8.active img{
+              filter: var(--invert_invert_img);
               }
       .settings-column4.active{
         background-color: var(--settings_column_active_indicator);
@@ -2924,8 +2938,10 @@ transition: var(--transition);
      --wekdays_bck_clr:hsl(0deg 0% 100% / 50%);
      --main_back_img:URl(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Backgrounds/win11background.jpg);
      --settings_column_indicator:#fff;
+     --invert_invert_img:invert(100%);
      }
       .dark-theme{
+        --invert_invert_img:invert(0%);
         --progressbar_thumb_border_color:#2b434f;
         --settings_column_indicator:#4cc2ff;
         --main_back_img:URL(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
