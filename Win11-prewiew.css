@@ -3264,7 +3264,7 @@ margin-top:2px;
 
 .battery_percent{
 /*width: 10%;*/
-height: 3.8px;
+height: 4.8px;
 position: absolute;
 left: 53.9px;
 bottom: 16px;
@@ -3967,4 +3967,11 @@ height: 0px;
   width: 16px;
   filter: var(--invert_img);
   transform: translateY(3px);
+}
+#plug{
+  position: absolute;
+  width: 6px;
+  right: 23px;
+  bottom: 15px;
+  filter: var(--invert_img);
 }
