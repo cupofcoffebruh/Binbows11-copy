@@ -1633,7 +1633,7 @@ start_menu_input.onclick = function(){
             
 
 /*battery % shower*/
-const batterylevel = document.querySelector(".battery_percent")
+/*const batterylevel = document.querySelector(".battery_percent")
 
 
 
@@ -1643,7 +1643,7 @@ const status = level * 13 +"%";
 batterylevel.style.width = status;
 //batterylevel.innerHTML = status;
 //battery.innerHTML = status;
-})
+})*/
 
 const battery = document.querySelector(".battery span")
 
@@ -1658,7 +1658,35 @@ battery.innerHTML = status;
 
  //Clock//
  
+navigator.getBattery().then(battery => {
 
+  let percentage = document.querySelector(".battery_percent");
+ 
+  let isCharging = document.querySelector("#plug");
+
+  function updateAllBatteryInfo(){
+      updateLevelInfo()
+      updateChargeInfo()
+  }
+  updateAllBatteryInfo()
+  
+  function updateLevelInfo(){
+      percentage.style.width = battery.level * 14 + '%';
+      percentage.innerHTML = battery.level * 100 + '%';
+  }
+
+  function updateChargeInfo(){
+      isCharging.innerHTML = battery.charging ? "Your device charging" : "";
+  }
+  
+  percentage.addEventListener('levelchange', () => {
+      updateLevelInfo()
+  })
+
+  isCharging.addEventListener('chargingchange', () => {
+      updateChargeInfo()
+  })
+})
   
   
   //Clock//
