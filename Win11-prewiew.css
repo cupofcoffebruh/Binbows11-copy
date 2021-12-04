@@ -14,7 +14,7 @@ body{
    /*Please set this propertie for fun*/
    /*transform: scaleY(50%);*/
    /*transform: scaleX(50%);*/
-   
+   position:fixed;
 
 }
 nav{
@@ -482,7 +482,7 @@ transition-delay:3s;
   height: 534px;
   width:520px;
   background-color:/* rgba(255, 255, 255, 0.9)*/ var(--deafult_backcolor);
-  position: absolute;
+  position: fixed;
 bottom:-600px;
   backdrop-filter: blur(20px);
   border-radius: 6px ;
@@ -990,7 +990,7 @@ transform: translateX(-5px);
 }
 .hr hr{
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 54px;
 }
 
@@ -998,7 +998,7 @@ transform: translateX(-5px);
 
 .Quick_Settings{
   
-  position: absolute;
+  position:fixed;
   right: 83px;
   bottom: 0px;
   padding: 8px 10px 6px 10px;
