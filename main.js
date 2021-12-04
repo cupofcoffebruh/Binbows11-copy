@@ -1671,7 +1671,7 @@ navigator.getBattery().then(battery => {
   updateAllBatteryInfo()
   
   function updateLevelInfo(){
-      percentage.style.width = battery.level * 14 + '%';
+      percentage.style.width = battery.level * 14.9 + '%';
      // percent.innerHTML = battery.level * 100 + '%';
   }
 
