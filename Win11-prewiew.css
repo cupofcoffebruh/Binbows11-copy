@@ -3281,7 +3281,7 @@ z-index: 12;
 .Quick_Settings .fa-battery-empty{
  color: var(--deafult_txt_color);
  font-size: 13px;
- transform: translateY(-3px);
+ transform: translateY(-2px);
 }
 
 
