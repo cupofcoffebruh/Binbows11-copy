@@ -3266,8 +3266,8 @@ margin-top:2px;
 /*width: 10%;*/
 height: 4.8px;
 position: absolute;
-left: 53.9px;
-bottom: 16px;
+left: 52.7px;
+bottom: 14.6px;
 background-color:var(--deafult_txt_color);
 z-index: 12;
 
@@ -3972,6 +3972,6 @@ height: 0px;
   position: absolute;
   width: 6px;
   right: 23px;
-  bottom: 15px;
+  bottom: 13px;
   filter: var(--invert_img);
 }
