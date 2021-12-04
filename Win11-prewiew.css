@@ -75,7 +75,7 @@ main{
 .Nav-Container ul{
   /*background-color: var(--dark_mode_str_menu_bck_clr);*/
    background: var(--deafult_backcolor);
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width:100%;
    
@@ -179,7 +179,7 @@ main{
 }
 
 .clock{
-    position:absolute;
+    position:fixed;
     text-align: right;
     right: 12px;
     bottom:0px;
@@ -220,7 +220,7 @@ main{
    /* background-color:white;*/
    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     border-radius: 7px;
-    position:absolute;
+    position:fixed;
     right: 12px;
     transform: translateX(340px);
     bottom:50px;
@@ -1026,7 +1026,7 @@ margin: 2px;
   border-radius:7px;
   background:var(--deafult_backcolor);
   box-shadow:  0 0 20px 0px rgba(0,0,0,0.1);
-  position: absolute;
+  position: fixed;
   /*right: 10px;*/
   bottom: 48px;
   right: 12px;
@@ -2314,7 +2314,7 @@ bottom:5px;
  
 }
 .Lang-Div{
-  position: absolute;
+  position: fixed;
   right: 165px;
   bottom:0px;
   background: transparent;
@@ -2335,7 +2335,7 @@ bottom:5px;
   background: var(--taskbar_right_hover_color);
 }
 .Chevron-up{
-  position: absolute;
+  position: fixed;
   right: 200px;
   bottom:1px;
   line-height: 39px;
