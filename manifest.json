@@ -1,0 +1,13 @@
+{
+    "name": "Binbows 11",
+    "short_name": "Binbows 11",
+    "start_url": ".",
+    "background_color":"#fff",
+    "theme_color":"#fff",
+    "display":"standalone",
+    "icons": [{
+        "src":"https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/Win11Favicon.png",
+        "sizes":"300x300",
+        "type":"image/jpg"    
+    }]
+}
