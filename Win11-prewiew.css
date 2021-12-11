@@ -4086,6 +4086,9 @@ height: 0px;
   font-size: 10px;
   padding: 12px;
    bottom: 78px;
+    width: 6px;
+  filter: var(--invert_img);
+  position: absolute;
 }
 .plug{
   left:4px;
