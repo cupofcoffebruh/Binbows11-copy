@@ -4093,6 +4093,9 @@ height: 0px;
 .plug{
   left:4px;
   top:4px;
+    width: 6px;
+  filter: var(--invert_img);
+  position: absolute;
 }
 .battery_percent2{
   position: absolute;
