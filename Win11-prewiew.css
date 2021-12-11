@@ -4082,11 +4082,16 @@ height: 0px;
 }
 .fa-chevron-right{
   position:absolute;
-  right: 11px;
+  right: 0px;
   font-size: 10px;
-  padding: 12px;
-   bottom: 78px;
-  
+  padding: 10px;
+   bottom: 68px;
+   padding-left: 11px;
+   border-radius: 4px;
+   transition: 0.2s;
+}
+.fa-chevron-right:hover{
+  background: var(--deafult_theme_p_apps_hover_bck_clr);
 }
 .plug{
   left:4px;
