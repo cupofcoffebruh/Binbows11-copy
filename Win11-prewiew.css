@@ -4112,3 +4112,9 @@ height: 0px;
 .Quick-Settings-Container-Footer.fa-battery-empty{
   font-size: 13px;
 }
+
+@media(max-width:700px){
+  .battery_percent{
+    left:56px;
+  }
+}
