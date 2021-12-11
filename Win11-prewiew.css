@@ -4113,7 +4113,7 @@ height: 0px;
   font-size: 13px;
 }
 
-@media(max-width:700px){
+@media(max-width:1600px){
   .battery_percent{
     left:56px;
   }
