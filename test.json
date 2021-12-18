@@ -1,0 +1,9 @@
+{
+    "obj": "File Explorer",
+    "short_name": "file_explorer",
+    "pinned": "true",
+    "special_window":"false",
+    "action":"file_explorer",
+    "display":"standalone",
+    "icons": [{"src":"https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/explorer.png"}]
+}
