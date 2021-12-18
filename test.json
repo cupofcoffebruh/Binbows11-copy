@@ -1,5 +1,5 @@
 {
-    "obj": "File Explorer",
+    "name": "File Explorer",
     "short_name": "file_explorer",
     "pinned": "true",
     "special_window":"false",
