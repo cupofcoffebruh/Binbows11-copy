@@ -1644,7 +1644,7 @@ outline-offset:-1px ;
       right: 0%;
       bottom: 0%;
      /*backdrop-filter: blur(20px);*/
-      background-color: /*var(--deafult_backcolor)*/ #222;
+      background-color: /*var(--deafult_backcolor)*/ var(--two_two_two_to_ddd);
       overflow-x: hidden;
     }
     .Window.Active{
@@ -2990,9 +2990,11 @@ left: 75%;
      --main_back_img:URl(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Backgrounds/win11background.jpg);
      --settings_column_indicator:#fff;
      --invert_invert_img:invert(100%);
+     --two_two_two_to_ddd:#eee;
      }
       .dark-theme{
         --invert_invert_img:invert(0%);
+        --two_two_two_to_ddd:#222;
         --progressbar_thumb_border_color:#2b434f;
         --settings_column_indicator:#4cc2ff;
         --main_back_img:URL(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/public/dark_theme_bck.jpeg);
@@ -4383,6 +4385,4 @@ height: 0px;
       font-weight: 200;
       margin-top: 5px;
     }
-    .water_mark:hover{
-      background: var(--taskbar_right_hover_color);
-    }
+    
