@@ -386,18 +386,31 @@
         }
       }
       
-      
-      window.addEventListener("contextmenu",function(event){
+      let desktop = document.querySelector(".Desktop-apps-container");
+      desktop.addEventListener("contextmenu",function(event){
         event.preventDefault();
         var contextElement = document.getElementById("context-menu");
         contextElement.style.top = event.offsetY + "px";
         contextElement.style.left = event.offsetX + "px";
         contextElement.classList.add("active");
+        document.querySelector(".taskbar_context_menu").classList.remove("active");
       });
-      window.addEventListener("click",function(){
+      desktop.addEventListener("click",function(){
         document.getElementById("context-menu").classList.remove("active");
       });
-      
+        
+      let taskbar123 = document.querySelector(".Nav-Container ul");
+      taskbar123.addEventListener("contextmenu",function(event){
+        event.preventDefault();
+        var contextElement = document.querySelector(".taskbar_context_menu");
+        contextElement.style.bottom = event.offsetY + "px";
+        contextElement.style.left = event.offsetX + "px";
+        contextElement.classList.add("active");
+        document.getElementById("context-menu").classList.remove("active");
+      });
+      taskbar123.addEventListener("click",function(){
+        document.querySelector(".taskbar_context_menu").classList.remove("active");
+      });
       
       
       
@@ -420,18 +433,68 @@
         }
       }*/
      /* rpogjifhg.classList.add("pls_work_window_brain_fuck");*/
-     Window_header.classList.add("SmallScreen");
+    // Window_header.classList.add("SmallScreen");
+square.addEventListener("click", () =>{
+  if(Window.classList.contains("SmallScreen")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    let resize_top = document.querySelector(".resizer.top");
+    let resize_bottom = document.querySelector(".resizer.bottom");
+    let resize_left = document.querySelector(".resizer.left");
+    let resize_right = document.querySelector(".resizer.right");
+    let resize_top_left = document.querySelector(".resizer.top_left");
+    let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+    let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+    resize_top.classList.add("sml_scr");
+    resize_bottom.classList.add("sml_scr");
+    resize_left.classList.add("sml_scr");
+    resize_right.classList.add("sml_scr");
+    resize_top_left.classList.add("sml_scr");
+    resize_bottom_left.classList.add("sml_scr");
+    resize_bottom_right.classList.add("sml_scr");
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+    let resize_top = document.querySelector(".resizer.top");
+    let resize_bottom = document.querySelector(".resizer.bottom");
+    let resize_left = document.querySelector(".resizer.left");
+    let resize_right = document.querySelector(".resizer.right");
+    let resize_top_left = document.querySelector(".resizer.top_left");
+    let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+    let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+    resize_top.classList.remove("sml_scr");
+    resize_bottom.classList.remove("sml_scr");
+    resize_left.classList.remove("sml_scr");
+    resize_right.classList.remove("sml_scr");
+    resize_top_left.classList.remove("sml_scr");
+    resize_bottom_left.classList.remove("sml_scr");
+    resize_bottom_right.classList.remove("sml_scr");
+  }
+
+
+})
+
       square.onclick = function(){
-       /* wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        //resizer_window.style.height = `${0 + 0}px`
-      //  square.src ="/Users/Dell/Documents/maxmin.png";
-      // header.classList.remove("active");
+    Window.style.width = null
+    Window.style.height = null
+    Window.style.left = null
+    Window.style.top = null
+    Window.style.right = null
+    Window.style.bottom = null
+    Window.style.borderRadius = null;
+    /*let resize_top = document.querySelector(".resizer.top");
+    let resize_bottom = document.querySelector(".resizer.bottom");
+    let resize_left = document.querySelector(".resizer.left");
+    let resize_right = document.querySelector(".resizer.right");
+    let resize_top_left = document.querySelector(".resizer.top_left");
+    let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+    let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+    resize_top.style.background = "none";
+    resize_bottom.style.background = "none";
+    resize_left.style.background = "none";
+    resize_right.style.background = "none";
+    resize_top_left.style.background = "none";
+    resize_bottom_left.style.background = "none";
+    resize_bottom_right.style.background = "none";*/
       Window.classList.toggle("SmallScreen");
-        xdk.classList.toggle("SmallScreen");
-       Numbergrid.classList.toggle("SmallScreen");
-      rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-       number_column_addright_top50.classList.remove("addright_top");
         window_multitask8.classList.remove("addright_top50");
         window_multitask7.classList.remove("addleft50trio");
         window_multitask6.classList.remove("addleft33");
@@ -449,25 +512,7 @@
         window_multitask15.classList.remove("asdw");
         window_multitask16.classList.remove("center50");
         window_multitask17.classList.remove("right25");
-      show_number.classList.remove("addright_top");
-  history.classList.remove("addright_top");
-  Window.classList.remove("set_brd_rds");
-  /*square.classList.toggle("maxmin");*/
- 
-    //resizer_window4.style.width = `${100 + 0}%`
-
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
-
-  /*resizer_window.style.height = `${0 + 0}px`*/
-   /*if(Window.classList.contains("Active")){
-    resizer_window4.style.width = `${null + 0 }px`
-   }*/
-    
- 
       }
-      
-  
      
        /* if(Window.classList.contains("addleft33")){
           square.onclick = function(){
@@ -585,7 +630,7 @@
         Window.classList.toggle("Active");
         line.classList.remove("notactive");
         line.classList.remove("active");
-
+        settings.classList.remove("open");
       }
 
      let windowsmallscreen = document.querySelector(".Window SmallScreen");
@@ -611,32 +656,35 @@
       let totaskbar = document.querySelector(".bx-minus");
       let  widow1234 = document.querySelector(".Window Active");
       let taskbar = document.querySelector(".Nav-Container ul ");
+      let settings = document.querySelector("#settings");
       let context_menu_option = document.querySelector("#left");
       
-      context_menu_option.onclick = function(){
-      taskbar.classList.toggle("left");
-      }
+    
       totaskbar.onclick = function(){
       Window.classList.toggle("Active");
         line.classList.toggle("notactive");
         line.classList.add("active");
-        
+        settings.classList.toggle("open");
+        Window.style.borderRadius = null;
+        square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png"
       } 
-      
+      totaskbar.addEventListener("click", () =>{
+        if(Window.classList.contains("SmallScreen")){
+          square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+          
+        }else{
+          square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+        }
+      })
       icon7.onclick = function(){
         line.classList.toggle("notactive");
         line.classList.add("active");
-       // header.classList.remove("active");
-       /* wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        xd.classList.remove("active")
         startmenu.classList.remove("active");
         search_menu.classList.remove("opened");
         calendar.classList.remove("active");
         Window.classList.toggle("Active");
-        Window.classList.remove("SmallScreen");
-        Numbergrid.classList.remove("SmallScreen");
-        window_multitask8.classList.remove("addright_top50");
+        settings.classList.toggle("open");
+      /*  window_multitask8.classList.remove("addright_top50");
         window_multitask7.classList.remove("addleft50trio");
         window_multitask6.classList.remove("addleft33");
         window_multitask5.classList.remove("addcenter33");
@@ -652,15 +700,7 @@
         window_multitask14.classList.remove("right4-bottom");
         window_multitask15.classList.remove("asdw");
         window_multitask16.classList.remove("center50");
-        window_multitask17.classList.remove("right25");
-        show_number.classList.remove("addright_top");
-        history.classList.remove("addright_top");
-        number_vals.classList.remove("addright_top");
-        number_column_addright_top50.classList.remove("addright_top");
-       /* resizer_window4.style.height = `${96 + 0}%`
-        resizer_window4.style.width = `${100 + 0}%`*/
-    
-
+        window_multitask17.classList.remove("right25");*/
       }
       calc_open_pinned.onclick = function(){
        line.classList.add("notactive");
@@ -827,10 +867,12 @@ let window_multitask = document.querySelector(".Window");
 
 
 column_left.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+    Window.style.height = null
+    Window.style.left = null
+    Window.style.top = null
+    Window.style.right = null
+    Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -849,19 +891,23 @@ column_left.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        
-        
-        Numbergrid.classList.add("multi_task_grid")
-        Window.classList.remove("set_brd_rds");
-        element123.style.width = width + null +'px'
-        element123.style.height = height + null +'px'
-       /* resizer_window4.style.width = `${0 + 0}px`*/
-  
 }
+column_left.addEventListener("click", () =>{
+  if(Window.classList.contains("addleft50")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
+square.addEventListener("click", () => {
+  if(Window.classList == ("addleft50")){
+    Window.classList.remove("addleft50");
+    Window.classList.add("SmallScreen");
+  }else{
+  
+  }
+  });
 
 /*toright*/
 
@@ -873,10 +919,12 @@ let window_multitask1 = document.querySelector(".Window");
 
 
 column_right.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -895,14 +943,16 @@ column_right.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
      
 } 
 
-
+column_right.addEventListener("click", () =>{
+  if(Window.classList.contains("addright50")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 /*toleft75*/
 
 let column_left1 = document.querySelector(".column-left1");
@@ -913,11 +963,12 @@ let window_multitask2 = document.querySelector(".Window");
 
 
 column_left1.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -936,12 +987,17 @@ column_left1.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
+  
       
 } 
+column_left1.addEventListener("click", () =>{
+  if(Window.classList.contains("addleft75")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
 
 /*toright25*/
 
@@ -953,10 +1009,12 @@ let window_multitask3 = document.querySelector(".Window");
 
 
 column_right1.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -975,13 +1033,16 @@ column_right1.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  Numbergrid.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-  wrapper.style.top = `${0 + 0}px`*/
-  Window.classList.remove("set_brd_rds");
- 
 }
+column_right1.addEventListener("click", () =>{
+  if(Window.classList.contains("addright25")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
 /*toleft33%*/
 
 let column_left2 = document.querySelector(".column-left2");
@@ -992,11 +1053,12 @@ let window_multitask4 = document.querySelector(".Window");
 
 
 column_left2.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  Numbergrid.classList.remove("SmallScreen")
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1015,13 +1077,15 @@ column_left2.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
 } 
-
+column_left2.addEventListener("click", () =>{
+  if(Window.classList.contains("addright33")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 /*tocenter33*/
 let column_left2_center_item = document.querySelector(".column-left2_center_item");
 let window_multitask5 = document.querySelector(".Window");
@@ -1031,11 +1095,12 @@ let window_multitask5 = document.querySelector(".Window");
 
 
 column_left2_center_item.onclick = function(){
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  Numbergrid.classList.remove("SmallScreen")
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1054,26 +1119,27 @@ column_left2_center_item.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  //rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-      
 }
 /*toleft33*/
 let column_right2 = document.querySelector(".column-right2");
 let window_multitask6 = document.querySelector(".Window");
-
-;
-
+column_left2_center_item.addEventListener("click", () =>{
+  if(Window.classList.contains("addcenter33")){
+    square.src = "https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 
 column_right2.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.add("addleft33");
@@ -1092,13 +1158,15 @@ column_right2.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
 } 
-
+column_right2.addEventListener("click", () =>{
+  if(Window.classList.contains("addleft33")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 
 /*tri position columns*/
@@ -1110,11 +1178,12 @@ let window_multitask7 = document.querySelector(".Window");
 
 
 column_left3.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
-  show_number.classList.add("addright_top");
-  history.classList.add("addright_top");
-  number_vals.classList.remove("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.add("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1133,14 +1202,16 @@ column_left3.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
 } 
 
-
+column_left3.addEventListener("click", () =>{
+  if(Window.classList.contains("addleft50trio")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 /*trio top column*/
 let column_right3_top = document.querySelector(".column-right3-top");
 let window_multitask8 = document.querySelector(".Window");
@@ -1153,11 +1224,12 @@ let history = document.querySelector(".history");
 
 
 column_right3_top.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  number_column_addright_top50.classList.add("addright_top");
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask8.classList.add("addright_top50");
   window_multitask6.classList.remove("addleft33");
   window_multitask5.classList.remove("addcenter33");
@@ -1174,14 +1246,16 @@ column_right3_top.onclick = function(){
   window_multitask15.classList.remove("asdw");
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
-  Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
+  Window.classList.remove("SmallScreen");     
 } 
-
+column_right3_top.addEventListener("click", () =>{
+  if(Window.classList.contains("addright_top50")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 /*leftbottom*/
 let column_right3_bottom = document.querySelector(".column-right3-bottom");
@@ -1191,13 +1265,15 @@ let window_multitask9 = document.querySelector(".Window");
 
 
 
+
 column_right3_bottom.onclick = function(){
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask9.classList.add("addright_bottom");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  Numbergrid.classList.remove("SmallScreen")
-  number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1215,12 +1291,15 @@ column_right3_bottom.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
 } 
+column_right3_bottom.addEventListener("click", () =>{
+  if(Window.classList.contains("addright_bottom")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 /*left4 top*/
 let column_left4_top = document.querySelector(".column-left4-top");
 let window_multitask10 = document.querySelector(".Window");
@@ -1230,12 +1309,13 @@ let window_multitask10 = document.querySelector(".Window");
 
 
 column_left4_top.onclick = function(){
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask10.classList.add("addleft_top");
-  history.classList.add("addright_top");
-  Numbergrid.classList.remove("SmallScreen")
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1252,14 +1332,16 @@ column_left4_top.onclick = function(){
   window_multitask15.classList.remove("asdw");
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
-  Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-      
+  Window.classList.remove("SmallScreen");    
 } 
-
+column_left4_top.addEventListener("click", () =>{
+  if(Window.classList.contains("addleft_top")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 /*top right*/
 
@@ -1271,12 +1353,13 @@ let window_multitask12 = document.querySelector(".Window");
 
 
 column_left4_bottom.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask12.classList.add("addsomething");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1294,14 +1377,15 @@ column_left4_bottom.onclick = function(){
    window_multitask16.classList.remove("center50");
    window_multitask17.classList.remove("right25");
    Window.classList.remove("SmallScreen");
-   rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-   /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-      
-
 } 
-
+column_left4_bottom.addEventListener("click", () =>{
+  if(Window.classList.contains("addsomething")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 /*bottom_left*/
 let column_right4_top = document.querySelector(".column-right4-top");
@@ -1312,12 +1396,13 @@ let window_multitask13 = document.querySelector(".Window");
 
 
 column_right4_top.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask13.classList.add("left-bottom");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1335,17 +1420,17 @@ column_right4_top.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        
-        Window.classList.remove("set_brd_rds");
-       
-
 } 
 
 
-
+column_right4_top.addEventListener("click", () =>{
+  if(Window.classList.contains("left-bottom")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 
 let column_right4_bottom = document.querySelector(".column-right4-bottom");
@@ -1356,12 +1441,13 @@ let window_multitask14 = document.querySelector(".Window");
 
 
 column_right4_bottom.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask14.classList.add("right4-bottom");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_vals.classList.add("addright_top");
-  number_column_addright_top50.classList.add("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1379,13 +1465,16 @@ column_right4_bottom.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-      
-} 
 
+} 
+column_right4_bottom.addEventListener("click", () =>{
+  if(Window.classList.contains("right4-bottom")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 let column_left5 = document.querySelector(".column-left5");
 let window_multitask15 = document.querySelector(".Window");
@@ -1395,11 +1484,13 @@ let number_vals1 = document.querySelector(".Number-vals");
 
 
 column_left5.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask15.classList.add("asdw");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1417,14 +1508,16 @@ column_left5.onclick = function(){
   window_multitask16.classList.remove("center50");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-        
-} 
+}
 
-
+column_left5.addEventListener("click", () =>{
+  if(Window.classList.contains("asdw")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 let column_left5_center_item = document.querySelector(".column-left5_center_item");
 let window_multitask16 = document.querySelector(".Window");
@@ -1433,11 +1526,13 @@ let window_multitask16 = document.querySelector(".Window");
 
 
 column_left5_center_item.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask16.classList.add("center50");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1455,12 +1550,15 @@ column_left5_center_item.onclick = function(){
   window_multitask15.classList.remove("asdw");
   window_multitask17.classList.remove("right25");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-       
 }
+column_left5_center_item.addEventListener("click", () =>{
+  if(Window.classList.contains("center50")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 let column_right5 = document.querySelector(".column-right5");
 let window_multitask17 = document.querySelector(".Window");
 ;
@@ -1468,11 +1566,13 @@ let window_multitask17 = document.querySelector(".Window");
 
 
 column_right5.onclick = function(){
-  Numbergrid.classList.remove("SmallScreen")
+  Window.style.width = null
+  Window.style.height = null
+  Window.style.left = null
+  Window.style.top = null
+  Window.style.right = null
+  Window.style.bottom = null
   window_multitask17.classList.add("right25");
-  history.classList.add("addright_top");
-  show_number.classList.add("addright_top");
-  number_column_addright_top50.classList.remove("addright_top");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1488,16 +1588,17 @@ column_right5.onclick = function(){
   window_multitask13.classList.remove("left-bottom");
   window_multitask14.classList.remove("right-bottom");
   window_multitask15.classList.remove("asdw");
-  window_multitask16.classList.remove("center");
+  window_multitask16.classList.remove("center50");
   Window.classList.remove("SmallScreen");
-  rpogjifhg.classList.remove("pls_work_window_brain_fuck");
-  /*wrapper.style.left = `${0 + 0}px`,
-        wrapper.style.top = `${0 + 0}px`*/
-        Window.classList.remove("set_brd_rds");
-        resizer_window4.style.height = `${96 + 0}%`
-        resizer_window4.style.width = `${25 + 0}%`
 }
-
+column_right5.addEventListener("click", () =>{
+  if(Window.classList.contains("right25")){
+    square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
 
 
 let option_selected = document.querySelector("#option_selected");
@@ -1547,6 +1648,7 @@ option4.onclick = function(){
 let start_menu_input = document.querySelector(".startmenu input");
 let search_menu = document.querySelector(".Search_box_container");
 let icon2 = document.querySelector("#icon2");
+let search_menu_input = document.querySelector(".Search_box_container input");
 
 icon2.onclick = function(){
   search_menu.classList.toggle("opened");
@@ -1562,10 +1664,13 @@ icon2.onclick = function(){
   all_apps_text.classList.remove("all_apps_state");
   all_apps_container.classList.remove("all_apps_state");
   Widgets_panel.classList.remove("opened")
+  search_menu_input.focus();
+  search_menu_input.value = null
 }
 start_menu_input.onclick = function(){
   startmenu.classList.remove("active");
   search_menu.classList.add("opened");
+  search_menu_input.focus();
 }
 
 
@@ -1957,13 +2062,32 @@ function dragElement(elmnt) {
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
+    let resize_top = document.querySelector(".resizer.top");
+    let resize_bottom = document.querySelector(".resizer.bottom");
+    let resize_left = document.querySelector(".resizer.left");
+    let resize_right = document.querySelector(".resizer.right");
+    let resize_top_left = document.querySelector(".resizer.top_left");
+    let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+    let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+    resize_top.classList.add("sml_scr");
+    resize_bottom.classList.add("sml_scr");
+    resize_left.classList.add("sml_scr");
+    resize_right.classList.add("sml_scr");
+    resize_top_left.classList.add("sml_scr");
+    resize_bottom_left.classList.add("sml_scr");
+    resize_bottom_right.classList.add("sml_scr");
+
     pos3 = e.clientX;
     pos4 = e.clientY;
+    let square = document.querySelector(".bx-square");
+        square.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
     Window.classList.add("onresize_trans");
+    Window.style.borderRadius = "6px";
     document.onmouseup = closeDragElement;
+  
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-    //Window.classList.add("onresize_trans");
+ 
   }
 
   function elementDrag(e) {
@@ -1974,6 +2098,8 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
+    
+   
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
@@ -1985,6 +2111,8 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
    //Window.classList.remove("onresize_trans");
+   //Window.classList.remove("onresize_trans");
+   Window.classList.remove("onresize_trans");
   }
 }
 
@@ -2089,11 +2217,11 @@ for (let resizer of resizers) {
 
 
 
-/*let about_trigger = document.querySelector("#about");
+let about_trigger = document.querySelector("#about");
 
 about_trigger.onclick = function() {
   abuot_window.classList.remove("close");
-}*/
+}
 
 
 
@@ -2138,18 +2266,36 @@ function onhover() {
   snapbox.classList.toggle("full");
 }
 
+function onhover1() {
+  let align_icons = document.querySelector(".taskbar_context_menu_sml");
+  align_icons.classList.toggle("active");
+}
+function onhover2() {
+  let search_show = document.querySelector(".taskbar_context_menu_sml_one");
+  search_show.classList.toggle("active1");
+}
 
 
+let left =  document.querySelector("#left");
 
 
+left.onclick = function(){
+taskbar123.classList.add("align_left");
+}
+let center =  document.querySelector("#center");
+
+
+center.onclick = function(){
+  taskbar123.classList.add("align_center");
+}
 
 
 function makeResizableDiv(div) {
   const element123 = document.querySelector(div);
   const resizers = document.querySelectorAll(div + ' .resizer')
   const minimum_size = 320;
-  let original_width = 1;
-  let original_height = 1;
+  let original_width = 0;
+  let original_height = 0;
   let original_x = 0;
   let original_y = 0;
   let original_mouse_x = 0;
@@ -2172,6 +2318,7 @@ function makeResizableDiv(div) {
       if (currentResizer.classList.contains('bottom_right')) {
         const width = original_width + (e.pageX - original_mouse_x);
         const height = original_height + (e.pageY - original_mouse_y)
+        Window.classList.toggle("onresize_trans");
         if (width > minimum_size) {
           element123.style.width = width + 'px'
         }
@@ -2182,6 +2329,7 @@ function makeResizableDiv(div) {
       else if (currentResizer.classList.contains('bottom_left')) {
         const height = original_height + (e.pageY - original_mouse_y)
         const width = original_width - (e.pageX - original_mouse_x)
+        Window.classList.toggle("onresize_trans");
         if (height > minimum_size) {
           element123.style.height = height + 'px'
         }
@@ -2191,24 +2339,26 @@ function makeResizableDiv(div) {
         }
       }
       else if (currentResizer.classList.contains('right')) {
-        const height = original_height + (e.pageY - original_mouse_y)
-        const width = original_width - (e.pageX - original_mouse_x)
-       if (height > minimum_size) {
-          element123.style.width = height + 'px'
-        }
+      //  const height = original_height + (e.offsetY - original_mouse_y)
+        const width = original_width + (e.pageX - original_mouse_x)
+        Window.classList.toggle("onresize_trans");
+      /* if (height > minimum_size) {
+          element123.style.width = width + 'px'
+        }*/
         if (width > minimum_size) {
           element123.style.width = width + 'px'
-          element123.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
           element123.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
+          //element123.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
         }
         
       }
       else if (currentResizer.classList.contains('left')) {
-        const height = original_height + (e.pageY - original_mouse_y)
+        //const height = original_height + (e.pageY - original_mouse_y)
         const width = original_width - (e.pageX - original_mouse_x)
-        if (height > minimum_size) {
+        Window.classList.toggle("onresize_trans");
+     /*   if (height > minimum_size) {
           element123.style.width = width + 'px'
-        }
+        }*/
         if (width > minimum_size) {
           element123.style.width = width + 'px'
           element123.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
@@ -2217,48 +2367,32 @@ function makeResizableDiv(div) {
       }
       else if (currentResizer.classList.contains('bottom')) {
         const height = original_height + (e.pageY - original_mouse_y)
-        const width = original_width - (e.pageX - original_mouse_x)
-        if (height > minimum_size) {
+        ///const width = original_width - (e.pageX - original_mouse_x)
+        Window.classList.toggle("onresize_trans");
+     /* if (width > minimum_size) {
           element123.style.height = height + 'px'
-        }
-        if (width > minimum_size) {
+        }*/
+        if (height > minimum_size) {
           element123.style.height = height + 'px'
           element123.style.bottom = original_x + (e.pageX - original_mouse_x) + 'px'
         }
       }
       else if (currentResizer.classList.contains('top')) {
-        const height = original_height + (e.pageY - original_mouse_y)
-        const width = original_width - (e.pageX - original_mouse_x)
+        const height = original_height - (e.pageY - original_mouse_y)
+      //  const width = original_width - (e.pageX - original_mouse_x)
+        Window.classList.toggle("onresize_trans");
         if (height > minimum_size) {
           element123.style.height = height + 'px'
-        }
-        if (width > minimum_size) {
-          element123.style.height = height + 'px'
-          element123.style.bottom = original_x + (e.pageX - original_mouse_x) + 'px'
+          element123.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
         }
       }
       else if (currentResizer.classList.contains('top_left')) {
-        const width = original_width + (e.pageX - original_mouse_x)
+       const width = original_width - (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
-        if (width > minimum_size) {
+        Window.classList.toggle("onresize_trans");
+       if (width > minimum_size) {
           element123.style.width = width + 'px'
-          element123.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
-        }
-        if (height > minimum_size) {
-          element123.style.height = height + 'px'
-          element123.style.bottom = original_y + (e.pageY - original_mouse_y) + 'px'
-          
-          //element123.style.height = height- 'px'
-        //element123.style.bottom = original_y + (e.pageY + original_mouse_y) + 'px'
-        //element123.style.right = original_x + (e.pageX + original_mouse_x) + 'px'
-        }
-      }
-      else if (currentResizer.classList.contains('top')) {
-        const width = original_width + (e.pageX - original_mouse_x)
-        const height = original_height - (e.pageY - original_mouse_y)
-        if (width > minimum_size) {
-         
-            
+          element123.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
         }
         if (height > minimum_size) {
           element123.style.height = height + 'px'
@@ -2268,6 +2402,8 @@ function makeResizableDiv(div) {
         //element123.style.right = original_x + (e.pageX + original_mouse_x) + 'px'
         }
       }
+     
+      
      /* else{
         const width = original_width - (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
@@ -2291,12 +2427,172 @@ function makeResizableDiv(div) {
 makeResizableDiv('.Window')
 
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('./sw.js')
-      .then((reg) => console.log('Success: ', reg.scope))
-      .catch((err) => console.log('Failure: ', err));
-  });
-}
+/*
+let home = document.querySelector("#home");
+let home_trigger = document.querySelector("#home_trigger");
+let apps = document.querySelector("#apps");
+let apps_svg = document.querySelector("#apps_svg");
+let apps_trigger = document.querySelector("#apps_trigger");
+let games = document.querySelector("#games");
+let games_svg = document.querySelector("#games_svg");
+let games_trigger = document.querySelector("#games_trigger");
+let library = document.querySelector("#library");
+let library_trigger = document.querySelector("#library_trigger");
+let library_svg = document.querySelector("#library_svg");
+let help = document.querySelector("#help");
+let help_trigger = document.querySelector("#help_trigger");
+let help_svg = document.querySelector("#help_svg");
 
+home_trigger.onclick = function(){
+  home.style.opacity = "1";
+  home_trigger.style.background = "#afafaf44";
+  help_trigger.style.background = "transparent";
+  library_trigger.style.background = "transparent";
+  games_trigger.style.background = "transparent";
+  apps_trigger.style.background = "transparent";
+  library.style.opacity="0";
+  apps.style.opacity="0";
+  games.style.opacity="0";
+  help.style.opacity="0"
+  help_svg.style.fill="#000"
+  games_svg.style.fill="#000";
+  apps_svg.style.fill="#000";
+  library_svg.style.fill="#000";
+}
+apps_trigger.onclick = function () {
+  apps.style.opacity="1";
+  apps_trigger.style.background = "#afafaf44";
+  help_trigger.style.background = "transparent";
+  library_trigger.style.background = "transparent";
+  games_trigger.style.background = "transparent";
+  home_trigger.style.background = "transparent"
+  library.style.opacity="0";
+  home.style.opacity = "0";
+  help.style.opacity="0"
+  help_svg.style.fill="#000"
+  games.style.opacity="0";
+  apps_svg.style.fill="#007efb";
+  games_svg.style.fill="#000";
+  library_svg.style.fill="#000";
+}
+games_trigger.onclick = function () {
+  games.style.opacity="1";
+  library.style.opacity="0";
+  apps.style.opacity="0";
+  help.style.opacity="0"
+  games_trigger.style.background = "#afafaf44";
+  help_trigger.style.background = "transparent";
+  library_trigger.style.background = "transparent";
+  apps_trigger.style.background = "transparent";
+  home_trigger.style.background = "transparent"
+  help_svg.style.fill="#000"
+  home.style.opacity = "0";
+  games_svg.style.fill="#007efb";
+  apps_svg.style.fill="#000";
+  library_svg.style.fill="#000";
+}
+library_trigger.onclick = function () {
+  games.style.opacity="0";
+  library.style.opacity="1";
+  apps.style.opacity="0";
+  home.style.opacity = "0";
+  library_trigger.style.background = "#afafaf44";
+  help_trigger.style.background = "transparent";
+  games_trigger.style.background = "transparent";
+  apps_trigger.style.background = "transparent";
+  home_trigger.style.background = "transparent"
+  help.style.opacity="0"
+  help_svg.style.fill="#000"
+  games_svg.style.fill="#000";
+  apps_svg.style.fill="#000";
+  library_svg.style.fill="#007efb";
+}
+help_trigger.onclick = function () {
+  games.style.opacity="0";
+  help.style.opacity="1"
+  library.style.opacity="0";
+  apps.style.opacity="0";
+  home.style.opacity = "0";
+  help_trigger.style.background = "#afafaf44";
+  library_trigger.style.background = "transparent";
+  games_trigger.style.background = "transparent";
+  apps_trigger.style.background = "transparent";
+  home_trigger.style.background = "transparent"
+  games_svg.style.fill="#000";
+  apps_svg.style.fill="#000";
+  library_svg.style.fill="#000";
+  help_svg.style.fill="#007efb"
+}
+*/
+
+fetch('https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/test.json').then(function(response){
+return response.json();
+}).then(function(data) {
+  console.log(data.name);
+  console.log(data.icons);
+  let app_img = document.querySelector(".app-img");
+  let app_p = document.querySelector(".Window-header p");
+  /*let app_taskbr = document.querySelector("#icon7");*/
+  let tool_tip_explorer  = document.querySelector("#tool_tip_explorer");
+/*app_img.src = data.icons*/
+/*app_p.innerHTML = data.name*/
+/*app_taskbr.src = data.icons*/
+tool_tip_explorer.innerHTML = data.name
+}).catch(function (error) {
+  console.error('Something went wrong');
+  console.error(error);
+})
+
+/*
+
+const car =  {icon: "https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/camera.png", name:"Camera"};
+const explorer = ["https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/camera.png"];
+const camera = ["Camera"];
+const carJson = JSON.stringify(car);
+
+app_img.src = car
+app_p.textContent = camera*/
+
+
+
+let desktop_app_p = document.querySelector(".Desktop-App p");
+let desktop_app = document.querySelector(".Desktop-App");
+desktop_app_p.addEventListener('dblclick', (e) => {
+  let rename = document.createElement('textarea');
+  rename.classList.add('text_area');
+  desktop_app.appendChild(rename);
+  desktop_app_p.innerHTML  =  rename.value;
+  
+  rename.focus();
+});
+
+/*desktop_app_p.onclick = function () {
+  let rename = document.createElement('textarea');
+  rename.classList.add('text_area');
+  desktop_app.appendChild(rename);
+  desktop_app_p.innerHTML  =  rename.value;
+  
+  rename.focus();
+}*/
+/*window.addEventListener('keydown', (event) => {
+  if (event.keyCode == 13) {
+    let rename1 = document.querySelector(".text_area");
+  event.preventDefault();
+  rename1.blur();
+  desktop_app_p.innerHTML  =  rename1.value;
+  rename1.value = "";
+  desktop_app.removeChild(rename1);
+  
+}
+});*/
+
+search_menu_input.addEventListener("input", () =>{
+  if(search_menu_input.value == "rick astley"){
+   search_menu.classList.remove("opened");
+   search_menu_input.blur();
+   let main = document.querySelector("main");
+   main.classList.toggle("rick")
+  }else{
+ 
+  }
+})
