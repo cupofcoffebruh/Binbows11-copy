@@ -2990,7 +2990,7 @@ left: 75%;
      --main_back_img:URl(https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Backgrounds/win11background.jpg);
      --settings_column_indicator:#fff;
      --invert_invert_img:invert(100%);
-     --two_two_two_to_ddd:#eee;
+     --two_two_two_to_ddd:#eff4f9;
      }
       .dark-theme{
         --invert_invert_img:invert(0%);
