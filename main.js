@@ -2293,7 +2293,7 @@ center.onclick = function(){
 function makeResizableDiv(div) {
   const element123 = document.querySelector(div);
   const resizers = document.querySelectorAll(div + ' .resizer')
-  const minimum_size = 320;
+  const minimum_size = 340;
   let original_width = 0;
   let original_height = 0;
   let original_x = 0;
