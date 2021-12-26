@@ -1,9 +1,4 @@
- //WidgetsClock//
-     
-  
-
-
-      //Clock//
+  //Clock//
       class DigitalClock {
         constructor(element) {
           this.element = element;
@@ -513,7 +508,8 @@ square.addEventListener("click", () =>{
         window_multitask16.classList.remove("center50");
         window_multitask17.classList.remove("right25");
       }
-     
+    
+         
        /* if(Window.classList.contains("addleft33")){
           square.onclick = function(){
             Window.classList.remove("Active");
@@ -630,6 +626,7 @@ square.addEventListener("click", () =>{
         Window.classList.toggle("Active");
         line.classList.remove("notactive");
         line.classList.remove("active");
+        Window.style.borderRadius = null
         settings.classList.remove("open");
       }
 
@@ -651,15 +648,155 @@ square.addEventListener("click", () =>{
       
       //To TaskBar//
       let line = document.querySelector(".line");
+      let line1 = document.querySelector(".line1");
       let icon7 = document.querySelector("#icon7");
+      let icon6 = document.querySelector("#icon6");
+      let store = document.querySelector("#store");
+      let store_unit = document.querySelector("#store_unit");
       let calc_open = document.querySelector("#calc_open")
       let totaskbar = document.querySelector(".bx-minus");
+      let totaskbar1 = document.querySelector("#bxminus");
       let  widow1234 = document.querySelector(".Window Active");
       let taskbar = document.querySelector(".Nav-Container ul ");
       let settings = document.querySelector("#settings");
       let context_menu_option = document.querySelector("#left");
-      
+      let square1 = document.querySelector("#square1");
+      let store_close = document.querySelector("#store_close");
+  
+      store_close.onclick = function(){
+        store.classList.remove("Active1");
+        line1.classList.remove("notactive");
+        line1.classList.remove("active");
+        store_unit.classList.remove("open1");
+      }
+      square1.onclick = function(){
+        store.style.width = null
+        store.style.height = null
+        store.style.left = null
+        store.style.top = null
+        store.style.right = null
+        store.style.bottom = null
+        store.style.borderRadius = null;
     
+        store_window_multitask14.classList.remove("right4-bottom");
+        store_window_multitask8.classList.remove("addright_top50");
+        store_window_multitask7.classList.remove("addleft50trio");
+        store_window_multitask6.classList.remove("addleft33");
+        store_window_multitask5.classList.remove("addcenter33");
+        store_window_multitask4.classList.remove("addright33");
+        store_window_multitask3.classList.remove("addright25");
+        store_window_multitask2.classList.remove("addleft75");
+        store_window_multitask1.classList.remove("addright50");
+        store_window_multitask.classList.remove("addleft50");
+        store_window_multitask9.classList.remove("addright_bottom");
+        store_window_multitask10.classList.remove("addleft_top");
+        store_window_multitask12.classList.remove("addsomething");
+        store_window_multitask13.classList.remove("left-bottom");
+        store_window_multitask15.classList.remove("asdw");
+        store_window_multitask16.classList.remove("center50");
+        store_window_multitask17.classList.remove("right25");
+        /*let resize_top = document.querySelector(".resizer.top");
+        let resize_bottom = document.querySelector(".resizer.bottom");
+        let resize_left = document.querySelector(".resizer.left");
+        let resize_right = document.querySelector(".resizer.right");
+        let resize_top_left = document.querySelector(".resizer.top_left");
+        let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+        let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+        resize_top.style.background = "none";
+        resize_bottom.style.background = "none";
+        resize_left.style.background = "none";
+        resize_right.style.background = "none";
+        resize_top_left.style.background = "none";
+        resize_bottom_left.style.background = "none";
+        resize_bottom_right.style.background = "none";*/
+          store.classList.toggle("SmallScreen1");
+           /* window_multitask8.classList.remove("addright_top50");
+            window_multitask7.classList.remove("addleft50trio");
+            window_multitask6.classList.remove("addleft33");
+            window_multitask5.classList.remove("addcenter33");
+            window_multitask.classList.remove("addleft50");
+            window_multitask1.classList.remove("addright50");
+            window_multitask2.classList.remove("addleft75");
+            window_multitask3.classList.remove("addright25");
+            window_multitask4.classList.remove("addright33");
+            window_multitask9.classList.remove("addright_bottom");
+            window_multitask10.classList.remove("addleft_top");
+            window_multitask12.classList.remove("addsomething");
+            window_multitask13.classList.remove("left-bottom");
+            window_multitask14.classList.remove("right4-bottom");
+            window_multitask15.classList.remove("asdw");
+            window_multitask16.classList.remove("center50");
+            window_multitask17.classList.remove("right25");*/
+          }
+          square1.addEventListener("click", () =>{
+            if(store.classList.contains("SmallScreen1")){
+              square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+              let resize1_top = document.querySelector(".resizer1.top");
+              let resize1_bottom = document.querySelector(".resizer1.bottom");
+              let resize1_left = document.querySelector(".resizer1.left");
+              let resize1_right = document.querySelector(".resizer1.right");
+              let resize1_top_left = document.querySelector(".resizer1.top_left");
+              let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+              let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+              resize1_top.classList.add("sml_scr");
+              resize1_bottom.classList.add("sml_scr");
+              resize1_left.classList.add("sml_scr");
+              resize1_right.classList.add("sml_scr");
+              resize1_top_left.classList.add("sml_scr");
+              resize1_bottom_left.classList.add("sml_scr");
+              resize1_bottom_right.classList.add("sml_scr");
+            
+            }else{
+              let resize1_top = document.querySelector(".resizer1.top");
+              let resize1_bottom = document.querySelector(".resizer1.bottom");
+              let resize1_left = document.querySelector(".resizer1.left");
+              let resize1_right = document.querySelector(".resizer1.right");
+              let resize1_top_left = document.querySelector(".resizer1.top_left");
+              let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+              let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+              square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+              resize1_top.classList.remove("sml_scr");
+              resize1_bottom.classList.remove("sml_scr");
+              resize1_left.classList.remove("sml_scr");
+              resize1_right.classList.remove("sml_scr");
+              resize1_top_left.classList.remove("sml_scr");
+              resize1_bottom_left.classList.remove("sml_scr");
+              resize1_bottom_right.classList.remove("sml_scr");
+            }
+          
+          
+          })
+         
+      totaskbar1.onclick = function(){
+        store.classList.toggle("Active1");
+          line1.classList.toggle("notactive");
+          line1.classList.add("active");
+          //settings.classList.toggle("open");
+           store.style.borderRadius = null;
+           store_unit.classList.remove("open1");
+          /* let resize1_top = document.querySelector(".resizer1.top");
+           let resize1_bottom = document.querySelector(".resizer1.bottom");
+           let resize1_left = document.querySelector(".resizer1.left");
+           let resize1_right = document.querySelector(".resizer1.right");
+           let resize1_top_left = document.querySelector(".resizer1.top_left");
+           let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+           let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+           resize1_top.classList.toggle("sml_scr");
+           resize1_bottom.classList.toggle("sml_scr");
+           resize1_left.classList.toggle("sml_scr");
+           resize1_right.classList.toggle("sml_scr");
+           resize1_top_left.classList.toggle("sml_scr");
+           resize1_bottom_left.classList.toggle("sml_scr");
+           resize1_bottom_right.classList.toggle("sml_scr");*/
+        } 
+        totaskbar1.addEventListener("click", () =>{
+          if(store.classList.contains("SmallScreen1")){
+            square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+            
+          }else{
+            square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+          }
+        })
       totaskbar.onclick = function(){
       Window.classList.toggle("Active");
         line.classList.toggle("notactive");
@@ -684,6 +821,14 @@ square.addEventListener("click", () =>{
         calendar.classList.remove("active");
         Window.classList.toggle("Active");
         settings.classList.toggle("open");
+        store_unit.classList.remove("open1")
+        line1.classList.remove("notactive");
+      store.style.zIndex = "0"
+      Window.style.zIndex = "99999999"
+      /*  line1.classList.add("notactive");
+        line1.classList.remove("active");
+        store_unit.classList.toggle("open1");
+        store.classList.remove("Active1");*/
       /*  window_multitask8.classList.remove("addright_top50");
         window_multitask7.classList.remove("addleft50trio");
         window_multitask6.classList.remove("addleft33");
@@ -702,6 +847,75 @@ square.addEventListener("click", () =>{
         window_multitask16.classList.remove("center50");
         window_multitask17.classList.remove("right25");*/
       }
+      icon6.onclick = function(){
+        line1.classList.toggle("notactive");
+        line1.classList.add("active");
+        line.classList.remove("notactive");
+        startmenu.classList.remove("active");
+        search_menu.classList.remove("opened");
+        settings.classList.remove("open");
+        calendar.classList.remove("active");
+        store.classList.toggle("Active1");
+        store_unit.classList.toggle("open1")
+        settings.classList.remove("open");
+        store.style.zIndex = "99999999"
+        Window.style.zIndex = "0"
+     
+       // settings.classList.toggle("open");
+      /*  window_multitask8.classList.remove("addright_top50");
+        window_multitask7.classList.remove("addleft50trio");
+        window_multitask6.classList.remove("addleft33");
+        window_multitask5.classList.remove("addcenter33");
+        window_multitask.classList.remove("addleft50");
+        window_multitask1.classList.remove("addright50");
+        window_multitask2.classList.remove("addleft75");
+        window_multitask3.classList.remove("addright25");
+        window_multitask4.classList.remove("addright33");
+        window_multitask9.classList.remove("addright_bottom");
+        window_multitask10.classList.remove("addleft_top");
+        window_multitask12.classList.remove("addsomething");
+        window_multitask13.classList.remove("left-bottom");
+        window_multitask14.classList.remove("right4-bottom");
+        window_multitask15.classList.remove("asdw");
+        window_multitask16.classList.remove("center50");
+        window_multitask17.classList.remove("right25");*/
+      }
+    icon6.addEventListener("click", () =>{
+        if(store.classList.contains("addleft50")){
+          square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+          let resize1_top = document.querySelector(".resizer1.top");
+          let resize1_bottom = document.querySelector(".resizer1.bottom");
+          let resize1_left = document.querySelector(".resizer1.left");
+          let resize1_right = document.querySelector(".resizer1.right");
+          let resize1_top_left = document.querySelector(".resizer1.top_left");
+          let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+          let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+          resize1_top.classList.toggle("sml_scr");
+          resize1_bottom.classList.toggle("sml_scr");
+          resize1_left.classList.toggle("sml_scr");
+          resize1_right.classList.toggle("sml_scr");
+          resize1_top_left.classList.toggle("sml_scr");
+          resize1_bottom_left.classList.toggle("sml_scr");
+          resize1_bottom_right.classList.toggle("sml_scr");
+        }else{
+          square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+          let resize1_top = document.querySelector(".resizer1.top");
+          let resize1_bottom = document.querySelector(".resizer1.bottom");
+          let resize1_left = document.querySelector(".resizer1.left");
+          let resize1_right = document.querySelector(".resizer1.right");
+          let resize1_top_left = document.querySelector(".resizer1.top_left");
+          let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+          let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+          resize1_top.classList.toggle("sml_scr");
+          resize1_bottom.classList.toggle("sml_scr");
+          resize1_left.classList.toggle("sml_scr");
+          resize1_right.classList.toggle("sml_scr");
+          resize1_top_left.classList.toggle("sml_scr");
+          resize1_bottom_left.classList.toggle("sml_scr");
+          resize1_bottom_right.classList.toggle("sml_scr");
+        }
+      })
+  
       calc_open_pinned.onclick = function(){
        line.classList.add("notactive");
         line.classList.add("active");
@@ -1491,6 +1705,7 @@ column_left5.onclick = function(){
   Window.style.right = null
   Window.style.bottom = null
   window_multitask15.classList.add("asdw");
+  window_multitask14.classList.remove("right4-bottom");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1533,6 +1748,7 @@ column_left5_center_item.onclick = function(){
   Window.style.right = null
   Window.style.bottom = null
   window_multitask16.classList.add("center50");
+  window_multitask14.classList.remove("right4-bottom");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -1573,6 +1789,7 @@ column_right5.onclick = function(){
   Window.style.right = null
   Window.style.bottom = null
   window_multitask17.classList.add("right25");
+  window_multitask14.classList.remove("right4-bottom");
   window_multitask8.classList.remove("addright_top50");
   window_multitask7.classList.remove("addleft50trio");
   window_multitask6.classList.remove("addleft33");
@@ -2045,6 +2262,153 @@ let about_trigger = document.querySelector("#about");
 about_trigger.onclick = function() {
   abuot_window.classList.remove("close");
 }*/
+/*/dragElement2(document.querySelector("#store"));
+
+function dragElement2(elmnt2) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.querySelector(elmnt2.id = "#store")) {
+    document.querySelector(elmnt2.id = "#store").onmousedown = dragMouseDown;
+    
+  }else {
+     /*otherwise, move the DIV from anywhere inside the DIV:*/
+   /* elmnt2.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+   /* let resize_top = document.querySelector(".resizer.top");
+    let resize_bottom = document.querySelector(".resizer.bottom");
+    let resize_left = document.querySelector(".resizer.left");
+    let resize_right = document.querySelector(".resizer.right");
+    let resize_top_left = document.querySelector(".resizer.top_left");
+    let resize_bottom_left = document.querySelector(".resizer.bottom_left");
+    let resize_bottom_right = document.querySelector(".resizer.bottom_right");
+    resize_top.classList.add("sml_scr");
+    resize_bottom.classList.add("sml_scr");
+    resize_left.classList.add("sml_scr");
+    resize_right.classList.add("sml_scr");
+    resize_top_left.classList.add("sml_scr");
+    resize_bottom_left.classList.add("sml_scr");
+    resize_bottom_right.classList.add("sml_scr");*/
+
+   /* pos3 = e.clientX;
+    pos4 = e.clientY;
+    //let square1 = document.querySelector(".bx-square");
+        square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    store.classList.add("onresize_trans");
+    store.style.borderRadius = "6px";
+    document.onmouseup = closeDragElement;
+  
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+ 
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+   
+    // set the element's new position:
+    elmnt2.style.top = (elmnt2.offsetTop - pos2) + "px";
+    elmnt2.style.left = (elmnt2.offsetLeft - pos1) + "px";
+   
+  }
+
+  function closeDragElement() {
+     stop moving when mouse button is released:*/
+    /*document.onmouseup = null;
+    document.onmousemove = null;
+   //Window.classList.remove("onresize_trans");
+   //Window.classList.remove("onresize_trans");
+   store.classList.remove("onresize_trans");
+  }
+}
+*/
+dragElement2(document.querySelector("#store"));
+
+function dragElement2(elmnt2) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.querySelector(elmnt2.class = "#store_header")) {
+    document.querySelector(elmnt2.class = "#store_header").onmousedown = dragMouseDown;
+    
+  }else {
+     /*otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt2.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    store.style.zIndex = "99999999"
+    Window.style.zIndex = "0"
+    let square2 = document.querySelector("#square1")
+        square2.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    store.style.transition = "0s";
+    store.style.borderRadius = "6px";
+    document.onmouseup = closeDragElement;
+    line1.classList.add("notactive");
+    line.classList.remove("notactive");
+    settings.classList.remove("open");
+    store_unit.classList.add("open1")
+  
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+ 
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    
+   
+    // set the element's new position:
+    elmnt2.style.top = (elmnt2.offsetTop - pos2) + "px";
+    elmnt2.style.left = (elmnt2.offsetLeft - pos1) + "px";
+   
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+   //Window.classList.remove("onresize_trans");
+   //Window.classList.remove("onresize_trans");
+   store.style.transition = "0.2s";
+   let resize1_top = document.querySelector(".resizer1.top");
+   let resize1_bottom = document.querySelector(".resizer1.bottom");
+   let resize1_left = document.querySelector(".resizer1.left");
+   let resize1_right = document.querySelector(".resizer1.right");
+   let resize1_top_left = document.querySelector(".resizer1.top_left");
+   let resize1_bottom_left = document.querySelector(".resizer1.bottom_left");
+   let resize1_bottom_right = document.querySelector(".resizer1.bottom_right");
+   resize1_top.classList.add("sml_scr");
+   resize1_bottom.classList.add("sml_scr");
+   resize1_left.classList.add("sml_scr");
+   resize1_right.classList.add("sml_scr");
+   resize1_top_left.classList.add("sml_scr");
+   resize1_bottom_left.classList.add("sml_scr");
+   resize1_bottom_right.classList.add("sml_scr");
+
+  }
+}
+
+
 
 dragElement(document.querySelector(".Window"));
 
@@ -2061,6 +2425,12 @@ function dragElement(elmnt) {
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
+  line1.classList.remove("notactive");
+    line.classList.add("notactive");
+    settings.classList.add("open");
+    store_unit.classList.remove("open1")
+    store.style.zIndex = "0"
+    Window.style.zIndex = "99999999"
     // get the mouse cursor position at startup:
     let resize_top = document.querySelector(".resizer.top");
     let resize_bottom = document.querySelector(".resizer.bottom");
@@ -2265,7 +2635,10 @@ function onhover() {
   let snapbox = document.querySelector(".multi_task_box");
   snapbox.classList.toggle("full");
 }
-
+function onhover4() {
+  let snapbox = document.querySelector("#multi_task_box");
+  snapbox.classList.toggle("full1");
+}
 function onhover1() {
   let align_icons = document.querySelector(".taskbar_context_menu_sml");
   align_icons.classList.toggle("active");
@@ -2289,11 +2662,11 @@ center.onclick = function(){
   taskbar123.classList.add("align_center");
 }
 
-
+//let iframe = document.querySelector("iframe");
 function makeResizableDiv(div) {
   const element123 = document.querySelector(div);
   const resizers = document.querySelectorAll(div + ' .resizer')
-  const minimum_size = 352;
+  const minimum_size = 320;
   let original_width = 0;
   let original_height = 0;
   let original_x = 0;
@@ -2312,15 +2685,25 @@ function makeResizableDiv(div) {
       original_mouse_y = e.pageY;
       window.addEventListener('mousemove', resize)
       window.addEventListener('mouseup', stopResize)
+     
     })
     
     function resize(e) {
+      line1.classList.remove("notactive");
+      line.classList.add("notactive");
+      settings.classList.add("open");
+      store_unit.classList.remove("open1");
+      store.style.zIndex = "0";
+      Window.style.zIndex = "99999999";
+     // iframe.classList.add("sml_scr");
       if (currentResizer.classList.contains('bottom_right')) {
         const width = original_width + (e.pageX - original_mouse_x);
         const height = original_height + (e.pageY - original_mouse_y)
+      
         Window.classList.toggle("onresize_trans");
         if (width > minimum_size) {
           element123.style.width = width + 'px'
+      
         }
         if (height > minimum_size) {
           element123.style.height = height + 'px'
@@ -2332,6 +2715,7 @@ function makeResizableDiv(div) {
         Window.classList.toggle("onresize_trans");
         if (height > minimum_size) {
           element123.style.height = height + 'px'
+         
         }
         if (width > minimum_size) {
           element123.style.width = width + 'px'
@@ -2345,6 +2729,8 @@ function makeResizableDiv(div) {
       /* if (height > minimum_size) {
           element123.style.width = width + 'px'
         }*/
+       
+
         if (width > minimum_size) {
           element123.style.width = width + 'px'
           element123.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
@@ -2355,6 +2741,7 @@ function makeResizableDiv(div) {
       else if (currentResizer.classList.contains('left')) {
         //const height = original_height + (e.pageY - original_mouse_y)
         const width = original_width - (e.pageX - original_mouse_x)
+       
         Window.classList.toggle("onresize_trans");
      /*   if (height > minimum_size) {
           element123.style.width = width + 'px'
@@ -2368,6 +2755,7 @@ function makeResizableDiv(div) {
       else if (currentResizer.classList.contains('bottom')) {
         const height = original_height + (e.pageY - original_mouse_y)
         ///const width = original_width - (e.pageX - original_mouse_x)
+     
         Window.classList.toggle("onresize_trans");
      /* if (width > minimum_size) {
           element123.style.height = height + 'px'
@@ -2380,6 +2768,7 @@ function makeResizableDiv(div) {
       else if (currentResizer.classList.contains('top')) {
         const height = original_height - (e.pageY - original_mouse_y)
       //  const width = original_width - (e.pageX - original_mouse_x)
+  
         Window.classList.toggle("onresize_trans");
         if (height > minimum_size) {
           element123.style.height = height + 'px'
@@ -2389,6 +2778,7 @@ function makeResizableDiv(div) {
       else if (currentResizer.classList.contains('top_left')) {
        const width = original_width - (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
+        
         Window.classList.toggle("onresize_trans");
        if (width > minimum_size) {
           element123.style.width = width + 'px'
@@ -2420,12 +2810,167 @@ function makeResizableDiv(div) {
     
     function stopResize() {
       window.removeEventListener('mousemove', resize)
+    //iframe.classList.remove("sml_scr");
     }
   }
 }
 
 makeResizableDiv('.Window')
 
+
+function makeResizableDiv1(div) {
+  const element1234 = document.querySelector(div);
+  const resizers = document.querySelectorAll(div + ' .resizer1')
+  const minimum_size = 320;
+  let original_width = 0;
+  let original_height = 0;
+  let original_x = 0;
+  let original_y = 0;
+  let original_mouse_x = 0;
+  let original_mouse_y = 0;
+  for (let i = 0;i < resizers.length; i++) {
+    const currentResizer = resizers[i];
+    currentResizer.addEventListener('mousedown', function(e) {
+      e.preventDefault()
+      original_width = parseFloat(getComputedStyle(element1234, null).getPropertyValue('width').replace('px', ''));
+      original_height = parseFloat(getComputedStyle(element1234, null).getPropertyValue('height').replace('px', ''));
+      original_x = element1234.getBoundingClientRect().left;
+      original_y = element1234.getBoundingClientRect().top;
+      original_mouse_x = e.pageX;
+      original_mouse_y = e.pageY;
+      window.addEventListener('mousemove', resize)
+      window.addEventListener('mouseup', stopResize)
+     
+    })
+    
+    function resize(e) {
+      line1.classList.add("notactive");
+      line.classList.remove("notactive");
+      settings.classList.remove("open");
+      store_unit.classList.add("open1")
+    store.style.transition = "0s";
+    store.style.zIndex = "99999999"
+    Window.style.zIndex = "0"
+      if (currentResizer.classList.contains('bottom_right')) {
+        const width = original_width + (e.pageX - original_mouse_x);
+        const height = original_height + (e.pageY - original_mouse_y)
+      
+  
+        if (width > minimum_size) {
+          element1234.style.width = width + 'px'
+      
+        }
+        if (height > minimum_size) {
+          element1234.style.height = height + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('bottom_left')) {
+        const height = original_height + (e.pageY - original_mouse_y)
+        const width = original_width - (e.pageX - original_mouse_x)
+   
+        if (height > minimum_size) {
+          element1234.style.height = height + 'px'
+         
+        }
+        if (width > minimum_size) {
+          element1234.style.width = width + 'px'
+          element1234.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('right')) {
+      //  const height = original_height + (e.offsetY - original_mouse_y)
+        const width = original_width + (e.pageX - original_mouse_x)
+       
+      /* if (height > minimum_size) {
+          element123.style.width = width + 'px'
+        }*/
+       
+
+        if (width > minimum_size) {
+          element1234.style.width = width + 'px'
+          element1234.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
+          //element123.style.right = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+        
+      }
+      else if (currentResizer.classList.contains('left')) {
+        //const height = original_height + (e.pageY - original_mouse_y)
+        const width = original_width - (e.pageX - original_mouse_x)
+       
+ 
+     /*   if (height > minimum_size) {
+          element123.style.width = width + 'px'
+        }*/
+        if (width > minimum_size) {
+          element1234.style.width = width + 'px'
+          element1234.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+        
+      }
+      else if (currentResizer.classList.contains('bottom')) {
+        const height = original_height + (e.pageY - original_mouse_y)
+        ///const width = original_width - (e.pageX - original_mouse_x)
+     
+     /* if (width > minimum_size) {
+          element123.style.height = height + 'px'
+        }*/
+        if (height > minimum_size) {
+          element1234.style.height = height + 'px'
+          element1234.style.bottom = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('top')) {
+        const height = original_height - (e.pageY - original_mouse_y)
+      //  const width = original_width - (e.pageX - original_mouse_x)
+  
+        
+        if (height > minimum_size) {
+          element1234.style.height = height + 'px'
+          element1234.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('top_left')) {
+       const width = original_width - (e.pageX - original_mouse_x)
+        const height = original_height - (e.pageY - original_mouse_y)
+        
+        
+       if (width > minimum_size) {
+          element1234.style.width = width + 'px'
+          element1234.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+        if (height > minimum_size) {
+          element1234.style.height = height + 'px'
+          element1234.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
+          //element123.style.height = height- 'px'
+        //element123.style.bottom = original_y + (e.pageY + original_mouse_y) + 'px'
+        //element123.style.right = original_x + (e.pageX + original_mouse_x) + 'px'
+        }
+      }
+     
+      
+     /* else{
+        const width = original_width - (e.pageX - original_mouse_x)
+        const height = original_height - (e.pageY - original_mouse_y)
+        if (width > minimum_size) {
+          element123.style.width = width + 'px'
+          element123.style.top = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+        if (height > minimum_size) {
+          element123.style.height = height + 'px'
+          element123.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
+        }
+      }*/
+    }
+    
+    function stopResize() {
+      window.removeEventListener('mousemove', resize)
+    //iframe.classList.remove("sml_scr");
+    store.style.transition = "0.2s";
+    }
+  }
+}
+
+makeResizableDiv1('#store')
 
 /*
 let home = document.querySelector("#home");
@@ -2523,8 +3068,8 @@ help_trigger.onclick = function () {
   library_svg.style.fill="#000";
   help_svg.style.fill="#007efb"
 }
-*/
 
+*/
 fetch('https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/test.json').then(function(response){
 return response.json();
 }).then(function(data) {
@@ -2588,11 +3133,753 @@ desktop_app_p.addEventListener('dblclick', (e) => {
 
 search_menu_input.addEventListener("input", () =>{
   if(search_menu_input.value == "rick astley"){
-   search_menu.classList.remove("opened");
+    search_menu.classList.remove("opened");
    search_menu_input.blur();
    let main = document.querySelector("main");
    main.classList.toggle("rick")
   }else{
  
+  }
+});
+
+
+
+//store snap_layout
+let store_column_left = document.querySelector("#store_column-left");
+let store_window_multitask = document.querySelector("#store");
+
+;
+
+
+
+store_column_left.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask.classList.add("addleft50");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+}
+store_column_left.addEventListener("click", () =>{
+  if(store.classList.contains("addleft50")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+/*
+square.addEventListener("click", () => {
+  if(Window.classList == ("addleft50")){
+    Window.classList.remove("addleft50");
+    Window.classList.add("SmallScreen");
+  }else{
+  
+  }
+  });*/
+
+/*toright*/
+
+let store_column_right = document.querySelector("#store_column-right");
+let store_window_multitask1 = document.querySelector("#store");
+
+;
+
+
+
+store_column_right.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask1.classList.add("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+     
+} 
+
+store_column_right.addEventListener("click", () =>{
+  if(store.classList.contains("addright50")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+/*toleft75*/
+
+let store_column_left1 = document.querySelector("#store_column-left1");
+let store_window_multitask2 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left1.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask2.classList.add("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+  
+      
+} 
+store_column_left1.addEventListener("click", () =>{
+  if(store.classList.contains("addleft75")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+
+/*toright25*/
+
+let store_column_right1 = document.querySelector("#store_column-right1");
+let store_window_multitask3 = document.querySelector("#store");
+
+;
+
+
+
+store_column_right1.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.add("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+}
+store_column_right1.addEventListener("click", () =>{
+  if(store.classList.contains("addright25")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+     
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+/*toleft33%*/
+
+let store_column_left2 = document.querySelector("#store_column-left2");
+let store_window_multitask4 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left2.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.add("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+} 
+store_column_left2.addEventListener("click", () =>{
+  if(store.classList.contains("addright33")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+/*tocenter33*/
+let store_column_left2_center_item = document.querySelector("#store_column-left2_center_item");
+let store_window_multitask5 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left2_center_item.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.add("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+}
+/*toleft33*/
+let store_column_right2 = document.querySelector("#store_column-right2");
+let store_window_multitask6 = document.querySelector("#store");
+column_left2_center_item.addEventListener("click", () =>{
+  if(store.classList.contains("addcenter33")){
+    square1.src = "https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+
+store_column_right2.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.add("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+} 
+store_column_right2.addEventListener("click", () =>{
+  if(store.classList.contains("addleft33")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+
+/*tri position columns*/
+let store_column_left3 = document.querySelector("#store_column-left3");
+let store_window_multitask7 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left3.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.add("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+} 
+
+store_column_left3.addEventListener("click", () =>{
+  if(store.classList.contains("addleft50trio")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+/*trio top column*/
+let store_column_right3_top = document.querySelector("#store_column-right3-top");
+let store_window_multitask8 = document.querySelector("#store");
+;
+
+
+
+store_column_right3_top.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask8.classList.add("addright_top50");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  window_multitask10.classList.remove("addleft_top");
+  window_multitask12.classList.remove("addsomething");
+  window_multitask13.classList.remove("left-bottom");
+  window_multitask14.classList.remove("right4-bottom");
+  window_multitask15.classList.remove("asdw");
+  window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");     
+} 
+store_column_right3_top.addEventListener("click", () =>{
+  if(store.classList.contains("addright_top50")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+/*leftbottom*/
+let store_column_right3_bottom = document.querySelector("#store_column-right3-bottom");
+let store_window_multitask9 = document.querySelector("#store");
+
+;
+
+
+
+
+store_column_right3_bottom.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask9.classList.add("addright_bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+} 
+store_column_right3_bottom.addEventListener("click", () =>{
+  if(store.classList.contains("addright_bottom")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+/*left4 top*/
+let store_column_left4_top = document.querySelector("#store_column-left4-top");
+let store_window_multitask10 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left4_top.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask10.classList.add("addleft_top");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");    
+} 
+store_column_left4_top.addEventListener("click", () =>{
+  if(store.classList.contains("addleft_top")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+/*top right*/
+
+let store_column_left4_bottom = document.querySelector("#store_column-left4-bottom");
+let store_window_multitask12 = document.querySelector("#store");
+
+;
+
+
+
+store_column_left4_bottom.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask12.classList.add("addsomething");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+   store.classList.remove("SmallScreen1");
+} 
+store_column_left4_bottom.addEventListener("click", () =>{
+  if(store.classList.contains("addsomething")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+ 
+/*bottom_left*/
+let store_column_right4_top = document.querySelector("#store_column-right4-top");
+let store_window_multitask13 = document.querySelector("#store");
+
+;
+
+
+
+store_column_right4_top.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask13.classList.add("left-bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+} 
+
+
+store_column_right4_top.addEventListener("click", () =>{
+  if(store.classList.contains("left-bottom")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+
+let store_column_right4_bottom = document.querySelector("#store_column-right4-bottom");
+let store_window_multitask14 = document.querySelector("#store");
+
+;
+
+
+
+store_column_right4_bottom.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask14.classList.add("right4-bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+
+} 
+store_column_right4_bottom.addEventListener("click", () =>{
+  if(store.classList.contains("right4-bottom")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+let store_column_left5 = document.querySelector("#store_column-left5");
+let store_window_multitask15 = document.querySelector("#store");
+;
+
+
+
+store_column_left5.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask15.classList.add("asdw");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right-bottom");
+  store_window_multitask16.classList.remove("center50");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+}
+
+store_column_left5.addEventListener("click", () =>{
+  if(store.classList.contains("asdw")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+
+let store_column_left5_center_item = document.querySelector("#store_column-left5_center_item");
+let store_window_multitask16 = document.querySelector("#store");
+;
+
+
+
+store_column_left5_center_item.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask16.classList.add("center50");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask17.classList.remove("right25");
+  store.classList.remove("SmallScreen1");
+}
+store_column_left5_center_item.addEventListener("click", () =>{
+  if(store.classList.contains("center50")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
+  }
+})
+let store_column_right5 = document.querySelector("#store_column-right5");
+let store_window_multitask17 = document.querySelector("#store");
+;
+
+
+
+store_column_right5.onclick = function(){
+  store.style.width = null
+  store.style.height = null
+  store.style.left = null
+  store.style.top = null
+  store.style.right = null
+  store.style.bottom = null
+  store_window_multitask17.classList.add("right25");
+  store_window_multitask14.classList.remove("right4-bottom");
+  store_window_multitask8.classList.remove("addright_top50");
+  store_window_multitask7.classList.remove("addleft50trio");
+  store_window_multitask6.classList.remove("addleft33");
+  store_window_multitask5.classList.remove("addcenter33");
+  store_window_multitask4.classList.remove("addright33");
+  store_window_multitask3.classList.remove("addright25");
+  store_window_multitask2.classList.remove("addleft75");
+  store_window_multitask1.classList.remove("addright50");
+  store_window_multitask.classList.remove("addleft50");
+  store_window_multitask9.classList.remove("addright_bottom");
+  store_window_multitask10.classList.remove("addleft_top");
+  store_window_multitask12.classList.remove("addsomething");
+  store_window_multitask13.classList.remove("left-bottom");
+  store_window_multitask14.classList.remove("right-bottom");
+  store_window_multitask15.classList.remove("asdw");
+  store_window_multitask16.classList.remove("center50");
+  store.classList.remove("SmallScreen1");
+}
+store_column_right5.addEventListener("click", () =>{
+  if(store.classList.contains("right25")){
+    square1.src ="https://win11.blueedge.me/img/icon/ui/maxmin.png";
+    
+  }else{
+    square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
   }
 })
