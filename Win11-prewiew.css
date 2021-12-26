@@ -1666,11 +1666,11 @@ outline-offset:-1px ;
     }
     .Window.SmallScreen{
       width: 60%;
-      height: 70%;
+      height: 74%;
       border-radius:6px;
       transition: 0.2s;
       left: 20%;
-      top:12.4%;
+      top:10%;
       box-shadow:0 0 20px 0px rgba(0,0,0,0.1);
     }
    
