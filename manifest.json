@@ -6,8 +6,14 @@
     "theme_color":"#fff",
     "display":"standalone",
     "icons": [{
-        "src":"https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Icons/Win11Favicon.png",
-        "sizes":"300x300",
-        "type":"image/jpg"    
-    }]
+        "src":"Icons/binbows11_dc_server_logo 192x192.png",
+        "sizes":"192x192",
+        "type":"image/png"    
+    },
+{
+    "src":"Icons/binbows11_dc_server_logo512.png",
+    "sizes":"512x512",
+    "type":"image/png"    
+}
+]
 }
