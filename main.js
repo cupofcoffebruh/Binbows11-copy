@@ -3883,3 +3883,15 @@ store_column_right5.addEventListener("click", () =>{
     square1.src ="https://raw.githubusercontent.com/cupofcoffebruh/Binbows11-copy/main/Ui_icons/maximize.png";
   }
 })
+
+if ("ServiceWorker" in navigator){
+  navigator.serviceWorker.register(sw.js).then(registration => {
+console.log("Registreted");
+console.log(registration);
+
+  }).catch(error =>{
+    console.log("Failed");
+    console.log(error)
+  })
+}
+
