@@ -3885,8 +3885,3 @@ store_column_right5.addEventListener("click", () =>{
 })
 
 
-if ("ServiceWorker" in navigator){
-  navigator.serviceWorker.register('sw.js')
-  }
-
-
