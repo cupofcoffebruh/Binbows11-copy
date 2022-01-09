@@ -1,42 +1,11 @@
-const CACHE_NAME = 'version-1';
-const urlsToCache = ['Win-11prewiew.html'];
-
-const self = this;
-
-// Install SW
-self.addEventListener('install', (event) => {
-	event.waitUntil(
-		caches.open(CACHE_NAME).then((cache) => {
-			console.log('Opened cache');
-
-			return cache.addAll(urlsToCache);
-		})
-	);
+self.addEventListener("install", e => {
+e.waitUntil(
+	catches.open("static").then(cache =>{
+	caches.open.addAll(["./","Win11-preview.css", "Icons/binbows11_dc_server_logo 192x192.png"]);
+})
+);
 });
 
-// Listen for requests
-self.addEventListener('fetch', (event) => {
-	event.respondWith(
-		caches.match(event.request).then(() => {
-			return fetch(event.request).catch(() => caches.match('Win-11prewiew.html'));
-		})
-	);
-});
-
-// Activate the SW
-self.addEventListener('activate', (event) => {
-	const cacheWhitelist = [];
-	cacheWhitelist.push(CACHE_NAME);
-
-	event.waitUntil(
-		caches.keys().then((cacheNames) =>
-			Promise.all(
-				cacheNames.map((cacheName) => {
-					if (!cacheWhitelist.includes(cacheName)) {
-						return caches.delete(cacheName);
-					}
-				})
-			)
-		)
-	);
+self.addEventListener("fetch", e =>{
+	console.log(`Intercepting fetch request for:${e.request.url}`)
 });
