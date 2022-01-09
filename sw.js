@@ -1,7 +1,7 @@
 self.addEventListener("install", e => {
 e.waitUntil(
 	catches.open("static").then(cache =>{
-	caches.open.addAll(["./","Win11-preview.css", "Icons/binbows11_dc_server_logo 192x192.png"]);
+	return cache.addAll(["./","Win11-preview.css", "Icons/binbows11_dc_server_logo 192x192.png"]);
 })
 );
 });
