@@ -3884,14 +3884,9 @@ store_column_right5.addEventListener("click", () =>{
   }
 })
 
-if ("ServiceWorker" in navigator){
-  navigator.serviceWorker.register("sw.js").then(registration => {
-console.log("Registreted");
-console.log(registration);
 
-  }).catch(error =>{
-    console.log("Failed");
-    console.log(error)
-  })
-}
+if ("ServiceWorker" in navigator){
+  navigator.serviceWorker.register('sw.js')
+  }
+
 
