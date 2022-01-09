@@ -1,11 +1,6 @@
-self.addEventListener("install", e => {
-e.waitUntil(
-	catches.open("static").then(cache =>{
-	return cache.addAll(["./","Win11-preview.css", "Icons/binbows11_dc_server_logo 192x192.png"]);
-})
-);
-});
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.2.0/workbox-sw.js');
 
-self.addEventListener("fetch", e =>{
-	console.log(`Intercepting fetch request for:${e.request.url}`)
-});
+workbox.routing.registerRoute(
+	({request}) => request.destination === 'image',
+	new workbox.strategies.NetworkFirst()
+);
